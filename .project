@@ -1,0 +1,19 @@
+# Gambas Project File 3.0
+# Compiled with Gambas 3.5.4
+Title=leones
+Startup=FMain
+Icon=leones.png
+Version=0.0.1
+Component=gb.image
+Component=gb.qt4
+Component=gb.form
+Component=gb.db
+Component=gb.db.form
+Component=gb.settings
+Component=gb.qt4.ext
+Description="Sistema de Control de lectura para alumnos"
+Authors="Julio Sanchez Berro (jsbsan)"
+TabSize=2
+Translate=1
+Language=es
+Packager=1
