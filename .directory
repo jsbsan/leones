@@ -1,2 +1,13 @@
 [Desktop Entry]
 Icon=./.icon.png
+
+[Dolphin]
+GroupedSorting=true
+SortOrder=1
+SortRole=date
+Timestamp=2017,4,20,21,24,31
+Version=3
+ViewMode=1
+
+[Settings]
+HiddenFilesShown=true
