@@ -1,0 +1,51 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,67,24)
+  { TextLabel1 TextLabel
+    MoveScaled(-4,1,26,4)
+    Text = ("Nombre de usuario:")
+    Alignment = Align.Right
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(-5,7,26,4)
+    Text = ("Contraseña:")
+    Alignment = Align.Right
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(-4,13,26,4)
+    Text = ("Repite Contraseña:")
+    Alignment = Align.Right
+  }
+  { TextBoxNombre TextBox
+    MoveScaled(23,1,40,4)
+  }
+  { TextBoxContrasena TextBox
+    MoveScaled(23,7,21,4)
+  }
+  { TextBoxRepiteContrasena TextBox
+    MoveScaled(23,13,21,4)
+    Password = True
+  }
+  { ComboBox1 ComboBox
+    MoveScaled(23,18,21,4)
+    ReadOnly = True
+    List = [("alumno"), ("profesor")]
+    Text = ("alumno")
+  }
+  { ButtonCrear Button
+    MoveScaled(49,7,15,8)
+    Text = ("Crear")
+    Picture = Picture["icon:/32/people"]
+  }
+  { Label1 Label
+    MoveScaled(5,18,17,4)
+    Text = ("Tipo:")
+    Alignment = Align.Right
+  }
+  { ButtonCancelar Button
+    MoveScaled(49,16,15,8)
+    Text = ("Cancelar")
+    Picture = Picture["icon:/32/cancel"]
+  }
+}

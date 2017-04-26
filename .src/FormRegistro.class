@@ -1,0 +1,26 @@
+' Gambas class file
+
+Public Sub TextLabel2_MouseDown()
+  
+End
+
+Public Sub Form_Open()
+  
+  Me.Center
+  
+End
+
+Public Sub ButtonCrear_Click()
+  
+  'crea alumno o profesor
+  'añade el registro
+  '
+  
+End
+
+Public Sub ButtonCancelar_Click()
+  
+  'cancela la insercion de nueva persona
+  Me.Close()
+  
+End

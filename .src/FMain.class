@@ -5,9 +5,15 @@ Public Sub _new()
 End
 
 Public Sub Form_Open()
-
+  
   Me.Title = ("Leones") & " " & ("Control de Acceso")
   Me.Center
   Labelversion.Text = ("Version") & " " & Application.Version
+  
+End
+
+Public Sub Button3_Click()
+  
+  FormRegistro.ShowDialog()
   
 End

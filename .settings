@@ -7,11 +7,16 @@ Count=0
 
 [OpenFile]
 File[1]="leones.png"
-Active=2
 File[2]=".src/FMain.form"
-File[3]=".src/FMain.class:8.2"
+File[3]=".src/FMain.class:16.27"
 File[4]=".src/ExplainTextbox.class:21.2"
-Count=4
+File[5]=".src/FormRegistro.form"
+File[6]=".src/FormRegistro.class:23.12"
+Active=7
+File[7]=".src/FormPrincipal.form"
+File[8]="Lectura_icnoco.jpg"
+File[9]="LectorIcono.png"
+Count=9
 
 [Watches]
 Count=0

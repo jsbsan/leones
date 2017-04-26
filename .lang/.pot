@@ -18,38 +18,66 @@ msgstr ""
 msgid "Sistema de Control de lectura para alumnos"
 msgstr ""
 
-#: FMain.form:30
+#: FMain.form:31
 msgid "Leones"
 msgstr ""
 
-#: FMain.form:37
+#: FMain.form:38
 msgid "Label2"
 msgstr ""
 
-#: FMain.form:43
+#: FMain.form:44
 msgid "Sistema para el control de lectura de alumnos."
 msgstr ""
 
-#: FMain.form:49
+#: FMain.form:50
 msgid "Entrar"
 msgstr ""
 
-#: FMain.form:55
+#: FMain.form:56
 msgid "Control de Acceso"
 msgstr ""
 
-#: FMain.form:61
+#: FMain.form:62
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMain.form:66
+#: FMain.form:67
 msgid "Usuario:"
 msgstr ""
 
-#: FMain.form:72
+#: FMain.form:73 FormRegistro.form:26
 msgid "Contraseña:"
 msgstr ""
 
 #: FMain.class:11
 msgid "Version"
+msgstr ""
+
+#: FormRegistro.form:20
+msgid "Nombre de usuario:"
+msgstr ""
+
+#: FormRegistro.form:32
+msgid "Repite Contraseña:"
+msgstr ""
+
+#: FormRegistro.form:52
+msgid "alumno"
+msgstr ""
+
+#: FormRegistro.form:52
+msgid "profesor"
+msgstr ""
+
+#: FormRegistro.form:58
+msgid "Crear"
+msgstr ""
+
+#: FormRegistro.form:64
+msgid "Tipo:"
+msgstr ""
+
+#: FormRegistro.form:70
+msgid "Cancelar"
 msgstr ""

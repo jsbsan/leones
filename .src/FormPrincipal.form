@@ -1,0 +1,45 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,90,64)
+  { Button1 Button
+    MoveScaled(1,1,27,8)
+    Text = ("Configuración Test")
+    Picture = Picture["Folder-Settings-Tools-icon40x40.png"]
+  }
+  { Label1 Label
+    MoveScaled(2,12,83,4)
+    Text = ("Lecturas Disponibles")
+    Alignment = Align.Center
+    Border = Border.Plain
+  }
+  { GridView1 GridView
+    MoveScaled(34,19,56,33)
+  }
+  { ButtonAgregar Button
+    MoveScaled(3,53,23,8)
+    Text = ("Agregar Lectura")
+    Picture = Picture["icon:/32/add"]
+  }
+  { ButtonAgregar2 Button
+    MoveScaled(31,1,23,8)
+    Text = ("Probar  lectura")
+    Picture = Picture["LectorIcono.png"]
+  }
+  { TabStrip1 IconPanel
+    MoveScaled(2,19,47,32)
+    Count = 5
+    Border = True
+    Index = 0
+    Text = ("Palagras")
+    Index = 1
+    Text = ("Sintagmas")
+    Index = 2
+    Text = ("Frases")
+    Index = 3
+    Text = ("Evaluaciones")
+    Index = 4
+    Text = ("Evaluaciones Externas")
+    Index = 0
+  }
+}
