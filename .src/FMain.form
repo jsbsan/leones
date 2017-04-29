@@ -3,6 +3,7 @@
 { Form Form
   MoveScaled(0,0,76,60)
   Icon = Picture["leones.png"]
+  Resizable = False
   { PictureBox1 PictureBox
     MoveScaled(3,2,33,27)
     Picture = Picture["leones.png"]
@@ -26,7 +27,7 @@
     Text = ("Sistema para el control de lectura de alumnos.")
     Alignment = Align.Center
   }
-  { Button2 Button
+  { ButtonEntrar Button
     MoveScaled(12,51,19,5)
     Text = ("Entrar")
   }
@@ -36,7 +37,7 @@
     Text = ("Control de Acceso")
     Alignment = Align.Center
   }
-  { Button3 Button
+  { ButtonNuevoUsuario Button
     MoveScaled(38,51,28,5)
     Text = ("¿nuevo usuario? Registrate")
   }

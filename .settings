@@ -5,19 +5,30 @@ Count=1
 [DebugWindow]
 Count=0
 
+[DebugWindow/ScrollBar]
+Geometry=[0,24,210,210]
+
 [OpenFile]
 File[1]="leones.png"
 File[2]=".src/FMain.form"
-File[3]=".src/FMain.class:16.27"
+File[3]=".src/FMain.class:26.28"
 File[4]=".src/ExplainTextbox.class:21.2"
 File[5]=".src/FormRegistro.form"
 File[6]=".src/FormRegistro.class:23.12"
-Active=7
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-Count=9
+File[10]=".src/FormPrincipal.class:101.0"
+File[11]=".src/ModuleComun.module:33.0"
+File[12]=".src/FormConfigurarTest.form"
+File[13]=".src/FormConfigurarTest.class:20.2"
+File[14]=".src/FormLectura.form"
+File[15]="Stop.png"
+Active=16
+File[16]=".src/FormLectura.class:31.0"
+Count=16
 
 [Watches]
-Count=0
+Count=1
+Watch[1]="fontchoosertipoletra.value"
 

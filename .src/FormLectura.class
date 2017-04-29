@@ -1,0 +1,39 @@
+' Gambas class file
+
+Public fichero As String 'nombre del fichero de lectura...
+Public tiempoPrueba As Integer
+
+Public Sub Form_Open()
+  
+  Me.Center()
+  
+  'leer datos de la configuracion...
+  
+  'leo configuracion...
+  
+  TextArea1.Background = Settings["colorfondo", Color.Black] 
+  TextArea1.Foreground = 
+    TextArea1.font = Font[Settings["TipoLetra", "Sans Serif"]]
+  
+  Timer1.Delay = 1000
+  tiempoPrueba = Settings["tiempo", 90] 
+  
+  LabelTiempo.text = tiempoPrueba
+  
+  Timer1.Start()
+  
+End
+
+Public Sub Timer1_Timer()
+  
+  tiempoPrueba -= 1
+  
+  LabelTiempo.text = tiempoPrueba
+  
+  If tiempoPrueba <= 0 Then 
+    Message.Info("Seleccione palabra donde se quedo en la lectura")
+    Timer1.Stop()
+    
+  Endif
+  
+End

@@ -1,0 +1,35 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,91,64)
+  { TextArea1 TextArea
+    MoveScaled(1,11,43,47)
+    Wrap = True
+  }
+  { Panel1 Panel
+    MoveScaled(55,4,31,57)
+    { ButtonParada Button
+      MoveScaled(2,41,28,8)
+      Text = ("Fin Prueba")
+      Picture = Picture["Stop.png"]
+    }
+    { LabelTiempo Label
+      MoveScaled(9,6,14,9)
+      Font = Font["+4"]
+      Alignment = Align.Center
+      Border = Border.Plain
+    }
+    { Label2 Label
+      MoveScaled(7,1,20,5)
+      Text = ("Tiempo restante.....")
+    }
+    { ButtonParada2 Button
+      MoveScaled(2,19,28,8)
+      Text = ("Grabar Locución")
+      Picture = Picture["iconosonido32.png"]
+    }
+  }
+  { Timer1 #Timer
+    #MoveScaled(41,2)
+  }
+}

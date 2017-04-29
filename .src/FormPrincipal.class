@@ -1,2 +1,109 @@
 ' Gambas class file
 
+Private ruta_trabajo As String = User.Home & "/.leones" ""
+
+Private ultimoobjeto As Label
+
+Public Sub Form_Open()
+  
+  ModuleComun.copiarLecturas()
+  
+  Me.Center
+  
+  'carga ficheros 
+  cargaficheros()
+  
+End
+
+Public Sub cargaficheros()
+  
+  Dim arfile As String[]
+  Dim hLabel As Label
+  Dim hboxtemp As HBox
+  Dim nombrefile As String
+  Dim arraybto As New Variant[]
+  
+  arfile = Dir(ruta_trabajo, "*", gb.file)  'extraemos los ficheros
+  
+  hboxtemp = New HBox(ScrollViewDatosFicheros) 
+  hboxtemp.h = 25
+  hboxtemp.w = ScrollViewDatosFicheros.w - 10
+  
+  hlabel = New Label(hboxtemp) 
+  hlabel.h = 15
+  hlabel.expand = True
+  hlabel.text = "ficheros"
+  hlabel.Alignment = Align.Center
+  hlabel.Border = Border.Plain
+  hlabel.Background = Color.cyan
+  
+  hlabel = New Label(hboxtemp) 
+  hlabel.h = 15
+  hlabel.w = 150
+  hlabel.Background = Color.cyan
+  hlabel.Alignment = Align.Center
+  hlabel.text = ("Puntuación")
+  hlabel.Border = Border.Plain
+  
+  hlabel = New Label(hboxtemp) 
+  hlabel.h = 15
+  hlabel.w = 150
+  hlabel.Background = Color.cyan
+  hlabel.Alignment = Align.Center
+  hlabel.text = ("Acción")
+  hlabel.Border = Border.Plain
+  
+  For Each nombrefile In arfile.Sort(gb.Ascent)  'los mostramos ordenadamente...
+    hboxtemp = New HBox(ScrollViewDatosFicheros) 
+    hboxtemp.h = 25
+    hboxtemp.w = ScrollViewDatosFicheros.w - 10
+    
+    hlabel = New Label(hboxtemp) As "GrupoFicheros"
+    hlabel.h = 15
+    hlabel.expand = True
+    
+    hlabel.text = nombrefile
+    hlabel.Border = Border.Plain
+    hlabel.Tooltip = ("haga doble click para seleccionar lectura")
+    
+    hlabel = New Label(hboxtemp)
+    hlabel.h = 15
+    hlabel.w = 150
+    hlabel.Alignment = Align.Center
+    hlabel.text = "0 p/m"
+    hlabel.Border = Border.Plain
+    
+    hlabel = New Label(hboxtemp) As "GrupoAccion"
+    hlabel.h = 15
+    hlabel.w = 150
+    hlabel.text = "Leer" 'si esta hecho seria, "Repetir"
+    hlabel.Alignment = Align.Center
+    hlabel.Border = Border.Plain
+    hlabel.tag = "accion en fichero|" & nombrefile
+    
+  Next  
+  
+End
+
+Public Sub GrupoFicheros_DblClick()
+  
+  If Not IsNull(ultimoobjeto) Then 
+    ultimoobjeto.Background = Color.White
+    
+  Endif
+  
+  Last.Background = Color.Cyan
+  
+  ultimoobjeto = Last
+  
+End
+
+Public Sub GrupoAccion_DblClick()
+  
+End
+
+Public Sub ButtonConfigurar_Click()
+  
+  FormConfigurarTest.ShowDialog()
+  
+End

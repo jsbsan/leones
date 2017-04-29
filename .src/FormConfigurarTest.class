@@ -1,0 +1,74 @@
+' Gambas class file
+
+Public Sub Form_Open()
+  
+  Me.Title = ("Configuración")
+  Me.center
+  ' TextArea1.ToColumn(1)
+  ' TextArea1.ToLine(1)
+  
+  'leo configuracion...
+  ColorButtonColorFondo.Value = Settings["colorfondo", Color.Black] 
+  ColorButtonColorTexto.Value = Settings["colorletra", Color.White]
+  FontChooserTipoLetra.Value = Settings["TipoLetra", "Sans Serif"]  
+  
+  'actualizo valores del textarea
+  TextArea1.Background = ColorButtonColorFondo.Value
+  TextArea1.Foreground = ColorButtonColorTexto.Value
+  TextArea1.font = Font[FontChooserTipoLetra.Value]
+  
+  ValueBoxTiempo.value = Settings["tiempo", 90] 
+  
+  TextArea1.Pos = 1
+  
+End
+
+Public Sub FontChooserTipoLetra_Change()
+  
+  TextArea1.font = Font[FontChooserTipoLetra.Value]
+  
+  TextArea1.Refresh()
+  
+End
+
+Public Sub ColorButtonColorTexto_Change()
+  
+  TextArea1.Foreground = ColorButtonColorTexto.Value
+  
+End
+
+Public Sub ColorButtonColorFondo_Change()
+  
+  TextArea1.Background = ColorButtonColorFondo.Value
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub TextArea1_DblClick()
+  
+  Dim numeropalabras As Integer
+  Dim textoAcontar As String
+  
+  numeropalabras = ModuleComun.contarPalabras(textArea1.text, TextArea1.pos)
+  Print "Numero de palabras: ", numeropalabras
+  
+  LabelPalabrasLeidas.text = ("Palabras leidas") & ":" & numeropalabras
+  
+End
+
+Public Sub ButtonGuardarYSalir_Click()
+  'guardos cambios de configuracion
+  
+  Settings["colorfondo"] = ColorButtonColorFondo.Value
+  Settings["colorletra"] = ColorButtonColorTexto.Value
+  Settings["tiempo"] = ValueBoxTiempo
+  Settings["TipoLetra"] = FontChooserTipoLetra.Value
+  
+  Me.Close()
+  
+End

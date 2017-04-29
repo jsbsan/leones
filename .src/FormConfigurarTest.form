@@ -1,0 +1,97 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,106,83)
+  Arrangement = Arrange.Horizontal
+  Spacing = True
+  Padding = 2
+  { Separator2 Separator
+    MoveScaled(2,24,1,16)
+  }
+  { TextArea1 TextArea
+    MoveScaled(5,9,37,51)
+    Expand = True
+    Text = ("Había en un pueblo un molinero que medía el trigo que compraba con una medida que cabía un celemín, pero que era un poco mayor de la medida justa, y con eso les robaba un poco de trigo a los vendedores en cada medida.\n\nY tenía en su casa dos graneros grandes llenos completamente de trigo. Llegó el tiempo de la Pascua y se fue a confesar. Hizo un buen examen de conciencia y vio que no tenía que acusarse más que de estar midiendo el trigo con un celemín un poquito grande.\n\nY cuando llegó en su confesión al punto en que le preguntó el señor cura:\n\n_ ¿Has hurtado alguna vez?\n\nDijo el molinero.\n\n--Yo, nunca. Lo único que hago es que tengo un celemín un poco grande y como compro trigo, pues en cada medida me queda un poco de ventaja.\n\n--Pues eso es hurtar. Y como todo lo que es hurto hay que restituirlo, y no vas a saber ni cuánto ni a quién se lo has de devolver, te vas a hacer otro celemín que le falte para la medida justa tanto como le sobraba al grande, y con eso vendrás a restituir todo lo que has hurtado.\n\nEl molinero prometió hacerlo así, le absolvió el señor cura, y al día siguiente ya se había hecho un celemín más pequeño.\n\nConque le llevó trigo un vendedor, se lo midió con el celemín nuevo, y se lo tuvo que pagar un poco más caro, porque había subido el precio del trigo.\n\nVino otro vendedor, también se lo midió con el celemín nuevo y se lo tuvo que pagar más caro, porque había subido otro poco más.\n\nY al año siguiente, cuando se volvió a confesar, le dijo el señor cura:\n\n--¿Te hiciste el celemín más pequeño?\n\n--Sí, señor, al otro día de confesarme hice un celemín más pequeño.\n\n--¿Y lo has empleado todo el año?\n\n--Sí, señor: pero lo que pasa es que después de comprar el trigo a dos que me lo vinieron a vender, como el trigo estaba cada día más caro, pensé que me convenía vender todo el trigo, y lo he vendido todo con el celemín pequeño.")
+    ReadOnly = True
+    Wrap = True
+  }
+  { Separator1 Separator
+    MoveScaled(46,22,1,14)
+  }
+  { Panel1 Panel
+    MoveScaled(52,0,45,84)
+    Expand = True
+    Arrangement = Arrange.Vertical
+    { FrameTiempo Frame
+      MoveScaled(1,0,43,12)
+      Text = ("Tiempo")
+      { Label1 Label
+        MoveScaled(1,3,20,4)
+        Text = ("Tiempo de Lectura:")
+        Alignment = Align.Right
+      }
+      { ValueBoxTiempo ValueBox
+        MoveScaled(22,3,8,4)
+      }
+      { Label4 Label
+        MoveScaled(31,3,10,4)
+        Text = ("segundos")
+      }
+    }
+    { FrameColores Frame
+      MoveScaled(1,13,43,14)
+      Text = ("Colores")
+      { ColorButtonColorFondo ColorButton
+        MoveScaled(18,2,11,5)
+        Value = &HFFFFFF&
+      }
+      { ColorButtonColorTexto ColorButton
+        MoveScaled(18,8,11,5)
+      }
+      { Label3 Label
+        MoveScaled(0,9,16,4)
+        Text = ("Color Texto:")
+        Alignment = Align.Right
+      }
+      { Label2 Label
+        MoveScaled(0,3,16,4)
+        Text = ("Color Fondo:")
+        Alignment = Align.Right
+      }
+    }
+    { FontChooserTipoLetra FontChooser
+      MoveScaled(1,28,42,39)
+    }
+    { LabelPalabrasLeidas Label
+      MoveScaled(1,69,42,4)
+      Font = Font["-1"]
+      ToolTip = ("Haga dobleclick en alguna palabra para contar")
+      Text = ("Haga dobleclick en alguna palabra para contar")
+      Alignment = Align.Center
+    }
+    { Panel2 Panel
+      MoveScaled(5,74,37,2)
+      Expand = True
+    }
+    { HBox1 HBox
+      MoveScaled(2,77,42,5)
+      { ButtonSalir Button
+        MoveScaled(0,0,19,6)
+        ToolTip = ("Salir sin guardar cambios")
+        Text = ("Salir")
+        Picture = Picture["icon:/22/quit"]
+      }
+      { Panel3 Panel
+        MoveScaled(19,1,3,3)
+        Expand = True
+        AutoResize = True
+      }
+      { ButtonGuardarYSalir Button
+        MoveScaled(23,-1,20,6)
+        ToolTip = ("Guardar configuración y salir")
+        Text = ("Guardar y Salir")
+        Picture = Picture["icon:/22/save"]
+      }
+    }
+  }
+}

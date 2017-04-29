@@ -18,40 +18,180 @@ msgstr ""
 msgid "Sistema de Control de lectura para alumnos"
 msgstr ""
 
-#: FMain.form:31
+#: FMain.form:32
 msgid "Leones"
 msgstr ""
 
-#: FMain.form:38
+#: FMain.form:39
 msgid "Label2"
 msgstr ""
 
-#: FMain.form:44
+#: FMain.form:45
 msgid "Sistema para el control de lectura de alumnos."
 msgstr ""
 
-#: FMain.form:50
+#: FMain.form:51
 msgid "Entrar"
 msgstr ""
 
-#: FMain.form:56
+#: FMain.form:57
 msgid "Control de Acceso"
 msgstr ""
 
-#: FMain.form:62
+#: FMain.form:63
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMain.form:67
+#: FMain.form:68
 msgid "Usuario:"
 msgstr ""
 
-#: FMain.form:73 FormRegistro.form:26
+#: FMain.form:74 FormRegistro.form:26
 msgid "Contraseña:"
 msgstr ""
 
 #: FMain.class:11
 msgid "Version"
+msgstr ""
+
+#: FormConfigurarTest.form:38
+msgid ""
+"Había en un pueblo un molinero que medía el trigo que compraba con una "
+"medida que cabía un celemín, pero que era un poco mayor de la medida justa, "
+"y con eso les robaba un poco de trigo a los vendedores en cada medida.\n"
+"\n"
+"Y tenía en su casa dos graneros grandes llenos completamente de trigo. Llegó "
+"el tiempo de la Pascua y se fue a confesar. Hizo un buen examen de "
+"conciencia y vio que no tenía que acusarse más que de estar midiendo el "
+"trigo con un celemín un poquito grande.\n"
+"\n"
+"Y cuando llegó en su confesión al punto en que le preguntó el señor cura:\n"
+"\n"
+"_ ¿Has hurtado alguna vez?\n"
+"\n"
+"Dijo el molinero.\n"
+"\n"
+"--Yo, nunca. Lo único que hago es que tengo un celemín un poco grande y como "
+"compro trigo, pues en cada medida me queda un poco de ventaja.\n"
+"\n"
+"--Pues eso es hurtar. Y como todo lo que es hurto hay que restituirlo, y no "
+"vas a saber ni cuánto ni a quién se lo has de devolver, te vas a hacer otro "
+"celemín que le falte para la medida justa tanto como le sobraba al grande, y "
+"con eso vendrás a restituir todo lo que has hurtado.\n"
+"\n"
+"El molinero prometió hacerlo así, le absolvió el señor cura, y al día "
+"siguiente ya se había hecho un celemín más pequeño.\n"
+"\n"
+"Conque le llevó trigo un vendedor, se lo midió con el celemín nuevo, y se lo "
+"tuvo que pagar un poco más caro, porque había subido el precio del trigo.\n"
+"\n"
+"Vino otro vendedor, también se lo midió con el celemín nuevo y se lo tuvo "
+"que pagar más caro, porque había subido otro poco más.\n"
+"\n"
+"Y al año siguiente, cuando se volvió a confesar, le dijo el señor cura:\n"
+"\n"
+"--¿Te hiciste el celemín más pequeño?\n"
+"\n"
+"--Sí, señor, al otro día de confesarme hice un celemín más pequeño.\n"
+"\n"
+"--¿Y lo has empleado todo el año?\n"
+"\n"
+"--Sí, señor: pero lo que pasa es que después de comprar el trigo a dos que "
+"me lo vinieron a vender, como el trigo estaba cada día más caro, pensé que "
+"me convenía vender todo el trigo, y lo he vendido todo con el celemín "
+"pequeño."
+msgstr ""
+
+#: FormConfigurarTest.form:54
+msgid "Tiempo"
+msgstr ""
+
+#: FormConfigurarTest.form:58
+msgid "Tiempo de Lectura:"
+msgstr ""
+
+#: FormConfigurarTest.form:68
+msgid "segundos"
+msgstr ""
+
+#: FormConfigurarTest.form:74
+msgid "Colores"
+msgstr ""
+
+#: FormConfigurarTest.form:87
+msgid "Color Texto:"
+msgstr ""
+
+#: FormConfigurarTest.form:93
+msgid "Color Fondo:"
+msgstr ""
+
+#: FormConfigurarTest.form:105
+msgid "Haga dobleclick en alguna palabra para contar"
+msgstr ""
+
+#: FormConfigurarTest.form:120
+msgid "Salir sin guardar cambios"
+msgstr ""
+
+#: FormConfigurarTest.form:121
+msgid "Salir"
+msgstr ""
+
+#: FormConfigurarTest.form:133
+msgid "Guardar configuración y salir"
+msgstr ""
+
+#: FormConfigurarTest.form:134
+msgid "Guardar y Salir"
+msgstr ""
+
+#: FormConfigurarTest.class:5
+msgid "Configuración"
+msgstr ""
+
+#: FormConfigurarTest.class:60
+msgid "Palabras leidas"
+msgstr ""
+
+#: FormLectura.form:25
+msgid "Fin Prueba"
+msgstr ""
+
+#: FormLectura.form:38
+msgid "Tiempo restante....."
+msgstr ""
+
+#: FormLectura.form:43
+msgid "Grabar Locución"
+msgstr ""
+
+#: FormPrincipal.form:24
+msgid "Configuración Test"
+msgstr ""
+
+#: FormPrincipal.form:30
+msgid "Probar  lectura"
+msgstr ""
+
+#: FormPrincipal.form:36
+msgid "Agregar Lectura"
+msgstr ""
+
+#: FormPrincipal.form:55
+msgid "Lecturas Disponibles"
+msgstr ""
+
+#: FormPrincipal.class:45
+msgid "Puntuación"
+msgstr ""
+
+#: FormPrincipal.class:53
+msgid "Acción"
+msgstr ""
+
+#: FormPrincipal.class:67
+msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
 #: FormRegistro.form:20

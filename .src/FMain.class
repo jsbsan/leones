@@ -12,8 +12,18 @@ Public Sub Form_Open()
   
 End
 
-Public Sub Button3_Click()
+Public Sub ButtonNuevoUsuario_Click()
   
   FormRegistro.ShowDialog()
+  
+End
+
+Public Sub ButtonEntrar_Click()
+  
+  'comprobar datos
+  '
+  'si ok, entonces mostrar siguiente formulario
+  
+  FormPrincipal.ShowDialog()
   
 End

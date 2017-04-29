@@ -1,0 +1,58 @@
+' Gambas module file
+
+''copiar ficheros de texto a adirectorio 
+
+Public Sub copiarLecturas()
+  
+  copia_dir("./LEONES-lecturas", User.Home & "/.leones", "*")
+  
+End
+
+Public Sub copia_dir(path_origen As String, path_destino As String, Optional tipo As String)
+  
+  Dim arDir As String[]
+  Dim arFile As String[]
+  Dim nombredir, nombrefile As String
+  
+  If Not tipo Then tipo = "*"
+  If Not Exist(path_destino) Then
+    Mkdir path_destino
+  Endif
+  arfile = Dir(path_origen, tipo, gb.file)  'extraemos los ficheros
+  For Each nombrefile In arfile  'los copiamos
+    Try Copy path_origen &/ nombrefile To path_destino &/ nombrefile
+    
+  Next
+  ardir = Dir(path_origen, "*", gb.Directory) 
+  For Each nombredir In arDir 'extraemos los subdirectorios
+    copia_dir(path_origen &/ nombredir, path_destino &/ nombredir) 'usamos la recursividad
+  Next
+  
+End
+
+''contar palabras de un texto dado y posicion dada...
+
+Public Function contarPalabras(texto As String, posicion As Integer) As Integer
+  
+  Dim n As String
+  Dim totalpalabras As Integer
+  Dim textoAcontar As String
+  
+  textoAcontar = String.Mid$(texto, 1, posicion)
+  
+  'quito caracteres que pueden aumentar el numero de palabras artificialmente...
+  textoAcontar = Replace$(textoAcontar, ".", "")
+  textoAcontar = Replace$(textoAcontar, ",", "")
+  textoAcontar = Replace$(textoAcontar, "-", "")
+  textoAcontar = Replace$(textoAcontar, "_", "")
+  textoAcontar = Replace$(textoAcontar, ":", "")
+  textoAcontar = Replace$(textoAcontar, ";", "")
+  
+  File.Save("/tmp/palabras.txt", textoAcontar)
+  Wait 0.01
+  
+  Shell "wc -w /tmp/palabras.txt" To n
+  totalpalabras = Val(Replace(n, "/tmp/palabras.txt", ""))
+  Return totalpalabras
+  
+End
