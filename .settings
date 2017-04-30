@@ -25,8 +25,10 @@ File[13]=".src/FormConfigurarTest.class:20.2"
 File[14]=".src/FormLectura.form"
 File[15]="Stop.png"
 Active=16
-File[16]=".src/FormLectura.class:31.0"
-Count=16
+File[16]=".src/FormLectura.class:131.31"
+File[17]=".src/FormResultados.class:9.19"
+File[18]=".src/FormResultados.form"
+Count=18
 
 [Watches]
 Count=1

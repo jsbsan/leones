@@ -10,14 +10,15 @@ Public Sub Form_Open()
   'leo configuracion...
   ColorButtonColorFondo.Value = Settings["colorfondo", Color.Black] 
   ColorButtonColorTexto.Value = Settings["colorletra", Color.White]
-  FontChooserTipoLetra.Value = Settings["TipoLetra", "Sans Serif"]  
+  FontChooserTipoLetra.Value = Settings["TipoLetra", "Serif,+8"]  
+  CheckBoxGrabarLocucion.Value = Settings["GrabarLocucion", False] 
   
   'actualizo valores del textarea
   TextArea1.Background = ColorButtonColorFondo.Value
   TextArea1.Foreground = ColorButtonColorTexto.Value
   TextArea1.font = Font[FontChooserTipoLetra.Value]
   
-  ValueBoxTiempo.value = Settings["tiempo", 90] 
+  ValueBoxTiempo.value = Settings["tiempo", 90]
   
   TextArea1.Pos = 1
   
@@ -68,7 +69,7 @@ Public Sub ButtonGuardarYSalir_Click()
   Settings["colorletra"] = ColorButtonColorTexto.Value
   Settings["tiempo"] = ValueBoxTiempo
   Settings["TipoLetra"] = FontChooserTipoLetra.Value
-  
+  Settings["GrabarLocucion"] = CheckBoxGrabarLocucion.Value
   Me.Close()
   
 End

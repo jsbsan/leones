@@ -1,35 +1,85 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,91,64)
-  { TextArea1 TextArea
-    MoveScaled(1,11,43,47)
-    Wrap = True
-  }
-  { Panel1 Panel
-    MoveScaled(55,4,31,57)
-    { ButtonParada Button
-      MoveScaled(2,41,28,8)
-      Text = ("Fin Prueba")
-      Picture = Picture["Stop.png"]
-    }
-    { LabelTiempo Label
-      MoveScaled(9,6,14,9)
-      Font = Font["+4"]
-      Alignment = Align.Center
-      Border = Border.Plain
-    }
-    { Label2 Label
-      MoveScaled(7,1,20,5)
-      Text = ("Tiempo restante.....")
-    }
-    { ButtonParada2 Button
-      MoveScaled(2,19,28,8)
-      Text = ("Grabar Locución")
-      Picture = Picture["iconosonido32.png"]
-    }
-  }
+  MoveScaled(0,0,105,92)
+  Arrangement = Arrange.Fill
   { Timer1 #Timer
     #MoveScaled(41,2)
+  }
+  { LabelCuentaAtras Label
+    MoveScaled(21,21,46,38)
+    Font = Font["+22"]
+    Background = &H4F9F9F&
+    Expand = True
+    Text = ("10")
+    Alignment = Align.Center
+  }
+  { TimerCuentaAtrasInicial #Timer
+    #MoveScaled(3,1)
+  }
+  { PanelPrincipal Panel
+    MoveScaled(0,2,92,85)
+    Arrangement = Arrange.Vertical
+    { TextArea1 TextArea
+      MoveScaled(-21,15,43,47)
+      Expand = True
+      ReadOnly = True
+      Wrap = True
+    }
+    { Panel1 Panel
+      MoveScaled(0,64,89,18)
+      Arrangement = Arrange.Horizontal
+      { Frame1 Frame
+        MoveScaled(1,1,24,17)
+        Text = ("Tiempo Restante....")
+        { LabelTiempo Label
+          MoveScaled(1,2,19,14)
+          Font = Font["+17"]
+          Alignment = Align.Center
+          Border = Border.Plain
+        }
+      }
+      { Panel5 Panel
+        MoveScaled(26,5,5,5)
+        Expand = True
+      }
+      { ButtonParada Button
+        MoveScaled(27,8,23,8)
+        Text = ("Fin Prueba")
+        Picture = Picture["Stop.png"]
+      }
+      { Panel3 Panel
+        MoveScaled(44,3,6,9)
+        Expand = True
+      }
+      { TextLabel1 TextLabel
+        MoveScaled(48,6,30,8)
+        Text = ("Pulse la tecla Enter o Return para contar errores de lectura")
+        Alignment = Align.Center
+      }
+      { Panel2 Panel
+        MoveScaled(51,-91,5,5)
+      }
+      { Panel4 Panel
+        MoveScaled(63,5,5,8)
+        Expand = True
+      }
+      { Panel6 Panel
+        MoveScaled(73,1,15,16)
+        Arrangement = Arrange.Vertical
+        { ButtonReiniciarPrueba Button
+          MoveScaled(2,1,14,10)
+          Expand = True
+          Text = ("Repetir")
+          Picture = Picture["repetir40x40.png"]
+        }
+        { ButtonSalir Button
+          MoveScaled(0,8,14,10)
+          Expand = True
+          Text = ("Salir")
+          Picture = Picture["icon:/32/quit"]
+        }
+      }
+    }
   }
 }

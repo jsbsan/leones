@@ -1,0 +1,73 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,64,29)
+  { Label1 Label
+    MoveScaled(11,1,19,7)
+    Text = ("Tiempo de lectura:")
+    Alignment = Align.Right
+  }
+  { Label2 Label
+    MoveScaled(11,9,19,6)
+    Text = ("Palabras leidas:")
+    Alignment = Align.Right
+  }
+  { Label3 Label
+    MoveScaled(9,17,21,6)
+    Text = ("Errores Cometidos:")
+    Alignment = Align.Right
+  }
+  { Label4 Label
+    MoveScaled(2,24,29,5)
+    Font = Font["Bold,+2"]
+    Text = ("Puntuación Obtenida:")
+    Alignment = Align.Right
+  }
+  { ButtonSalir Button
+    MoveScaled(55,22,8,6)
+    Text = ("Salir")
+    Picture = Picture["icon:/16/quit"]
+  }
+  { TextLabelResultado TextLabel
+    MoveScaled(33,24,12,5)
+    Font = Font["Bold,+2"]
+    Text = ("TextLabel1")
+    Alignment = Align.Center
+  }
+  { PictureBox1 PictureBox
+    MoveScaled(2,0,7,8)
+    Picture = Picture["reloj40x40.png"]
+    Stretch = True
+  }
+  { PictureBox2 PictureBox
+    MoveScaled(2,9,7,7)
+    Picture = Picture["icon:/48/text-italic"]
+    Stretch = True
+  }
+  { PictureBox3 PictureBox
+    MoveScaled(2,17,7,7)
+    Picture = Picture["icon:/48/error"]
+    Stretch = True
+  }
+  { TextLabeltiempo TextLabel
+    MoveScaled(33,1,12,6)
+    Font = Font["Bold,+2"]
+    Text = ("TextLabel1")
+    Alignment = Align.Center
+  }
+  { TextLabelPalabrasLeidas TextLabel
+    MoveScaled(33,9,12,6)
+    Font = Font["Bold,+2"]
+    Text = ("TextLabel1")
+    Alignment = Align.Center
+  }
+  { TextLabelErrores TextLabel
+    MoveScaled(33,17,12,6)
+    Font = Font["Bold,+2"]
+    Text = ("TextLabel1")
+    Alignment = Align.Center
+  }
+  { Separator1 Separator
+    MoveScaled(-1,23,53,2)
+  }
+}

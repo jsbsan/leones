@@ -1,10 +1,18 @@
 ' Gambas class file
 
-Public fichero As String 'nombre del fichero de lectura...
+Public ficheroTexto As String 'texto del fichero seleccionado....que me lo tiene que pasar el formulario anterior...
 Public tiempoPrueba As Integer
+Private SumandoErrores As Integer = 0
+Private cuentaAtras As Integer
+Private tiempoPruebaInicial As Integer
+Private TiempoFinal As Integer
+Private pruebafinalizada As Boolean
 
 Public Sub Form_Open()
   
+  PanelPrincipal.Visible = False
+  
+  LabelCuentaAtras.Visible = True
   Me.Center()
   
   'leer datos de la configuracion...
@@ -12,15 +20,19 @@ Public Sub Form_Open()
   'leo configuracion...
   
   TextArea1.Background = Settings["colorfondo", Color.Black] 
-  TextArea1.Foreground = 
-    TextArea1.font = Font[Settings["TipoLetra", "Sans Serif"]]
+  TextArea1.Foreground = Settings["colorletra", Color.White]
+  TextArea1.font = Font[Settings["TipoLetra", "Serif,+8"]]
   
-  Timer1.Delay = 1000
+  TextArea1.text = ficheroTexto 'que me pases el texto... leñe!!!
+  
   tiempoPrueba = Settings["tiempo", 90] 
   
+  tiempoPruebaInicial = tiempoPrueba
   LabelTiempo.text = tiempoPrueba
   
-  Timer1.Start()
+  Timer1.Delay = 1000
+  iniciaCuentaAtras()
+  pruebafinalizada = False 'no se ha terminado la prueba
   
 End
 
@@ -31,9 +43,92 @@ Public Sub Timer1_Timer()
   LabelTiempo.text = tiempoPrueba
   
   If tiempoPrueba <= 0 Then 
-    Message.Info("Seleccione palabra donde se quedo en la lectura")
+    pruebafinalizada = True
     Timer1.Stop()
+    Message.Info("Seleccione palabra donde se quedo en la lectura")
     
   Endif
+  
+End
+
+Public Sub Form_KeyRelease()
+  
+  If Key.code = Key.enter Or Key.code = Key.Return Then 
+    SumandoErrores += 1
+    
+    Print SumandoErrores
+  Endif
+  
+End
+
+Public Sub iniciaCuentaAtras()
+  
+  cuentaAtras = 10
+  TimerCuentaAtrasInicial.Start()
+  
+End
+
+Public Sub TimerCuentaAtrasInicial_Timer()
+  
+  cuentaAtras -= 1
+  LabelCuentaAtras.text = Str$(cuentaAtras)
+  If cuentaAtras = -1 Then 
+    LabelCuentaAtras.Visible = False
+    PanelPrincipal.Visible = True
+    
+    LabelCuentaAtras.Visible = False
+    
+    Timer1.Start()
+    TimerCuentaAtrasInicial.Stop()
+  Endif
+  
+End
+
+Public Sub ButtonParada_Click() ''parada forzada por profesor. El alumno termino la lectura antes de que acabase el tiempo
+  
+  pruebafinalizada = True 'he finalizado la prueba.... pedir palabra y pasar al calculo!!!
+  
+  TiempoFinal = tiempoPruebaInicial - tiempoPrueba
+  Timer1.Stop()
+  
+  Message.Info("Seleccione palabra donde se quedo en la lectura")
+  
+End
+
+Public Sub TextArea1_DblClick()
+  
+  Dim numeropalabras As Integer
+  Dim textoAcontar As String
+  Dim misDatosPruebas As New ClassDatosPruebas
+  
+  If pruebafinalizada = True Then 
+    
+    numeropalabras = ModuleComun.contarPalabras(textArea1.text, TextArea1.pos)
+    Print "Numero de palabras: ", numeropalabras
+    
+    'mis Datos de la prueba
+    misDatosPruebas.errores = SumandoErrores
+    misDatosPruebas.palabrasleidas = numeropalabras
+    misDatosPruebas.tiempo = TiempoFinal
+    
+    'mostrar informacion sobre el resultado....
+    FormResultados.DatosPruebas = misDatosPruebas
+    FormResultados.ShowDialog()
+    
+    ''TODO: habria que preguntar por si graba los resultados de la prueba,,,,
+    
+  Endif
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub ButtonReiniciarPrueba_Click()
+  
+  ''TODO: repetir la prueba....
   
 End

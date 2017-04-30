@@ -20,7 +20,12 @@ Public Sub copia_dir(path_origen As String, path_destino As String, Optional tip
   Endif
   arfile = Dir(path_origen, tipo, gb.file)  'extraemos los ficheros
   For Each nombrefile In arfile  'los copiamos
-    Try Copy path_origen &/ nombrefile To path_destino &/ nombrefile
+    If Exist(path_destino &/ nombrefile) Then 
+      'no copio
+    Else
+      'lo copio
+      Try Copy path_origen &/ nombrefile To path_destino &/ nombrefile
+    Endif
     
   Next
   ardir = Dir(path_origen, "*", gb.Directory) 

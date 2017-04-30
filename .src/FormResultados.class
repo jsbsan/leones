@@ -1,0 +1,30 @@
+' Gambas class file
+
+Public DatosPruebas As ClassDatosPruebas
+
+Public Sub Form_Open()
+  
+  Me.text = ("Datos de la prueba de lectura")
+  Me.Center()
+  
+  TextLabeltiempo.text = Str$(DatosPruebas.tiempo)
+  TextLabelPalabrasLeidas.text = Str$(DatosPruebas.palabrasleidas)
+  TextLabelErrores.text = Str$(DatosPruebas.errores)
+  
+  DatosPruebas.puntuacion = CalculoPuntuacion(DatosPruebas.palabrasleidas, DatosPruebas.errores, DatosPruebas.tiempo)
+  
+  TextLabelResultado.text = Str$(DatosPruebas.puntuacion)
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End
+
+Public Function CalculoPuntuacion(NumeroPalabras As Integer, NumeroErrores As Integer, tiempo As Integer) As Integer
+  
+  Return (NumeroPalabras - NumeroErrores) * 60 / tiempo ''puntos Palabras/minuto y con  tiempo en segundos, 
+  
+End

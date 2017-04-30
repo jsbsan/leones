@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,106,83)
+  MoveScaled(0,0,119,83)
   Arrangement = Arrange.Horizontal
   Spacing = True
   Padding = 2
@@ -9,7 +9,7 @@
     MoveScaled(2,24,1,16)
   }
   { TextArea1 TextArea
-    MoveScaled(5,9,37,51)
+    MoveScaled(3,10,46,66)
     Expand = True
     Text = ("Había en un pueblo un molinero que medía el trigo que compraba con una medida que cabía un celemín, pero que era un poco mayor de la medida justa, y con eso les robaba un poco de trigo a los vendedores en cada medida.\n\nY tenía en su casa dos graneros grandes llenos completamente de trigo. Llegó el tiempo de la Pascua y se fue a confesar. Hizo un buen examen de conciencia y vio que no tenía que acusarse más que de estar midiendo el trigo con un celemín un poquito grande.\n\nY cuando llegó en su confesión al punto en que le preguntó el señor cura:\n\n_ ¿Has hurtado alguna vez?\n\nDijo el molinero.\n\n--Yo, nunca. Lo único que hago es que tengo un celemín un poco grande y como compro trigo, pues en cada medida me queda un poco de ventaja.\n\n--Pues eso es hurtar. Y como todo lo que es hurto hay que restituirlo, y no vas a saber ni cuánto ni a quién se lo has de devolver, te vas a hacer otro celemín que le falte para la medida justa tanto como le sobraba al grande, y con eso vendrás a restituir todo lo que has hurtado.\n\nEl molinero prometió hacerlo así, le absolvió el señor cura, y al día siguiente ya se había hecho un celemín más pequeño.\n\nConque le llevó trigo un vendedor, se lo midió con el celemín nuevo, y se lo tuvo que pagar un poco más caro, porque había subido el precio del trigo.\n\nVino otro vendedor, también se lo midió con el celemín nuevo y se lo tuvo que pagar más caro, porque había subido otro poco más.\n\nY al año siguiente, cuando se volvió a confesar, le dijo el señor cura:\n\n--¿Te hiciste el celemín más pequeño?\n\n--Sí, señor, al otro día de confesarme hice un celemín más pequeño.\n\n--¿Y lo has empleado todo el año?\n\n--Sí, señor: pero lo que pasa es que después de comprar el trigo a dos que me lo vinieron a vender, como el trigo estaba cada día más caro, pensé que me convenía vender todo el trigo, y lo he vendido todo con el celemín pequeño.")
     ReadOnly = True
@@ -19,11 +19,11 @@
     MoveScaled(46,22,1,14)
   }
   { Panel1 Panel
-    MoveScaled(52,0,45,84)
+    MoveScaled(53,0,45,84)
     Expand = True
     Arrangement = Arrange.Vertical
     { FrameTiempo Frame
-      MoveScaled(1,0,43,12)
+      MoveScaled(1,0,43,9)
       Text = ("Tiempo")
       { Label1 Label
         MoveScaled(1,3,20,4)
@@ -39,7 +39,7 @@
       }
     }
     { FrameColores Frame
-      MoveScaled(1,13,43,14)
+      MoveScaled(1,9,43,14)
       Text = ("Colores")
       { ColorButtonColorFondo ColorButton
         MoveScaled(18,2,11,5)
@@ -59,8 +59,21 @@
         Alignment = Align.Right
       }
     }
+    { Frame1 Frame
+      MoveScaled(1,23,43,10)
+      Text = ("Grabar....")
+      { PictureBox1 PictureBox
+        MoveScaled(3,2,7,7)
+        Picture = Picture["microfono.png"]
+        Stretch = True
+      }
+      { CheckBoxGrabarLocucion CheckBox
+        MoveScaled(12,3,22,6)
+        Text = ("Grabar locución")
+      }
+    }
     { FontChooserTipoLetra FontChooser
-      MoveScaled(1,28,42,39)
+      MoveScaled(2,33,42,39)
     }
     { LabelPalabrasLeidas Label
       MoveScaled(1,69,42,4)

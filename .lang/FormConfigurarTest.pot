@@ -14,51 +14,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormConfigurarTest.form:38
+#: FormConfigurarTest.form:41
 msgid "Había en un pueblo un molinero que medía el trigo que compraba con una medida que cabía un celemín, pero que era un poco mayor de la medida justa, y con eso les robaba un poco de trigo a los vendedores en cada medida.\n\nY tenía en su casa dos graneros grandes llenos completamente de trigo. Llegó el tiempo de la Pascua y se fue a confesar. Hizo un buen examen de conciencia y vio que no tenía que acusarse más que de estar midiendo el trigo con un celemín un poquito grande.\n\nY cuando llegó en su confesión al punto en que le preguntó el señor cura:\n\n_ ¿Has hurtado alguna vez?\n\nDijo el molinero.\n\n--Yo, nunca. Lo único que hago es que tengo un celemín un poco grande y como compro trigo, pues en cada medida me queda un poco de ventaja.\n\n--Pues eso es hurtar. Y como todo lo que es hurto hay que restituirlo, y no vas a saber ni cuánto ni a quién se lo has de devolver, te vas a hacer otro celemín que le falte para la medida justa tanto como le sobraba al grande, y con eso vendrás a restituir todo lo que has hurtado.\n\nEl molinero prometió hacerlo así, le absolvió el señor cura, y al día siguiente ya se había hecho un celemín más pequeño.\n\nConque le llevó trigo un vendedor, se lo midió con el celemín nuevo, y se lo tuvo que pagar un poco más caro, porque había subido el precio del trigo.\n\nVino otro vendedor, también se lo midió con el celemín nuevo y se lo tuvo que pagar más caro, porque había subido otro poco más.\n\nY al año siguiente, cuando se volvió a confesar, le dijo el señor cura:\n\n--¿Te hiciste el celemín más pequeño?\n\n--Sí, señor, al otro día de confesarme hice un celemín más pequeño.\n\n--¿Y lo has empleado todo el año?\n\n--Sí, señor: pero lo que pasa es que después de comprar el trigo a dos que me lo vinieron a vender, como el trigo estaba cada día más caro, pensé que me convenía vender todo el trigo, y lo he vendido todo con el celemín pequeño."
 msgstr ""
 
-#: FormConfigurarTest.form:54
+#: FormConfigurarTest.form:57
 msgid "Tiempo"
 msgstr ""
 
-#: FormConfigurarTest.form:58
+#: FormConfigurarTest.form:61
 msgid "Tiempo de Lectura:"
 msgstr ""
 
-#: FormConfigurarTest.form:68
+#: FormConfigurarTest.form:71
 msgid "segundos"
 msgstr ""
 
-#: FormConfigurarTest.form:74
+#: FormConfigurarTest.form:77
 msgid "Colores"
 msgstr ""
 
-#: FormConfigurarTest.form:87
+#: FormConfigurarTest.form:90
 msgid "Color Texto:"
 msgstr ""
 
-#: FormConfigurarTest.form:93
+#: FormConfigurarTest.form:96
 msgid "Color Fondo:"
 msgstr ""
 
-#: FormConfigurarTest.form:105
+#: FormConfigurarTest.form:103
+msgid "Grabar...."
+msgstr ""
+
+#: FormConfigurarTest.form:113
+msgid "Grabar locución"
+msgstr ""
+
+#: FormConfigurarTest.form:124
 msgid "Haga dobleclick en alguna palabra para contar"
 msgstr ""
 
-#: FormConfigurarTest.form:120
+#: FormConfigurarTest.form:139
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:121
+#: FormConfigurarTest.form:140
 msgid "Salir"
 msgstr ""
 
-#: FormConfigurarTest.form:133
+#: FormConfigurarTest.form:152
 msgid "Guardar configuración y salir"
 msgstr ""
 
-#: FormConfigurarTest.form:134
+#: FormConfigurarTest.form:153
 msgid "Guardar y Salir"
 msgstr ""
 
@@ -66,7 +74,7 @@ msgstr ""
 msgid "Configuración"
 msgstr ""
 
-#: FormConfigurarTest.class:60
+#: FormConfigurarTest.class:61
 msgid "Palabras leidas"
 msgstr ""
 
