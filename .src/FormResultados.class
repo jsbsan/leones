@@ -14,6 +14,7 @@ Public Sub Form_Open()
   DatosPruebas.puntuacion = CalculoPuntuacion(DatosPruebas.palabrasleidas, DatosPruebas.errores, DatosPruebas.tiempo)
   
   TextLabelResultado.text = Str$(DatosPruebas.puntuacion)
+  DatosPruebas.fecha = Now 'se guarda la fecha de la prueba
   
 End
 

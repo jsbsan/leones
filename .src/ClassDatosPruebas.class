@@ -4,3 +4,4 @@ Public tiempo As Integer
 Public palabrasleidas As Integer
 Public errores As Integer
 Public puntuacion As Integer
+Public fecha As Date

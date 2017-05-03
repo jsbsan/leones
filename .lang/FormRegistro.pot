@@ -14,35 +14,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormRegistro.form:20
+#: FormRegistro.form:24
 msgid "Nombre de usuario:"
 msgstr ""
 
-#: FormRegistro.form:26
+#: FormRegistro.form:30
 msgid "Contraseña:"
 msgstr ""
 
-#: FormRegistro.form:32
+#: FormRegistro.form:36
 msgid "Repite Contraseña:"
 msgstr ""
 
-#: FormRegistro.form:52
-msgid "alumno"
+#: FormRegistro.form:56
+msgid "Alumno"
 msgstr ""
 
-#: FormRegistro.form:52
-msgid "profesor"
+#: FormRegistro.form:56
+msgid "Profesor"
 msgstr ""
 
-#: FormRegistro.form:58
+#: FormRegistro.form:61
 msgid "Crear"
 msgstr ""
 
-#: FormRegistro.form:64
+#: FormRegistro.form:67
 msgid "Tipo:"
 msgstr ""
 
-#: FormRegistro.form:70
+#: FormRegistro.form:73
 msgid "Cancelar"
+msgstr ""
+
+#: FormRegistro.form:79
+msgid "Nivel/Grado:"
+msgstr ""
+
+#: FormRegistro.form:90
+msgid "Clase:"
 msgstr ""
 

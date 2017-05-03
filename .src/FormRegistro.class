@@ -8,6 +8,11 @@ Public Sub Form_Open()
   
   Me.Center
   
+  'cargar Niveles y Grado
+  ComboBoxNivelGrado.list = ModuleComun.NivelesGrado()
+  'la clase se debe de cargar
+  ComboBoxClase.list = ModuleComun.Clases()
+  
 End
 
 Public Sub ButtonCrear_Click()
@@ -22,5 +27,17 @@ Public Sub ButtonCancelar_Click()
   
   'cancela la insercion de nueva persona
   Me.Close()
+  
+End
+
+Public Sub ComboBoxTipoProfesorAlumnos_Leave()
+  
+  If ComboBoxTipoProfesorAlumnos.text = ("Profesor") Then 
+    ComboBoxNivelGrado.enabled = False
+    ComboBoxClase.Enabled = False
+  Else
+    ComboBoxNivelGrado.enabled = True
+    ComboBoxClase.Enabled = True
+  Endif
   
 End

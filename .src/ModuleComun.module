@@ -1,5 +1,17 @@
 ' Gambas module file
 
+Public Function NivelesGrado() As String[]
+  
+  Return Split(File.Load("./NivelesGrados.txt"), "\n")
+  
+End
+
+Public Function Clases() As String[]
+  
+  Return Split(File.Load("./Clases.txt"), "\n")
+  
+End
+
 ''copiar ficheros de texto a adirectorio 
 
 Public Sub copiarLecturas()

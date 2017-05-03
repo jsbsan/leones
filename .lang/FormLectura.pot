@@ -30,11 +30,11 @@ msgstr ""
 msgid "Pulse la tecla Enter o Return para contar errores de lectura"
 msgstr ""
 
-#: FormLectura.form:105
+#: FormLectura.form:106
 msgid "Repetir"
 msgstr ""
 
-#: FormLectura.form:111
+#: FormLectura.form:113
 msgid "Salir"
 msgstr ""
 

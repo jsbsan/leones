@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,67,24)
+  MoveScaled(0,0,70,39)
   { TextLabel1 TextLabel
     MoveScaled(-4,1,26,4)
     Text = ("Nombre de usuario:")
@@ -18,7 +18,7 @@
     Alignment = Align.Right
   }
   { TextBoxNombre TextBox
-    MoveScaled(23,1,40,4)
+    MoveScaled(23,1,41,4)
   }
   { TextBoxContrasena TextBox
     MoveScaled(23,7,21,4)
@@ -27,25 +27,42 @@
     MoveScaled(23,13,21,4)
     Password = True
   }
-  { ComboBox1 ComboBox
-    MoveScaled(23,18,21,4)
+  { ComboBoxTipoProfesorAlumnos ComboBox
+    MoveScaled(23,19,21,4)
     ReadOnly = True
-    List = [("alumno"), ("profesor")]
-    Text = ("alumno")
+    List = [("Alumno"), ("Profesor")]
   }
   { ButtonCrear Button
-    MoveScaled(49,7,15,8)
+    MoveScaled(49,13,15,8)
     Text = ("Crear")
     Picture = Picture["icon:/32/people"]
   }
   { Label1 Label
-    MoveScaled(5,18,17,4)
+    MoveScaled(5,19,17,4)
     Text = ("Tipo:")
     Alignment = Align.Right
   }
   { ButtonCancelar Button
-    MoveScaled(49,16,15,8)
+    MoveScaled(49,26,15,8)
     Text = ("Cancelar")
     Picture = Picture["icon:/32/cancel"]
+  }
+  { Label2 Label
+    MoveScaled(5,25,17,4)
+    Text = ("Nivel/Grado:")
+    Alignment = Align.Right
+  }
+  { ComboBoxNivelGrado ComboBox
+    MoveScaled(23,25,21,4)
+    ReadOnly = True
+  }
+  { Label3 Label
+    MoveScaled(5,31,17,4)
+    Text = ("Clase:")
+    Alignment = Align.Right
+  }
+  { ComboBoxClase ComboBox
+    MoveScaled(23,31,21,4)
+    ReadOnly = True
   }
 }

@@ -1,10 +1,10 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,109,70)
+  MoveScaled(0,0,115,72)
   Arrangement = Arrange.Vertical
   { HBox1 HBox
-    MoveScaled(2,0,94,9)
+    MoveScaled(0,0,108,9)
     Spacing = True
     { ButtonConfigurar Button
       MoveScaled(4,0,27,8)
@@ -22,33 +22,44 @@
       Picture = Picture["icon:/32/add"]
     }
   }
-  { HPanel1 Panel
-    MoveScaled(-1,9,106,61)
-    Background = &H4F4F9F&
+  { TabStripVarias TabStrip
+    MoveScaled(-2,10,115,61)
     Expand = True
-    Arrangement = Arrange.Vertical
-    { PanelTexto Panel
-      MoveScaled(1,0,95,6)
-      Background = &H279F9F&
-      Arrangement = Arrange.Fill
-      { Label1 Label
-        MoveScaled(0,0,41,4)
-        Expand = True
-        Text = ("Lecturas Disponibles")
-        Alignment = Align.Center
-        Border = Border.Plain
-      }
-    }
-    { Panel1 Panel
-      MoveScaled(6,11,53,41)
+    Arrangement = Arrange.Fill
+    Count = 2
+    Index = 0
+    Text = ("Lecturas")
+    { HPanel1 Panel
+      MoveScaled(6,0,82,60)
+      Background = &H4F4F9F&
       Expand = True
-      Arrangement = Arrange.Fill
-      AutoResize = True
-      { ScrollViewDatosFicheros ScrollView
-        MoveScaled(7,4,35,34)
-        Background = &HFFFFFF&
-        Arrangement = Arrange.Vertical
+      Arrangement = Arrange.Vertical
+      { PanelTexto Panel
+        MoveScaled(4,3,95,6)
+        Background = &H279F9F&
+        Arrangement = Arrange.Fill
+        { Label1 Label
+          MoveScaled(0,0,41,4)
+          Expand = True
+          Text = ("Lecturas Disponibles")
+          Alignment = Align.Center
+          Border = Border.Plain
+        }
+      }
+      { Panel1 Panel
+        MoveScaled(7,9,53,41)
+        Expand = True
+        Arrangement = Arrange.Fill
+        AutoResize = True
+        { ScrollViewDatosFicheros ScrollView
+          MoveScaled(7,4,35,34)
+          Background = &HFFFFFF&
+          Arrangement = Arrange.Vertical
+        }
       }
     }
+    Index = 1
+    Text = ("Alumnos")
+    Index = 0
   }
 }
