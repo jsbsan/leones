@@ -14,28 +14,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormPrincipal.form:25
+#: FormPrincipal.form:35
 msgid "Configuración Test"
 msgstr ""
 
-#: FormPrincipal.form:31
+#: FormPrincipal.form:41
 msgid "Estadisticas e informes"
 msgstr ""
 
-#: FormPrincipal.form:37
+#: FormPrincipal.form:47
 msgid "Agregar Lectura"
 msgstr ""
 
-#: FormPrincipal.form:48
+#: FormPrincipal.form:59
 msgid "Lecturas"
 msgstr ""
 
-#: FormPrincipal.form:64
+#: FormPrincipal.form:76
 msgid "Lecturas Disponibles"
 msgstr ""
 
-#: FormPrincipal.form:84
+#: FormPrincipal.form:96
 msgid "Alumnos"
+msgstr ""
+
+#: FormPrincipal.form:112
+msgid "Estadísticas"
+msgstr ""
+
+#: FormPrincipal.form:118
+msgid "Exportar datos de alumnos"
+msgstr ""
+
+#: FormPrincipal.form:123
+msgid "Importar datos de alumnos"
 msgstr ""
 
 #: FormPrincipal.class:45

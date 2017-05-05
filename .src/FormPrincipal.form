@@ -2,10 +2,13 @@
 
 { Form Form
   MoveScaled(0,0,115,72)
+  Icon = Picture["LectorIcono.png"]
   Arrangement = Arrange.Vertical
   { HBox1 HBox
     MoveScaled(0,0,108,9)
     Spacing = True
+    Margin = True
+    Padding = 3
     { ButtonConfigurar Button
       MoveScaled(4,0,27,8)
       Text = ("Configuración Test")
@@ -23,12 +26,14 @@
     }
   }
   { TabStripVarias TabStrip
-    MoveScaled(-2,10,115,61)
+    MoveScaled(2,11,115,61)
+    Font = Font["+3"]
     Expand = True
     Arrangement = Arrange.Fill
     Count = 2
     Index = 0
     Text = ("Lecturas")
+    Picture = Picture["icon:/32/font"]
     { HPanel1 Panel
       MoveScaled(6,0,82,60)
       Background = &H4F4F9F&
@@ -60,6 +65,40 @@
     }
     Index = 1
     Text = ("Alumnos")
+    Picture = Picture["icon:/32/people"]
+    { Panel4 Panel
+      MoveScaled(2,3,108,54)
+      Arrangement = Arrange.Vertical
+      { Panel2 Panel
+        MoveScaled(1,0,106,8)
+        Spacing = True
+        Margin = True
+        Padding = 3
+        Border = Border.Plain
+        { Button1 Button
+          MoveScaled(75,1,26,6)
+          Text = ("Estadísticas")
+          Picture = Picture["estadisticas40x40.png"]
+        }
+        { ButtonImportar2 Button
+          MoveScaled(38,1,36,6)
+          Text = ("Exportar datos de alumnos")
+        }
+        { ButtonImportar Button
+          MoveScaled(1,1,36,6)
+          Text = ("Importar datos de alumnos")
+        }
+      }
+      { Panel3 Panel
+        MoveScaled(5,11,82,13)
+        Expand = True
+        Arrangement = Arrange.Fill
+        { GridViewDatosAlumnos GridView
+          MoveScaled(1,1,36,6)
+          Expand = True
+        }
+      }
+    }
     Index = 0
   }
 }
