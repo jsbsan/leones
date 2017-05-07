@@ -1,0 +1,134 @@
+PROPERTY idprueba AS Integer 
+PRIVATE hidprueba AS Integer
+
+PROPERTY idpersona AS INTEGER 
+PRIVATE hidpersona AS INTEGER
+
+PROPERTY textolectura AS String 
+PRIVATE htextolectura AS String
+
+PROPERTY puntuacion AS INTEGER 
+PRIVATE hpuntuacion AS INTEGER
+
+PROPERTY fecha AS Date 
+PRIVATE hfecha AS Date
+
+PROPERTY archivosonido AS String 
+PRIVATE harchivosonido AS String
+
+PROPERTY campo AS string[] 
+PRIVATE hcampo AS new string[]
+
+PROPERTY campotipo AS string[] 
+PRIVATE hcampotipo AS new string[]
+
+PROPERTY campovisible AS string[] 
+PRIVATE hcampovisible AS new string[]
+
+PRIVATE FUNCTION idprueba_read() AS Integer
+ RETURN hidprueba 
+END 
+ 
+PRIVATE SUB idprueba_write(Valor AS Integer)
+ hidprueba= Valor 
+END  
+ 
+PRIVATE FUNCTION idpersona_read() AS INTEGER
+ RETURN hidpersona 
+END 
+ 
+PRIVATE SUB idpersona_write(Valor AS INTEGER)
+ hidpersona= Valor 
+END  
+ 
+PRIVATE FUNCTION textolectura_read() AS String
+ RETURN htextolectura 
+END 
+ 
+PRIVATE SUB textolectura_write(Valor AS String)
+ htextolectura= Valor 
+END  
+ 
+PRIVATE FUNCTION puntuacion_read() AS INTEGER
+ RETURN hpuntuacion 
+END 
+ 
+PRIVATE SUB puntuacion_write(Valor AS INTEGER)
+ hpuntuacion= Valor 
+END  
+ 
+PRIVATE FUNCTION fecha_read() AS Date
+ RETURN hfecha 
+END 
+ 
+PRIVATE SUB fecha_write(Valor AS Date)
+ hfecha= Valor 
+END  
+ 
+PRIVATE FUNCTION archivosonido_read() AS String
+ RETURN harchivosonido 
+END 
+ 
+PRIVATE SUB archivosonido_write(Valor AS String)
+ harchivosonido= Valor 
+END  
+ 
+PRIVATE FUNCTION campo_read() AS string[]
+ RETURN hcampo 
+END 
+ 
+PRIVATE SUB campo_write(Valor AS string[])
+ hcampo= Valor 
+END  
+ 
+PRIVATE FUNCTION campotipo_read() AS string[]
+ RETURN hcampotipo 
+END 
+ 
+PRIVATE SUB campotipo_write(Valor AS string[])
+ hcampotipo= Valor 
+END  
+ 
+PRIVATE FUNCTION campovisible_read() AS string[]
+ RETURN hcampovisible 
+END 
+ 
+PRIVATE SUB campovisible_write(Valor AS string[])
+ hcampovisible= Valor 
+END  
+ 
+PUBLIC FUNCTION Copia(Optional dato as PruebasVO) AS PruebasVO
+Dim datoVOtmp as new PruebasVO
+Dim datoVOtmpOriginal as PruebasVO
+If isnull(dato) then
+dato=me 'se copia a si mismo
+endif
+datoVOtmp.idprueba=dato.idprueba
+datoVOtmp.idpersona=dato.idpersona
+datoVOtmp.textolectura=dato.textolectura
+datoVOtmp.puntuacion=dato.puntuacion
+datoVOtmp.fecha=dato.fecha
+datoVOtmp.archivosonido=dato.archivosonido
+return datoVOtmp
+end
+
+PUBLIC FUNCTION ConvertirVOaColeccion(dato as PruebasVO) AS collection
+Dim colecciontmp as new collection
+colecciontmp.add(dato.idprueba,"idprueba")
+colecciontmp.add(dato.idpersona,"idpersona")
+colecciontmp.add(dato.textolectura,"textolectura")
+colecciontmp.add(dato.puntuacion,"puntuacion")
+colecciontmp.add(dato.fecha,"fecha")
+colecciontmp.add(dato.archivosonido,"archivosonido")
+return colecciontmp
+end
+PUBLIC FUNCTION ConvertirColeccionaVO(dato as collection) AS PruebasVO
+Dim datoVOtmp as new PruebasVO
+try datoVOtmp.idprueba=dato["idprueba"]
+try datoVOtmp.idpersona=dato["idpersona"]
+try datoVOtmp.textolectura=dato["textolectura"]
+try datoVOtmp.puntuacion=dato["puntuacion"]
+try datoVOtmp.fecha=dato["fecha"]
+try datoVOtmp.archivosonido=dato["archivosonido"]
+return datoVOtmp
+end

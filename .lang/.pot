@@ -54,6 +54,14 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
+#: FormAutomaticoDinamico.form:34
+msgid "Aceptar"
+msgstr ""
+
+#: FormAutomaticoDinamico.form:46 FormRegistro.form:73
+msgid "Cancelar"
+msgstr ""
+
 #: FormConfigurarTest.form:41
 msgid ""
 "Había en un pueblo un molinero que medía el trigo que compraba con una "
@@ -254,10 +262,6 @@ msgstr ""
 msgid "Tipo:"
 msgstr ""
 
-#: FormRegistro.form:73
-msgid "Cancelar"
-msgstr ""
-
 #: FormRegistro.form:79
 msgid "Nivel/Grado:"
 msgstr ""
@@ -288,4 +292,64 @@ msgstr ""
 
 #: FormResultados.class:7
 msgid "Datos de la prueba de lectura"
+msgstr ""
+
+#: PersonaDAO.class:404 PruebasDAO.class:408
+msgid "idpersona"
+msgstr ""
+
+#: PersonaDAO.class:407
+msgid "nombre"
+msgstr ""
+
+#: PersonaDAO.class:410
+msgid "nivel"
+msgstr ""
+
+#: PersonaDAO.class:413
+msgid "clase"
+msgstr ""
+
+#: PersonaDAO.class:416
+msgid "password"
+msgstr ""
+
+#: PersonaDAO.class:419
+msgid "tipo"
+msgstr ""
+
+#: PersonaDAO.class:881 PruebasDAO.class:882
+msgid "No hay registro seleccionado"
+msgstr ""
+
+#: PersonaDAO.class:1034 PruebasDAO.class:1035
+msgid "INFORME"
+msgstr ""
+
+#: PersonaDAO.class:1053 PruebasDAO.class:1054
+msgid "Seleccione un registro"
+msgstr ""
+
+#: PruebasDAO.class:405
+msgid "idprueba"
+msgstr ""
+
+#: PruebasDAO.class:411
+msgid "textolectura"
+msgstr ""
+
+#: PruebasDAO.class:414
+msgid "puntuacion"
+msgstr ""
+
+#: PruebasDAO.class:417
+msgid "fecha"
+msgstr ""
+
+#: PruebasDAO.class:420
+msgid "archivosonido"
+msgstr ""
+
+#: comun.module:60
+msgid "Trazada:"
 msgstr ""

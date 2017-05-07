@@ -15,7 +15,6 @@ File[3]=".src/FMain.class:26.28"
 File[4]=".src/ExplainTextbox.class:21.2"
 File[5]=".src/FormRegistro.form"
 File[6]=".src/FormRegistro.class:39.32"
-Active=7
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
@@ -31,7 +30,10 @@ File[18]=".src/FormResultados.form"
 File[19]=".src/ClassDatosPruebas.class:7.0"
 File[20]="NivelesGrados.txt:8.13"
 File[21]="Clases.txt:6.1"
-Count=21
+File[22]=".src/modelo/modeloTabla/DAO/PersonaDAO.class:103.7"
+Active=23
+File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:104.2"
+Count=23
 
 [Watches]
 Count=1

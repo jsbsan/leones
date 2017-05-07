@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd"><svg width="10cm" height="4cm" viewBox="86 92 1950 750" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="g1"> 
+ <rect style="fill: #ffffff" x="80" y="88" width="250" height="160"/>/n<rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="80" y="88" width="250" height="160"/>
+<rect style="fill: #ffffff" x="80" y="88" width="250" height="30"/>/n<rect style="fill:#BFFF7F; fill-opacity:1; stroke-width: 2; stroke: #000000" x="80" y="88" width="250" height="30"/>
+<text font-size="16" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="90" y="113">Persona</text>/n/n<rect style="fill: #ffffff" x="80" y="120" width="250" height="20"/>/n<rect style="fill:#FFFF00; fill-opacity:1; stroke-width: 2; stroke: #000000" x="80" y="120" width="250" height="20"/>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="90" y="136">idpersona: Null</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="90" y="156">nombre: String</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="90" y="176">nivel: String</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="90" y="196">clase: String</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="90" y="216">password: String</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="90" y="236">tipo: String</text>
+
+ </g>
+<g id="g2"> 
+ <rect style="fill: #ffffff" x="340" y="88" width="250" height="160"/>/n<rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="340" y="88" width="250" height="160"/>
+<rect style="fill: #ffffff" x="340" y="88" width="250" height="30"/>/n<rect style="fill:#BFFF7F; fill-opacity:1; stroke-width: 2; stroke: #000000" x="340" y="88" width="250" height="30"/>
+<text font-size="16" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="350" y="113">Pruebas</text>/n/n<rect style="fill: #ffffff" x="340" y="120" width="250" height="20"/>/n<rect style="fill:#FFFF00; fill-opacity:1; stroke-width: 2; stroke: #000000" x="340" y="120" width="250" height="20"/>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="136">idprueba: Null</text>
+<rect style="fill: #ffffff" x="340" y="140" width="250" height="20"/>/n<rect style="fill:#FFFF00; fill-opacity:1; stroke-width: 2; stroke: #000000" x="340" y="140" width="250" height="20"/>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="156">idpersona: INTEGER</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="176">textolectura: String</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="196">puntuacion: INTEGER</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="216">fecha: Date</text>
+<text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="350" y="236">archivosonido: String</text>
+
+ </g>
+<path
+ id="path1"
+   style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+    d="M 80,120 80,120" inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:connection-start="#g1"
+    inkscape:connection-start-point="d4"
+    inkscape:connection-end="#g1"
+    inkscape:connection-end-point="d4"
+    transform="matrix(5.5033332,0,0,5.5033332,86,77.000008)" />
+<path
+ id="path2"
+   style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+    d="M 340,140 80,120" inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:connection-start="#g2"
+    inkscape:connection-start-point="d4"
+    inkscape:connection-end="#g1"
+    inkscape:connection-end-point="d4"
+    transform="matrix(5.5033332,0,0,5.5033332,86,77.000008)" />
+<path
+ id="path3"
+   style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+    d="M 340,120 340,120" inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:connection-start="#g2"
+    inkscape:connection-start-point="d4"
+    inkscape:connection-end="#g2"
+    inkscape:connection-end-point="d4"
+    transform="matrix(5.5033332,0,0,5.5033332,86,77.000008)" />
+</svg>

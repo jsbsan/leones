@@ -1,0 +1,3 @@
+CREATE TABLE persona (idpersona INTEGER PRIMARY KEY AUTOINCREMENT , nombre TEXT, nivel TEXT, clase TEXT, password TEXT, tipo TEXT)
+CREATE TABLE sqlite_sequence(name,seq)
+CREATE TABLE pruebas (idprueba INTEGER PRIMARY KEY AUTOINCREMENT , idpersona INTEGER, textolectura TEXT, puntuacion INTEGER, fecha DATETIME, archivosonido TEXT)

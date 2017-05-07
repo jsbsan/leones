@@ -1,0 +1,134 @@
+PROPERTY idpersona AS Integer 
+PRIVATE hidpersona AS Integer
+
+PROPERTY nombre AS String 
+PRIVATE hnombre AS String
+
+PROPERTY nivel AS String 
+PRIVATE hnivel AS String
+
+PROPERTY clase AS String 
+PRIVATE hclase AS String
+
+PROPERTY password AS String 
+PRIVATE hpassword AS String
+
+PROPERTY tipo AS String 
+PRIVATE htipo AS String
+
+PROPERTY campo AS string[] 
+PRIVATE hcampo AS new string[]
+
+PROPERTY campotipo AS string[] 
+PRIVATE hcampotipo AS new string[]
+
+PROPERTY campovisible AS string[] 
+PRIVATE hcampovisible AS new string[]
+
+PRIVATE FUNCTION idpersona_read() AS Integer
+ RETURN hidpersona 
+END 
+ 
+PRIVATE SUB idpersona_write(Valor AS Integer)
+ hidpersona= Valor 
+END  
+ 
+PRIVATE FUNCTION nombre_read() AS String
+ RETURN hnombre 
+END 
+ 
+PRIVATE SUB nombre_write(Valor AS String)
+ hnombre= Valor 
+END  
+ 
+PRIVATE FUNCTION nivel_read() AS String
+ RETURN hnivel 
+END 
+ 
+PRIVATE SUB nivel_write(Valor AS String)
+ hnivel= Valor 
+END  
+ 
+PRIVATE FUNCTION clase_read() AS String
+ RETURN hclase 
+END 
+ 
+PRIVATE SUB clase_write(Valor AS String)
+ hclase= Valor 
+END  
+ 
+PRIVATE FUNCTION password_read() AS String
+ RETURN hpassword 
+END 
+ 
+PRIVATE SUB password_write(Valor AS String)
+ hpassword= Valor 
+END  
+ 
+PRIVATE FUNCTION tipo_read() AS String
+ RETURN htipo 
+END 
+ 
+PRIVATE SUB tipo_write(Valor AS String)
+ htipo= Valor 
+END  
+ 
+PRIVATE FUNCTION campo_read() AS string[]
+ RETURN hcampo 
+END 
+ 
+PRIVATE SUB campo_write(Valor AS string[])
+ hcampo= Valor 
+END  
+ 
+PRIVATE FUNCTION campotipo_read() AS string[]
+ RETURN hcampotipo 
+END 
+ 
+PRIVATE SUB campotipo_write(Valor AS string[])
+ hcampotipo= Valor 
+END  
+ 
+PRIVATE FUNCTION campovisible_read() AS string[]
+ RETURN hcampovisible 
+END 
+ 
+PRIVATE SUB campovisible_write(Valor AS string[])
+ hcampovisible= Valor 
+END  
+ 
+PUBLIC FUNCTION Copia(Optional dato as PersonaVO) AS PersonaVO
+Dim datoVOtmp as new PersonaVO
+Dim datoVOtmpOriginal as PersonaVO
+If isnull(dato) then
+dato=me 'se copia a si mismo
+endif
+datoVOtmp.idpersona=dato.idpersona
+datoVOtmp.nombre=dato.nombre
+datoVOtmp.nivel=dato.nivel
+datoVOtmp.clase=dato.clase
+datoVOtmp.password=dato.password
+datoVOtmp.tipo=dato.tipo
+return datoVOtmp
+end
+
+PUBLIC FUNCTION ConvertirVOaColeccion(dato as PersonaVO) AS collection
+Dim colecciontmp as new collection
+colecciontmp.add(dato.idpersona,"idpersona")
+colecciontmp.add(dato.nombre,"nombre")
+colecciontmp.add(dato.nivel,"nivel")
+colecciontmp.add(dato.clase,"clase")
+colecciontmp.add(dato.password,"password")
+colecciontmp.add(dato.tipo,"tipo")
+return colecciontmp
+end
+PUBLIC FUNCTION ConvertirColeccionaVO(dato as collection) AS PersonaVO
+Dim datoVOtmp as new PersonaVO
+try datoVOtmp.idpersona=dato["idpersona"]
+try datoVOtmp.nombre=dato["nombre"]
+try datoVOtmp.nivel=dato["nivel"]
+try datoVOtmp.clase=dato["clase"]
+try datoVOtmp.password=dato["password"]
+try datoVOtmp.tipo=dato["tipo"]
+return datoVOtmp
+end
