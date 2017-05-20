@@ -22,6 +22,7 @@
   }
   { TextBoxContrasena TextBox
     MoveScaled(23,7,21,4)
+    Password = True
   }
   { TextBoxRepiteContrasena TextBox
     MoveScaled(23,13,21,4)
@@ -64,5 +65,9 @@
   { ComboBoxClase ComboBox
     MoveScaled(23,31,21,4)
     ReadOnly = True
+  }
+  { PictureBoxComprobarContrasena PictureBox
+    MoveScaled(44,13,4,4)
+    Stretch = True
   }
 }

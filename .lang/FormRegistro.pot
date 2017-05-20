@@ -14,43 +14,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormRegistro.form:24
+#: FormRegistro.form:25
 msgid "Nombre de usuario:"
 msgstr ""
 
-#: FormRegistro.form:30
+#: FormRegistro.form:31
 msgid "Contraseña:"
 msgstr ""
 
-#: FormRegistro.form:36
+#: FormRegistro.form:37
 msgid "Repite Contraseña:"
 msgstr ""
 
-#: FormRegistro.form:56
+#: FormRegistro.form:58
 msgid "Alumno"
 msgstr ""
 
-#: FormRegistro.form:56
+#: FormRegistro.form:58
 msgid "Profesor"
 msgstr ""
 
-#: FormRegistro.form:61
+#: FormRegistro.form:63
 msgid "Crear"
 msgstr ""
 
-#: FormRegistro.form:67
+#: FormRegistro.form:69
 msgid "Tipo:"
 msgstr ""
 
-#: FormRegistro.form:73
+#: FormRegistro.form:75
 msgid "Cancelar"
 msgstr ""
 
-#: FormRegistro.form:79
+#: FormRegistro.form:81
 msgid "Nivel/Grado:"
 msgstr ""
 
-#: FormRegistro.form:90
+#: FormRegistro.form:92
 msgid "Clase:"
+msgstr ""
+
+#: FormRegistro.class:49
+msgid "Error: no se ha introducido bien la contraseña maestra"
+msgstr ""
+
+#: FormRegistro.class:58
+msgid "Se ha creado el registro"
+msgstr ""
+
+#: FormRegistro.class:61
+msgid "Ha habido algun problema al crear el registro"
+msgstr ""
+
+#: FormRegistro.class:64
+msgid "Error: las contraseñas no son iguales"
 msgstr ""
 

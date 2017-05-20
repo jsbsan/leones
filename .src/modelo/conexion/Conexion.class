@@ -1,31 +1,38 @@
 ' Gambas class file 
+
 ''NOTE: Realizado con MapBd-Vistas. version 0.2.99920  Fecha: 2017-05-07 20:00:36
 Public hconn As New Connection 
-Public NombreBaseDatos As string= user.home & "/lecturas.sqlite"
-PUBLIC FUNCTION conexion()
-' hace la conexion a la base de datos
-dim rutabd as string
-rutabd=File.Dir(User.home & Replace(NombreBaseDatos, User.home, ""))
+Public NombreBaseDatos As String = user.home & "/" & "lecturas.sqlite" ''TODO: Cambiar ruta a .config
+
+Public Function conexion()
+  ' hace la conexion a la base de datos
+  
+  Dim rutabd As String
+  
+  rutabd = File.Dir(User.home & Replace(NombreBaseDatos, User.home, ""))
   'comprueba que exista ruta
-If Not Exist(rutabd) Then 
-Mkdir rutabd
-ENDIF
+  If Not Exist(rutabd) Then 
+    Mkdir rutabd
+  Endif
   'comprueba que exista fichero de bd
-IF NOT Exist( rutabd &/ file.name(NombreBaseDatos)) THEN 
-application.busy=1
-try COPY "lecturas.tar.gz" to rutabd &/ "lecturas.tar.gz"
-Shell "cd " & rutabd & ";tar xzvf " & rutabd  &/ "lecturas.tar.gz"
-wait 2
-try kill rutabd &/ "lecturas.tar.gz"
-application.busy=0
-ENDIF
+  If Not Exist(rutabd &/ file.name(NombreBaseDatos)) Then 
+    application.busy = 1
+    Try Copy "lecturas.tar.gz" To rutabd &/ "lecturas.tar.gz"
+    Shell "cd " & rutabd & ";tar xzvf " & rutabd &/ "lecturas.tar.gz"
+    Wait 2
+    Try Kill rutabd &/ "lecturas.tar.gz"
+    application.busy = 0
+  Endif
   hconn.Name = user.home & "/lecturas.sqlite"
   hconn.host = user.home & "/lecturas.sqlite"
-  hconn.Type ="Sqlite3"
+  hconn.Type = "Sqlite3"
   hconn.open
-RETURN 
-END
+  Return 
+  
+End
 
 Public Sub desconectar()
+  
   hconn.close()
+  
 End

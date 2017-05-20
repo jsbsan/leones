@@ -1,134 +1,179 @@
-PROPERTY idpersona AS Integer 
-PRIVATE hidpersona AS Integer
+' Gambas class file
 
-PROPERTY nombre AS String 
-PRIVATE hnombre AS String
+Property idpersona As Integer 
+Private hidpersona As Integer
 
-PROPERTY nivel AS String 
-PRIVATE hnivel AS String
+Property nombre As String 
+Private hnombre As String
 
-PROPERTY clase AS String 
-PRIVATE hclase AS String
+Property nivel As String 
+Private hnivel As String
 
-PROPERTY password AS String 
-PRIVATE hpassword AS String
+Property clase As String 
+Private hclase As String
 
-PROPERTY tipo AS String 
-PRIVATE htipo AS String
+Property password As String 
+Private hpassword As String
 
-PROPERTY campo AS string[] 
-PRIVATE hcampo AS new string[]
+Property tipo As String 
+Private htipo As String
 
-PROPERTY campotipo AS string[] 
-PRIVATE hcampotipo AS new string[]
+Property campo As String[] 
+Private hcampo As New String[]
 
-PROPERTY campovisible AS string[] 
-PRIVATE hcampovisible AS new string[]
+Property campotipo As String[] 
+Private hcampotipo As New String[]
 
-PRIVATE FUNCTION idpersona_read() AS Integer
- RETURN hidpersona 
-END 
- 
-PRIVATE SUB idpersona_write(Valor AS Integer)
- hidpersona= Valor 
-END  
- 
-PRIVATE FUNCTION nombre_read() AS String
- RETURN hnombre 
-END 
- 
-PRIVATE SUB nombre_write(Valor AS String)
- hnombre= Valor 
-END  
- 
-PRIVATE FUNCTION nivel_read() AS String
- RETURN hnivel 
-END 
- 
-PRIVATE SUB nivel_write(Valor AS String)
- hnivel= Valor 
-END  
- 
-PRIVATE FUNCTION clase_read() AS String
- RETURN hclase 
-END 
- 
-PRIVATE SUB clase_write(Valor AS String)
- hclase= Valor 
-END  
- 
-PRIVATE FUNCTION password_read() AS String
- RETURN hpassword 
-END 
- 
-PRIVATE SUB password_write(Valor AS String)
- hpassword= Valor 
-END  
- 
-PRIVATE FUNCTION tipo_read() AS String
- RETURN htipo 
-END 
- 
-PRIVATE SUB tipo_write(Valor AS String)
- htipo= Valor 
-END  
- 
-PRIVATE FUNCTION campo_read() AS string[]
- RETURN hcampo 
-END 
- 
-PRIVATE SUB campo_write(Valor AS string[])
- hcampo= Valor 
-END  
- 
-PRIVATE FUNCTION campotipo_read() AS string[]
- RETURN hcampotipo 
-END 
- 
-PRIVATE SUB campotipo_write(Valor AS string[])
- hcampotipo= Valor 
-END  
- 
-PRIVATE FUNCTION campovisible_read() AS string[]
- RETURN hcampovisible 
-END 
- 
-PRIVATE SUB campovisible_write(Valor AS string[])
- hcampovisible= Valor 
-END  
- 
-PUBLIC FUNCTION Copia(Optional dato as PersonaVO) AS PersonaVO
-Dim datoVOtmp as new PersonaVO
-Dim datoVOtmpOriginal as PersonaVO
-If isnull(dato) then
-dato=me 'se copia a si mismo
-endif
-datoVOtmp.idpersona=dato.idpersona
-datoVOtmp.nombre=dato.nombre
-datoVOtmp.nivel=dato.nivel
-datoVOtmp.clase=dato.clase
-datoVOtmp.password=dato.password
-datoVOtmp.tipo=dato.tipo
-return datoVOtmp
-end
+Property campovisible As String[] 
+Private hcampovisible As New String[]
 
-PUBLIC FUNCTION ConvertirVOaColeccion(dato as PersonaVO) AS collection
-Dim colecciontmp as new collection
-colecciontmp.add(dato.idpersona,"idpersona")
-colecciontmp.add(dato.nombre,"nombre")
-colecciontmp.add(dato.nivel,"nivel")
-colecciontmp.add(dato.clase,"clase")
-colecciontmp.add(dato.password,"password")
-colecciontmp.add(dato.tipo,"tipo")
-return colecciontmp
-end
-PUBLIC FUNCTION ConvertirColeccionaVO(dato as collection) AS PersonaVO
-Dim datoVOtmp as new PersonaVO
-try datoVOtmp.idpersona=dato["idpersona"]
-try datoVOtmp.nombre=dato["nombre"]
-try datoVOtmp.nivel=dato["nivel"]
-try datoVOtmp.clase=dato["clase"]
-try datoVOtmp.password=dato["password"]
-try datoVOtmp.tipo=dato["tipo"]
-return datoVOtmp
-end
+Private Function idpersona_read() As Integer
+  
+  Return hidpersona 
+  
+End 
+
+Private Sub idpersona_write(Valor As Integer)
+  
+  hidpersona = Valor 
+  
+End  
+
+Private Function nombre_read() As String
+  
+  Return hnombre 
+  
+End 
+
+Private Sub nombre_write(Valor As String)
+  
+  hnombre = Valor 
+  
+End  
+
+Private Function nivel_read() As String
+  
+  Return hnivel 
+  
+End 
+
+Private Sub nivel_write(Valor As String)
+  
+  hnivel = Valor 
+  
+End  
+
+Private Function clase_read() As String
+  
+  Return hclase 
+  
+End 
+
+Private Sub clase_write(Valor As String)
+  
+  hclase = Valor 
+  
+End  
+
+Private Function password_read() As String
+  
+  Return hpassword 
+  
+End 
+
+Private Sub password_write(Valor As String)
+  
+  hpassword = Valor 
+  
+End  
+
+Private Function tipo_read() As String
+  
+  Return htipo 
+  
+End 
+
+Private Sub tipo_write(Valor As String)
+  
+  htipo = Valor 
+  
+End  
+
+Private Function campo_read() As String[]
+  
+  Return hcampo 
+  
+End 
+
+Private Sub campo_write(Valor As String[])
+  
+  hcampo = Valor 
+  
+End  
+
+Private Function campotipo_read() As String[]
+  
+  Return hcampotipo 
+  
+End 
+
+Private Sub campotipo_write(Valor As String[])
+  
+  hcampotipo = Valor 
+  
+End  
+
+Private Function campovisible_read() As String[]
+  
+  Return hcampovisible 
+  
+End 
+
+Private Sub campovisible_write(Valor As String[])
+  
+  hcampovisible = Valor 
+  
+End  
+
+Public Function Copia(Optional dato As PersonaVO) As PersonaVO
+
+  Dim datoVOtmp As New PersonaVO
+  Dim datoVOtmpOriginal As PersonaVO
+
+  If IsNull(dato) Then
+    dato = Me 'se copia a si mismo
+  Endif
+  datoVOtmp.idpersona = dato.idpersona
+  datoVOtmp.nombre = dato.nombre
+  datoVOtmp.nivel = dato.nivel
+  datoVOtmp.clase = dato.clase
+  datoVOtmp.password = dato.password
+  datoVOtmp.tipo = dato.tipo
+  Return datoVOtmp
+
+End
+
+Public Function ConvertirVOaColeccion(dato As PersonaVO) As Collection
+
+  Dim colecciontmp As New Collection
+  colecciontmp.add(dato.idpersona, "idpersona")
+  colecciontmp.add(dato.nombre, "nombre")
+  colecciontmp.add(dato.nivel, "nivel")
+  colecciontmp.add(dato.clase, "clase")
+  colecciontmp.add(dato.password, "password")
+  colecciontmp.add(dato.tipo, "tipo")
+  Return colecciontmp
+
+End
+
+Public Function ConvertirColeccionaVO(dato As Collection) As PersonaVO
+
+  Dim datoVOtmp As New PersonaVO
+  Try datoVOtmp.idpersona = dato["idpersona"]
+  Try datoVOtmp.nombre = dato["nombre"]
+Try datoVOtmp.nivel = dato["nivel"]
+Try datoVOtmp.clase = dato["clase"]
+Try datoVOtmp.password = dato["password"]
+Try datoVOtmp.tipo = dato["tipo"]
+Return datoVOtmp
+End

@@ -1,10 +1,15 @@
 ' Gambas class file
 
-Public Sub TextLabel2_MouseDown()
-  
-End
+Private manejadorPersona As New PersonaDAO
 
 Public Sub Form_Open()
+  
+  Dim ctmp As New Conexion
+  
+  If Not Exist(Ctmp.NombreBaseDatos) Then 
+    Copy "./EstructuraBaseDatos/lecturas.sqlite" To Ctmp.NombreBaseDatos
+    
+  Endif
   
   Me.Center
   
@@ -13,13 +18,51 @@ Public Sub Form_Open()
   'la clase se debe de cargar
   ComboBoxClase.list = ModuleComun.Clases()
   
+  ' Por defecto será un alumno
+  ComboBoxTipoProfesorAlumnos.tag = "Alumno" 
+  
 End
 
 Public Sub ButtonCrear_Click()
   
-  'crea alumno o profesor
-  'añade el registro
-  '
+  Dim passwordProfesor As String
+  Dim PersonaVOtmp As New PersonaVO
+  
+  If TextBoxContrasena.text = TextBoxRepiteContrasena.text Then 
+    
+    'crea alumno o profesor
+    'añade el registro
+    PersonaVOtmp.nombre = TextBoxNombre.Text
+    PersonaVOtmp.password = TextBoxContrasena.Text
+    PersonaVOtmp.tipo = ComboBoxTipoProfesorAlumnos.tag 
+    
+    If ComboBoxTipoProfesorAlumnos.tag = "Alumno" Or ComboBoxTipoProfesorAlumnos.tag = "" Then 
+      'es una alumno
+      PersonaVOtmp.clase = ComboBoxClase.Text
+      PersonaVOtmp.nivel = ComboBoxNivelGrado.Text
+      
+    Else
+      
+      passwordProfesor = InputBox(("Contraseña:"), "Contraseña Maestra")
+      
+      If passwordProfesor <> Settings["ContraseñaMaestra", "MININO"] Then 
+        Message.Error(("Error: no se ha introducido bien la contraseña maestra"))
+        Return 
+        
+      Endif
+      '      
+      
+    Endif
+    
+    If manejadorPersona.registrar(PersonaVOtmp) Then
+      Message.Info(("Se ha creado el registro"))
+      Me.Close()
+    Else
+      Message.Info(("Ha habido algun problema al crear el registro"))
+    Endif
+  Else
+    Message.Info(("Error: las contraseñas no son iguales"))
+  Endif
   
 End
 
@@ -38,6 +81,48 @@ Public Sub ComboBoxTipoProfesorAlumnos_Leave()
   Else
     ComboBoxNivelGrado.enabled = True
     ComboBoxClase.Enabled = True
+  Endif
+  
+End
+
+Public Sub TextBoxNombre_Leave()
+  
+  'poner en mayusculas los nombres 
+  TextBoxNombre.text = String.Upper$(TextBoxNombre.text)
+  
+End
+
+Public Sub TextBoxRepiteContrasena_LostFocus()
+  
+  If TextBoxContrasena.text = TextBoxRepiteContrasena.text Then 
+    
+    PictureBoxComprobarContrasena.Picture = Picture["icon:/22/apply"]
+    
+  Else
+    
+    PictureBoxComprobarContrasena.Picture = Picture["icon:/22/error"]
+  Endif  
+  
+End
+
+Public Sub ComboBoxTipoProfesorAlumnos_LostFocus()
+  'primer elemento es Alumno
+  'el segundo elemento es Profesor
+  
+  Dim tipo As Integer
+  
+  tipo = ComboBoxTipoProfesorAlumnos.List.Find(ComboBoxTipoProfesorAlumnos.Text)
+  
+  If tipo = 0 Then 
+    ComboBoxTipoProfesorAlumnos.tag = "Alumno" 'Funciona como una banderan, se usa internamente en el programa y no hay que traducirla
+    Return 
+    
+  Endif
+  
+  If tipo = 1 Then 
+    ComboBoxTipoProfesorAlumnos.tag = "Profesor" 'Funciona como una banderan, se usa internamente en el programa y no hay que traducirla
+    Return 
+    
   Endif
   
 End
