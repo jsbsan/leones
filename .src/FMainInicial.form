@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,76,60)
+  MoveScaled(0,0,78,60)
   Icon = Picture["leones.png"]
   Resizable = False
   { PictureBox1 PictureBox
@@ -62,5 +62,13 @@
     MoveScaled(24,4,11,11)
     Picture = Picture["LectorIcono.png"]
     Stretch = True
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(61,35,15,8)
+    Text = ("Ejemplo Usuario:<br>testAlumno<br>testProfesor")
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(43,43,21,6)
+    Text = ("Ejemplo Contraseña:<br>testAlumno<br>testProfesor")
   }
 }

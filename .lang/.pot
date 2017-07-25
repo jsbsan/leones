@@ -18,40 +18,60 @@ msgstr ""
 msgid "Sistema de Control de lectura para alumnos"
 msgstr ""
 
-#: FMain.form:32 FMainInicial.form:32
+#: FMain.form:32 FMainInicial.form:34
 msgid "Leones"
 msgstr ""
 
-#: FMain.form:39 FMainInicial.form:39
+#: FMain.form:39 FMainInicial.form:41
 msgid "Label2"
 msgstr ""
 
-#: FMain.form:45 FMainInicial.form:45
+#: FMain.form:45 FMainInicial.form:47
 msgid "Sistema para el control de lectura de alumnos."
 msgstr ""
 
-#: FMain.form:51 FMainInicial.form:51
+#: FMain.form:51 FMainInicial.form:53
 msgid "Entrar"
 msgstr ""
 
-#: FMain.form:57 FMainInicial.form:57
+#: FMain.form:57 FMainInicial.form:59
 msgid "Control de Acceso"
 msgstr ""
 
-#: FMain.form:63 FMainInicial.form:63
+#: FMain.form:63 FMainInicial.form:65
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMain.form:68 FMainInicial.form:68
+#: FMain.form:68 FMainInicial.form:70
 msgid "Usuario:"
 msgstr ""
 
-#: FMain.form:74 FMainInicial.form:74 FormRegistro.form:31
+#: FMain.form:74 FMainInicial.form:76 FormRegistro.form:31
 msgid "Contraseña:"
 msgstr ""
 
 #: FMain.class:11 FMainInicial.class:11
 msgid "Version"
+msgstr ""
+
+#: FMainInicial.form:97
+msgid "Ejemplo Usuario:<br>testAlumno<br>testProfesor"
+msgstr ""
+
+#: FMainInicial.form:102
+msgid "Ejemplo Contraseña:<br>testAlumno<br>testProfesor"
+msgstr ""
+
+#: FMainInicial.class:37
+msgid "No existe ese alumno/profesor"
+msgstr ""
+
+#: FMainInicial.class:43
+msgid "No existe ese alumno/profesor con ese nombre"
+msgstr ""
+
+#: FMainInicial.class:49
+msgid "Error: Contraseña inválida"
 msgstr ""
 
 #: FTest.form:79
@@ -291,7 +311,7 @@ msgid "Salir sin guardar cambios"
 msgstr ""
 
 #: FormConfigurarTest.form:140 FormEstadistica.form:24 FormLectura.form:113
-#: FormResultados.form:48
+#: FormResultados.form:49
 msgid "Salir"
 msgstr ""
 
@@ -383,19 +403,19 @@ msgstr ""
 msgid "Importar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.class:45
+#: FormPrincipal.class:54
 msgid "Puntuación"
 msgstr ""
 
-#: FormPrincipal.class:53
+#: FormPrincipal.class:62
 msgid "Acción"
 msgstr ""
 
-#: FormPrincipal.class:67
+#: FormPrincipal.class:76
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
-#: FormPrincipal.class:107
+#: FormPrincipal.class:141
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 
@@ -447,28 +467,40 @@ msgstr ""
 msgid "Error: las contraseñas no son iguales"
 msgstr ""
 
-#: FormResultados.form:23
+#: FormResultados.form:24
 msgid "Tiempo de lectura:"
 msgstr ""
 
-#: FormResultados.form:29
+#: FormResultados.form:30
 msgid "Palabras leidas:"
 msgstr ""
 
-#: FormResultados.form:35
+#: FormResultados.form:36
 msgid "Errores Cometidos:"
 msgstr ""
 
-#: FormResultados.form:42
+#: FormResultados.form:43
 msgid "Puntuación Obtenida:"
 msgstr ""
 
-#: FormResultados.form:55
+#: FormResultados.form:56
 msgid "TextLabel1"
 msgstr ""
 
-#: FormResultados.class:7
+#: FormResultados.form:105
+msgid "Guardar Datos y Salir"
+msgstr ""
+
+#: FormResultados.class:9
 msgid "Datos de la prueba de lectura"
+msgstr ""
+
+#: FormResultados.class:49
+msgid "Datos de la prueba guardados correctamente"
+msgstr ""
+
+#: FormResultados.class:51
+msgid "Se ha producido un error al guardar los datos"
 msgstr ""
 
 #: PersonaDAO.class:404 PruebasDAO.class:408

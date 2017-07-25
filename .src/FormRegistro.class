@@ -32,8 +32,8 @@ Public Sub ButtonCrear_Click()
     
     'crea alumno o profesor
     'añade el registro
-    PersonaVOtmp.nombre = TextBoxNombre.Text
-    PersonaVOtmp.password = TextBoxContrasena.Text
+    PersonaVOtmp.nombre = Upper$(TextBoxNombre.Text) ' Para unificar datos, los pongo todos mayusculas
+    PersonaVOtmp.password = Upper$(TextBoxContrasena.Text) ' Para unificar datos, los pongo todos mayusculas
     PersonaVOtmp.tipo = ComboBoxTipoProfesorAlumnos.tag 
     
     If ComboBoxTipoProfesorAlumnos.tag = "Alumno" Or ComboBoxTipoProfesorAlumnos.tag = "" Then 

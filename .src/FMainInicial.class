@@ -9,7 +9,8 @@ Public Sub Form_Open()
   Me.Title = ("Leones") & " " & ("Control de Acceso")
   Me.Center
   Labelversion.Text = ("Version") & " " & Application.Version
-  
+  ComboBoxUsuario.SetFocus()
+
 End
 
 Public Sub ButtonNuevoUsuario_Click()
@@ -20,10 +21,55 @@ End
 
 Public Sub ButtonEntrar_Click()
   
+  Dim manejador As New PersonaDAO
+  Dim personatmp As New PersonaVO
+  Dim personasTmp As PersonaVO[]
   'comprobar datos
   '
   'si ok, entonces mostrar siguiente formulario
   
-  FormPrincipal.ShowDialog()
+  personatmp.nombre = Upper$(ComboBoxUsuario.text)
+  personatmp.password = Upper$(TextBoxContrasena.text)
+  
+  personasTmp = manejador.ConvertirResult(manejador.BuscarIgualNombre(personatmp.nombre))
+  
+  If personasTmp.count = 0 Then 
+    Message.error(("No existe ese alumno/profesor"))  
+    Return 
+    
+  Endif
+  
+  If personasTmp[0].nombre <> personatmp.nombre Then
+    Message.Error(("No existe ese alumno/profesor con ese nombre"))
+    Return 
+    
+  Else
+    
+    If personasTmp[0].password <> personatmp.password Then 
+      Message.Error(("Error: Contraseña inválida"))
+      
+    Else
+      
+      FormPrincipal.persona = personasTmp[0]
+      FormPrincipal.ShowDialog()
+      Me.Close()
+    Endif
+  Endif
+  
+End
+
+Public Sub TextBoxContrasena_KeyPress()
+  
+  If Key.code = Key.Return Or Key.code = Key.enter Then 
+    ButtonEntrar_Click()
+  Endif
+  
+End
+
+Public Sub ComboBoxUsuario_KeyPress()
+  
+  If Key.code = Key.Return Or Key.code = Key.enter Then 
+    TextBoxContrasena.SetFocus()
+  Endif
   
 End

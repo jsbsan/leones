@@ -1,6 +1,8 @@
 ' Gambas class file
 
+Public PersonaVOtmp As PersonaVO
 Public DatosPruebas As ClassDatosPruebas
+Public FicheroLectura As String
 
 Public Sub Form_Open()
   
@@ -20,8 +22,6 @@ End
 
 Public Sub ButtonSalir_Click()
   
-  'guardar datos
-  
   Me.Close()
   
 End
@@ -29,5 +29,28 @@ End
 Public Function CalculoPuntuacion(NumeroPalabras As Integer, NumeroErrores As Integer, tiempo As Integer) As Integer
   
   Return (NumeroPalabras - NumeroErrores) * 60 / tiempo ''puntos Palabras/minuto y con  tiempo en segundos, 
+  
+End
+
+Public Sub ButtonGUARDARySalir_Click()
+  
+  ''TODO: ETAPA 2: guardar datos de la prueba
+  Dim pruebatmp As New PruebasVO
+  Dim PruebastmpDAO As New PruebasDAO
+  
+  pruebatmp.idpersona = PersonaVOtmp.idpersona
+  pruebatmp.textolectura = File.Name(FicheroLectura)
+  pruebatmp.puntuacion = DatosPruebas.puntuacion 
+  pruebatmp.fecha = Now
+  ''TODO: ETAPA 2 Si se ha activado la grabación de la lectura...
+  '' pruebatmp.archivosonido = ficherosonido 'si es que lo hay
+  
+  If PruebastmpDAO.registrar(pruebatmp) Then 
+    Message.Info(("Datos de la prueba guardados correctamente"))
+  Else
+    Message.Error(("Se ha producido un error al guardar los datos"))
+  Endif
+  
+  Me.Close()
   
 End

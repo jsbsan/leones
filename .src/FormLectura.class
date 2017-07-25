@@ -1,5 +1,7 @@
 ' Gambas class file
 
+Public PersonaVOtmp As PersonaVO
+Public ficheroNombreLectura As String
 Public ficheroTexto As String 'texto del fichero seleccionado....que me lo tiene que pasar el formulario anterior...
 Public tiempoPrueba As Integer
 Public modo As String ''Modo Pruebas-> no graba la información, Modo Real -> graba la informacion
@@ -122,7 +124,9 @@ Public Sub TextArea1_DblClick()
     misDatosPruebas.tiempo = TiempoFinal
     
     'mostrar informacion sobre el resultado....
+    FormResultados.PersonaVOtmp = PersonaVOtmp
     FormResultados.DatosPruebas = misDatosPruebas
+    FormResultados.FicheroLectura = ficheroNombreLectura
     FormResultados.ShowDialog()
     
     ''TODO: habria que preguntar por si graba los resultados de la prueba,,,,

@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,64,29)
+  MoveScaled(0,0,54,37)
   { Label1 Label
     MoveScaled(11,1,19,7)
     Text = ("Tiempo de lectura:")
@@ -24,7 +24,7 @@
     Alignment = Align.Right
   }
   { ButtonSalir Button
-    MoveScaled(55,22,8,6)
+    MoveScaled(2,31,19,5)
     Text = ("Salir")
     Picture = Picture["icon:/16/quit"]
   }
@@ -69,5 +69,10 @@
   }
   { Separator1 Separator
     MoveScaled(-1,23,53,2)
+  }
+  { ButtonGUARDARySalir Button
+    MoveScaled(27,31,25,5)
+    Text = ("Guardar Datos y Salir")
+    Picture = Picture["icon:/16/save"]
   }
 }

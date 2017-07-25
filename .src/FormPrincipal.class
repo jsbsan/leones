@@ -1,7 +1,11 @@
 ' Gambas class file
 
-Private ruta_trabajo As String = User.Home & "/.leones" ""
+Public persona As PersonaVO ''persona que proviene de la introduccion de clave
+Public ManejadorPersona As New PersonaDAO
+Private ManejadorPruebasTmpDato As PruebasDAO 
+Private PruebasTmpDato As PruebasVO
 
+Private ruta_trabajo As String = User.Home & "/.leones"
 Private ultimoobjeto As Label
 
 Public Sub Form_Open()
@@ -12,10 +16,15 @@ Public Sub Form_Open()
   
   'carga ficheros 
   cargaficheros()
+  'datos
+  Me.Title = "Leones: " & persona.nombre
   
 End
 
 Public Sub cargaficheros()
+  
+  Dim res As Result 'result de las consultas de lecturas realizadas
+  Dim VELOCIDAD As String
   
   Dim arfile As String[]
   Dim hLabel As Label
@@ -70,13 +79,37 @@ Public Sub cargaficheros()
     hlabel.h = 15
     hlabel.w = 150
     hlabel.Alignment = Align.Center
-    hlabel.text = "0 p/m"
+    
+    hlabel.text = "0 p/m" 'dato por defecto...
+    
+    If persona.tipo = "Profesor" Then 
+      'no pongo nada...porque es un profesor
+      
+    Else
+      'tengo que cargar los datos de la lectura si los hubiera..
+      'y si no pongo el dato por defecto
+      
+      ''TODO: ETAPA 2: res = ManejadorPruebasTmpDato.sql() 'buscar pruebas con maxima puntuacion, donde el alumno y la prueba lo tenemos
+      ' ' If res.Count <> 0 Then 
+      ' '   'hay pruebas de ese alumno...
+      ' '   
+      ' ' Endif
+      ' 
+    Endif
+    VELOCIDAD = hlabel.text
+    
     hlabel.Border = Border.Plain
     
     hlabel = New Label(hboxtemp) As "GrupoAccion"
     hlabel.h = 15
     hlabel.w = 150
-    hlabel.text = "Leer" 'si esta hecho seria, "Repetir"
+    
+    If VELOCIDAD = "0 p/m" Then 
+      hlabel.text = "Leer" 'si esta hecho seria, "Repetir"
+    Else
+      hlabel.text = "Repetir" 'si esta hecho seria, "Repetir"
+    Endif
+    
     hlabel.Alignment = Align.Center
     hlabel.Border = Border.Plain
     hlabel.tag = "accion en fichero|" & ruta_trabajo & "/" & nombrefile
@@ -101,12 +134,13 @@ End
 Public Sub GrupoAccion_DblClick()
   'iniciar prueba...
   
-  Try FormLectura.ficheroTexto = File.Load(Split(Last.tag, "|")[1])
+  FormLectura.ficheroNombreLectura = Split(Last.tag, "|")[1]
+  Try FormLectura.ficheroTexto = File.Load(FormLectura.ficheroNombreLectura)
   
   If Error Then 
     Message.Info(("Se ha producido un error al intentar leer el fichero de lectura"))
   Else
-    
+    FormLectura.PersonaVOtmp = persona
     FormLectura.showmodal()  
   Endif
   
@@ -120,6 +154,7 @@ End
 
 Public Sub ButtonEstadisticas_Click()
   
+  FormEstadistica.PersonaVOtmp = persona
   FormEstadistica.ShowModal()
   
 End

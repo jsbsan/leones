@@ -1,134 +1,179 @@
-PROPERTY idprueba AS Integer 
-PRIVATE hidprueba AS Integer
+' Gambas class file
 
-PROPERTY idpersona AS INTEGER 
-PRIVATE hidpersona AS INTEGER
+Property idprueba As Integer 
+Private hidprueba As Integer
 
-PROPERTY textolectura AS String 
-PRIVATE htextolectura AS String
+Property idpersona As Integer 
+Private hidpersona As Integer
 
-PROPERTY puntuacion AS INTEGER 
-PRIVATE hpuntuacion AS INTEGER
+Property textolectura As String 
+Private htextolectura As String
 
-PROPERTY fecha AS Date 
-PRIVATE hfecha AS Date
+Property puntuacion As Integer 
+Private hpuntuacion As Integer
 
-PROPERTY archivosonido AS String 
-PRIVATE harchivosonido AS String
+Property fecha As Date 
+Private hfecha As Date
 
-PROPERTY campo AS string[] 
-PRIVATE hcampo AS new string[]
+Property archivosonido As String 
+Private harchivosonido As String
 
-PROPERTY campotipo AS string[] 
-PRIVATE hcampotipo AS new string[]
+Property campo As String[] 
+Private hcampo As New String[]
 
-PROPERTY campovisible AS string[] 
-PRIVATE hcampovisible AS new string[]
+Property campotipo As String[] 
+Private hcampotipo As New String[]
 
-PRIVATE FUNCTION idprueba_read() AS Integer
- RETURN hidprueba 
-END 
- 
-PRIVATE SUB idprueba_write(Valor AS Integer)
- hidprueba= Valor 
-END  
- 
-PRIVATE FUNCTION idpersona_read() AS INTEGER
- RETURN hidpersona 
-END 
- 
-PRIVATE SUB idpersona_write(Valor AS INTEGER)
- hidpersona= Valor 
-END  
- 
-PRIVATE FUNCTION textolectura_read() AS String
- RETURN htextolectura 
-END 
- 
-PRIVATE SUB textolectura_write(Valor AS String)
- htextolectura= Valor 
-END  
- 
-PRIVATE FUNCTION puntuacion_read() AS INTEGER
- RETURN hpuntuacion 
-END 
- 
-PRIVATE SUB puntuacion_write(Valor AS INTEGER)
- hpuntuacion= Valor 
-END  
- 
-PRIVATE FUNCTION fecha_read() AS Date
- RETURN hfecha 
-END 
- 
-PRIVATE SUB fecha_write(Valor AS Date)
- hfecha= Valor 
-END  
- 
-PRIVATE FUNCTION archivosonido_read() AS String
- RETURN harchivosonido 
-END 
- 
-PRIVATE SUB archivosonido_write(Valor AS String)
- harchivosonido= Valor 
-END  
- 
-PRIVATE FUNCTION campo_read() AS string[]
- RETURN hcampo 
-END 
- 
-PRIVATE SUB campo_write(Valor AS string[])
- hcampo= Valor 
-END  
- 
-PRIVATE FUNCTION campotipo_read() AS string[]
- RETURN hcampotipo 
-END 
- 
-PRIVATE SUB campotipo_write(Valor AS string[])
- hcampotipo= Valor 
-END  
- 
-PRIVATE FUNCTION campovisible_read() AS string[]
- RETURN hcampovisible 
-END 
- 
-PRIVATE SUB campovisible_write(Valor AS string[])
- hcampovisible= Valor 
-END  
- 
-PUBLIC FUNCTION Copia(Optional dato as PruebasVO) AS PruebasVO
-Dim datoVOtmp as new PruebasVO
-Dim datoVOtmpOriginal as PruebasVO
-If isnull(dato) then
-dato=me 'se copia a si mismo
-endif
-datoVOtmp.idprueba=dato.idprueba
-datoVOtmp.idpersona=dato.idpersona
-datoVOtmp.textolectura=dato.textolectura
-datoVOtmp.puntuacion=dato.puntuacion
-datoVOtmp.fecha=dato.fecha
-datoVOtmp.archivosonido=dato.archivosonido
-return datoVOtmp
-end
+Property campovisible As String[] 
+Private hcampovisible As New String[]
 
-PUBLIC FUNCTION ConvertirVOaColeccion(dato as PruebasVO) AS collection
-Dim colecciontmp as new collection
-colecciontmp.add(dato.idprueba,"idprueba")
-colecciontmp.add(dato.idpersona,"idpersona")
-colecciontmp.add(dato.textolectura,"textolectura")
-colecciontmp.add(dato.puntuacion,"puntuacion")
-colecciontmp.add(dato.fecha,"fecha")
-colecciontmp.add(dato.archivosonido,"archivosonido")
-return colecciontmp
-end
-PUBLIC FUNCTION ConvertirColeccionaVO(dato as collection) AS PruebasVO
-Dim datoVOtmp as new PruebasVO
-try datoVOtmp.idprueba=dato["idprueba"]
-try datoVOtmp.idpersona=dato["idpersona"]
-try datoVOtmp.textolectura=dato["textolectura"]
-try datoVOtmp.puntuacion=dato["puntuacion"]
-try datoVOtmp.fecha=dato["fecha"]
-try datoVOtmp.archivosonido=dato["archivosonido"]
-return datoVOtmp
-end
+Private Function idprueba_read() As Integer
+  
+  Return hidprueba 
+  
+End 
+
+Private Sub idprueba_write(Valor As Integer)
+  
+  hidprueba = Valor 
+  
+End  
+
+Private Function idpersona_read() As Integer
+  
+  Return hidpersona 
+  
+End 
+
+Private Sub idpersona_write(Valor As Integer)
+  
+  hidpersona = Valor 
+  
+End  
+
+Private Function textolectura_read() As String
+  
+  Return htextolectura 
+  
+End 
+
+Private Sub textolectura_write(Valor As String)
+  
+  htextolectura = Valor 
+  
+End  
+
+Private Function puntuacion_read() As Integer
+  
+  Return hpuntuacion 
+  
+End 
+
+Private Sub puntuacion_write(Valor As Integer)
+  
+  hpuntuacion = Valor 
+  
+End  
+
+Private Function fecha_read() As Date
+  
+  Return hfecha 
+  
+End 
+
+Private Sub fecha_write(Valor As Date)
+  
+  hfecha = Valor 
+  
+End  
+
+Private Function archivosonido_read() As String
+  
+  Return harchivosonido 
+  
+End 
+
+Private Sub archivosonido_write(Valor As String)
+  
+  harchivosonido = Valor 
+  
+End  
+
+Private Function campo_read() As String[]
+  
+  Return hcampo 
+  
+End 
+
+Private Sub campo_write(Valor As String[])
+  
+  hcampo = Valor 
+  
+End  
+
+Private Function campotipo_read() As String[]
+  
+  Return hcampotipo 
+  
+End 
+
+Private Sub campotipo_write(Valor As String[])
+  
+  hcampotipo = Valor 
+  
+End  
+
+Private Function campovisible_read() As String[]
+  
+  Return hcampovisible 
+  
+End 
+
+Private Sub campovisible_write(Valor As String[])
+  
+  hcampovisible = Valor 
+  
+End  
+
+Public Function Copia(Optional dato As PruebasVO) As PruebasVO
+
+  Dim datoVOtmp As New PruebasVO
+  Dim datoVOtmpOriginal As PruebasVO
+
+  If IsNull(dato) Then
+    dato = Me 'se copia a si mismo
+  Endif
+  datoVOtmp.idprueba = dato.idprueba
+  datoVOtmp.idpersona = dato.idpersona
+  datoVOtmp.textolectura = dato.textolectura
+  datoVOtmp.puntuacion = dato.puntuacion
+  datoVOtmp.fecha = dato.fecha
+  datoVOtmp.archivosonido = dato.archivosonido
+  Return datoVOtmp
+
+End
+
+Public Function ConvertirVOaColeccion(dato As PruebasVO) As Collection
+
+  Dim colecciontmp As New Collection
+  colecciontmp.add(dato.idprueba, "idprueba")
+  colecciontmp.add(dato.idpersona, "idpersona")
+  colecciontmp.add(dato.textolectura, "textolectura")
+  colecciontmp.add(dato.puntuacion, "puntuacion")
+  colecciontmp.add(dato.fecha, "fecha")
+  colecciontmp.add(dato.archivosonido, "archivosonido")
+  Return colecciontmp
+
+End
+
+Public Function ConvertirColeccionaVO(dato As Collection) As PruebasVO
+
+  Dim datoVOtmp As New PruebasVO
+  Try datoVOtmp.idprueba = dato["idprueba"]
+  Try datoVOtmp.idpersona = dato["idpersona"]
+Try datoVOtmp.textolectura = dato["textolectura"]
+Try datoVOtmp.puntuacion = dato["puntuacion"]
+Try datoVOtmp.fecha = dato["fecha"]
+Try datoVOtmp.archivosonido = dato["archivosonido"]
+Return datoVOtmp
+End
