@@ -20,6 +20,8 @@ End
 
 Public Sub ButtonSalir_Click()
   
+  'guardar datos
+  
   Me.Close()
   
 End

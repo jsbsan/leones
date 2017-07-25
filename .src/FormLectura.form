@@ -18,7 +18,7 @@
     #MoveScaled(3,1)
   }
   { PanelPrincipal Panel
-    MoveScaled(0,2,92,85)
+    MoveScaled(2,28,92,85)
     Arrangement = Arrange.Vertical
     { TextArea1 TextArea
       MoveScaled(-21,15,43,47)

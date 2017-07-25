@@ -62,3 +62,7 @@ msgstr ""
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
+#: FormPrincipal.class:107
+msgid "Se ha producido un error al intentar leer el fichero de lectura"
+msgstr ""
+

@@ -1,0 +1,29 @@
+' Gambas class file
+
+Public Sub _new()
+  
+End
+
+Public Sub Form_Open()
+  
+  Me.Title = ("Leones") & " " & ("Control de Acceso")
+  Me.Center
+  Labelversion.Text = ("Version") & " " & Application.Version
+  
+End
+
+Public Sub ButtonNuevoUsuario_Click()
+  
+  FormRegistro.ShowDialog()
+  
+End
+
+Public Sub ButtonEntrar_Click()
+  
+  'comprobar datos
+  '
+  'si ok, entonces mostrar siguiente formulario
+  
+  FormPrincipal.ShowDialog()
+  
+End

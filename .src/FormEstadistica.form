@@ -1,0 +1,39 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,111,64)
+  Icon = Picture["tabla velocidades.png"]
+  { PictureBox1 PictureBox
+    MoveScaled(3,32,42,32)
+    Picture = Picture["tabla velocidades.png"]
+    Stretch = True
+  }
+  { ButtonSalir Button
+    MoveScaled(73,58,16,5)
+    Text = ("Salir")
+    Picture = Picture["icon:/22/quit"]
+  }
+  { Button1 Button
+    MoveScaled(7,2,36,6)
+    Text = ("Media de todas las marcas")
+    Picture = Picture["estadisticas16x16.png"]
+  }
+  { Button2 Button
+    MoveScaled(7,9,36,6)
+    Text = ("Evolución Velocidad vs Tiempo")
+    Picture = Picture["estadisticas16x16.png"]
+  }
+  { Button3 Button
+    MoveScaled(7,16,36,6)
+    Text = ("Ültima Marca")
+    Picture = Picture["estadisticas16x16.png"]
+  }
+  { Button4 Button
+    MoveScaled(7,23,36,6)
+    Text = ("Mejor Marca")
+    Picture = Picture["estadisticas16x16.png"]
+  }
+  { DrawingArea1 DrawingArea
+    MoveScaled(47,2,62,54)
+  }
+}

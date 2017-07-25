@@ -1,0 +1,42 @@
+' Gambas class file
+
+'Recibire los datos de la persona para sacar las gráficas....
+Public PersonaVOtmp As PersonaVO
+Private PersonaDAOtmp As New PersonaDAO
+
+Public Sub Form_Open()
+  
+  Chart.CountDataSets = 2                                                         'How many data sets do you require = 2
+  Chart.Headers.Values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 'Header values
+  Chart.Title.Text = "Percent"                                                    'Chart heading
+  Chart[0].Values = [20, 50, 10, 60, 30]                                          'Chart initial values
+  Chart[1].Values = [15, 85, 25, 35, 55]                                          'Chart initial values
+  'Chart.Legend.Visible = True                                                     'Makes the Legend visible
+  Chart.Legend.Title = "Days"                                                     'Title of chart
+  Chart.Type = ChartType.Lines                                                    'Type of chart
+  Chart.BackGround = Color.Yellow                                                 'Sets the background colour
+  Chart.Border = False                                                            'Gets rid of the border
+  DrawingArea1.Refresh                                                            'Refresh the Drawing area
+  
+End
+
+Public Sub DrawingArea1_Draw()                                                  'Required to draw the chart
+  
+  Dim siHeight, siWidth As Short                                                  'For Height and Width of the Chart
+  
+  siHeight = DrawingArea1.Height - 10                                             'Set the value to 10 less than the DrawingArea Height
+  siWidth = DrawingArea1.Width - 10                                               'Set the value to 10 less than the DrawingArea Width
+  If siHeight < 10 Then siHeight = 10                                             'Make sure the value is not too small
+  If siWidth < 10 Then siWidth = 10                                               'Make sure the value is not too small
+  
+  Chart.Height = siHeight                                                         'Set the Chart Height
+  Chart.Width = siWidth                                                           'Set the Chart Width
+  Chart.Draw                                                                      'Draw the chart
+  
+End
+
+Public Sub ButtonSalir_Click()
+  
+  Me.Close()
+  
+End

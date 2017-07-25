@@ -79,7 +79,7 @@ Public Sub cargaficheros()
     hlabel.text = "Leer" 'si esta hecho seria, "Repetir"
     hlabel.Alignment = Align.Center
     hlabel.Border = Border.Plain
-    hlabel.tag = "accion en fichero|" & nombrefile
+    hlabel.tag = "accion en fichero|" & ruta_trabajo & "/" & nombrefile
     
   Next  
   
@@ -99,11 +99,27 @@ Public Sub GrupoFicheros_DblClick()
 End
 
 Public Sub GrupoAccion_DblClick()
+  'iniciar prueba...
+  
+  Try FormLectura.ficheroTexto = File.Load(Split(Last.tag, "|")[1])
+  
+  If Error Then 
+    Message.Info(("Se ha producido un error al intentar leer el fichero de lectura"))
+  Else
+    
+    FormLectura.showmodal()  
+  Endif
   
 End
 
 Public Sub ButtonConfigurar_Click()
   
   FormConfigurarTest.ShowDialog()
+  
+End
+
+Public Sub ButtonEstadisticas_Click()
+  
+  FormEstadistica.ShowModal()
   
 End

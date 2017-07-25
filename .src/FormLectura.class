@@ -2,6 +2,8 @@
 
 Public ficheroTexto As String 'texto del fichero seleccionado....que me lo tiene que pasar el formulario anterior...
 Public tiempoPrueba As Integer
+Public modo As String ''Modo Pruebas-> no graba la información, Modo Real -> graba la informacion
+
 Private SumandoErrores As Integer = 0
 Private cuentaAtras As Integer
 Private tiempoPruebaInicial As Integer
@@ -10,8 +12,14 @@ Private pruebafinalizada As Boolean
 
 Public Sub Form_Open()
   
-  PanelPrincipal.Visible = False
+  iniciaFormulario()
   
+End
+
+Public Sub iniciaFormulario()
+  
+  PanelPrincipal.Visible = False
+  LabelCuentaAtras.text = 10
   LabelCuentaAtras.Visible = True
   Me.Center()
   
@@ -24,6 +32,8 @@ Public Sub Form_Open()
   TextArea1.font = Font[Settings["TipoLetra", "Serif,+8"]]
   
   TextArea1.text = ficheroTexto 'que me pases el texto... leñe!!!
+  
+  TextArea1.pos = 1 'me pongo al inicio del documento
   
   tiempoPrueba = Settings["tiempo", 90] 
   
@@ -130,5 +140,6 @@ End
 Public Sub ButtonReiniciarPrueba_Click()
   
   ''TODO: repetir la prueba....
+  iniciaFormulario()
   
 End

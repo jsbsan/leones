@@ -18,40 +18,180 @@ msgstr ""
 msgid "Sistema de Control de lectura para alumnos"
 msgstr ""
 
-#: FMain.form:32
+#: FMain.form:32 FMainInicial.form:32
 msgid "Leones"
 msgstr ""
 
-#: FMain.form:39
+#: FMain.form:39 FMainInicial.form:39
 msgid "Label2"
 msgstr ""
 
-#: FMain.form:45
+#: FMain.form:45 FMainInicial.form:45
 msgid "Sistema para el control de lectura de alumnos."
 msgstr ""
 
-#: FMain.form:51
+#: FMain.form:51 FMainInicial.form:51
 msgid "Entrar"
 msgstr ""
 
-#: FMain.form:57
+#: FMain.form:57 FMainInicial.form:57
 msgid "Control de Acceso"
 msgstr ""
 
-#: FMain.form:63
+#: FMain.form:63 FMainInicial.form:63
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMain.form:68
+#: FMain.form:68 FMainInicial.form:68
 msgid "Usuario:"
 msgstr ""
 
-#: FMain.form:74 FormRegistro.form:31
+#: FMain.form:74 FMainInicial.form:74 FormRegistro.form:31
 msgid "Contraseña:"
 msgstr ""
 
-#: FMain.class:11
+#: FMain.class:11 FMainInicial.class:11
 msgid "Version"
+msgstr ""
+
+#: FTest.form:79
+msgid "Data"
+msgstr ""
+
+#: FTest.form:87
+msgid "Add a Row"
+msgstr ""
+
+#: FTest.form:92
+msgid "Remove a Row"
+msgstr ""
+
+#: FTest.form:101
+msgid "Add a Dataset"
+msgstr ""
+
+#: FTest.form:106
+msgid "Remove a Dataset"
+msgstr ""
+
+#: FTest.form:115
+msgid "MinY"
+msgstr ""
+
+#: FTest.form:120
+msgid "MaxY"
+msgstr ""
+
+#: FTest.form:125
+msgid "StepY"
+msgstr ""
+
+#: FTest.form:142
+msgid "AutoScale Yaxe"
+msgstr ""
+
+#: FTest.form:146
+msgid "Chart Style"
+msgstr ""
+
+#: FTest.form:150
+msgid "Style"
+msgstr ""
+
+#: FTest.form:163
+msgid "SubStyle"
+msgstr ""
+
+#: FTest.form:173
+msgid "Other"
+msgstr ""
+
+#: FTest.form:177
+msgid "General"
+msgstr ""
+
+#: FTest.form:181
+msgid "Show Title"
+msgstr ""
+
+#: FTest.form:187
+msgid "BackColor"
+msgstr ""
+
+#: FTest.form:196
+msgid "Chart Border"
+msgstr ""
+
+#: FTest.form:202
+msgid "Title"
+msgstr ""
+
+#: FTest.form:207
+msgid "TextBox1"
+msgstr ""
+
+#: FTest.form:212
+msgid "Button7"
+msgstr ""
+
+#: FTest.form:218
+msgid "Proportional fonts"
+msgstr ""
+
+#: FTest.form:225
+msgid "Legend"
+msgstr ""
+
+#: FTest.form:229
+msgid "Show Legend"
+msgstr ""
+
+#: FTest.form:237
+msgid "Right"
+msgstr ""
+
+#: FTest.form:237
+msgid "Bottom"
+msgstr ""
+
+#: FTest.form:259
+msgid "Axes"
+msgstr ""
+
+#: FTest.form:263
+msgid "Show X Labels"
+msgstr ""
+
+#: FTest.form:269
+msgid "Show Y Labels"
+msgstr ""
+
+#: FTest.form:275
+msgid "Show Y Interlines"
+msgstr ""
+
+#: FTest.form:293
+msgid "X Steps Arrange"
+msgstr ""
+
+#: FTest.form:298
+msgid "Show Data labels"
+msgstr ""
+
+#: FTest.form:303
+msgid "Colors"
+msgstr ""
+
+#: FTest.form:307
+msgid "Auto"
+msgstr ""
+
+#: FTest.form:318
+msgid "Add"
+msgstr ""
+
+#: FTest.form:323
+msgid "Remove"
 msgstr ""
 
 #: FormAutomaticoDinamico.form:34
@@ -150,7 +290,8 @@ msgstr ""
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:140 FormLectura.form:113 FormResultados.form:48
+#: FormConfigurarTest.form:140 FormEstadistica.form:24 FormLectura.form:113
+#: FormResultados.form:48
 msgid "Salir"
 msgstr ""
 
@@ -168,6 +309,22 @@ msgstr ""
 
 #: FormConfigurarTest.class:61
 msgid "Palabras leidas"
+msgstr ""
+
+#: FormEstadistica.form:30
+msgid "Media de todas las marcas"
+msgstr ""
+
+#: FormEstadistica.form:36
+msgid "Evolución Velocidad vs Tiempo"
+msgstr ""
+
+#: FormEstadistica.form:42
+msgid "Ültima Marca"
+msgstr ""
+
+#: FormEstadistica.form:48
+msgid "Mejor Marca"
 msgstr ""
 
 #: FormLectura.form:34
@@ -236,6 +393,10 @@ msgstr ""
 
 #: FormPrincipal.class:67
 msgid "haga doble click para seleccionar lectura"
+msgstr ""
+
+#: FormPrincipal.class:107
+msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 
 #: FormRegistro.form:25
@@ -364,6 +525,14 @@ msgstr ""
 
 #: PruebasDAO.class:420
 msgid "archivosonido"
+msgstr ""
+
+#: _CHeaders.class:93 _CSerie.class:113
+msgid "An array can't be NULL"
+msgstr ""
+
+#: _CSerie.class:49
+msgid "The values count must be up than 1"
 msgstr ""
 
 #: comun.module:60
