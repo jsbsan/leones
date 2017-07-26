@@ -50,19 +50,19 @@ msgstr ""
 msgid "Importar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.class:54
+#: FormPrincipal.class:55
 msgid "Puntuación"
 msgstr ""
 
-#: FormPrincipal.class:62
+#: FormPrincipal.class:63
 msgid "Acción"
 msgstr ""
 
-#: FormPrincipal.class:76
+#: FormPrincipal.class:77
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
-#: FormPrincipal.class:141
+#: FormPrincipal.class:143
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 

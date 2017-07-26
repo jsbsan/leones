@@ -1,39 +1,79 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,111,64)
+  MoveScaled(0,0,111,77)
   Icon = Picture["tabla velocidades.png"]
-  { PictureBox1 PictureBox
-    MoveScaled(3,32,42,32)
-    Picture = Picture["tabla velocidades.png"]
-    Stretch = True
-  }
-  { ButtonSalir Button
-    MoveScaled(73,58,16,5)
-    Text = ("Salir")
-    Picture = Picture["icon:/22/quit"]
-  }
-  { Button1 Button
-    MoveScaled(7,2,36,6)
-    Text = ("Media de todas las marcas")
-    Picture = Picture["estadisticas16x16.png"]
-  }
-  { Button2 Button
-    MoveScaled(7,9,36,6)
-    Text = ("Evolución Velocidad vs Tiempo")
-    Picture = Picture["estadisticas16x16.png"]
-  }
-  { Button3 Button
-    MoveScaled(7,16,36,6)
-    Text = ("Ültima Marca")
-    Picture = Picture["estadisticas16x16.png"]
-  }
-  { Button4 Button
-    MoveScaled(7,23,36,6)
-    Text = ("Mejor Marca")
-    Picture = Picture["estadisticas16x16.png"]
+  Arrangement = Arrange.Horizontal
+  { Panel1 Panel
+    MoveScaled(14,-3,49,74)
+    { PictureBox1 PictureBox
+      MoveScaled(0,30,40,38)
+      Picture = Picture["tabla velocidades.png"]
+      Stretch = True
+    }
+    { ButtonSalir Button
+      MoveScaled(2,68,16,5)
+      Text = ("Salir")
+      Picture = Picture["icon:/22/quit"]
+    }
+    { Button1 Button
+      MoveScaled(1,1,36,6)
+      Text = ("Media de todas las marcas")
+      Picture = Picture["estadisticas16x16.png"]
+    }
+    { Button2 Button
+      MoveScaled(1,8,36,6)
+      Text = ("Evolución Velocidad vs Tiempo")
+      Picture = Picture["estadisticas16x16.png"]
+    }
+    { Button3 Button
+      MoveScaled(1,15,36,6)
+      Text = ("Ültima Marca")
+      Picture = Picture["estadisticas16x16.png"]
+    }
+    { Button4 Button
+      MoveScaled(1,23,36,6)
+      Text = ("Mejor Marca")
+      Picture = Picture["estadisticas16x16.png"]
+    }
+    { VBox1 Panel
+      MoveScaled(39,38,6,34)
+      { CheckBox1 CheckBox
+        MoveScaled(1,0,15,4)
+      }
+      { CheckBox2 CheckBox
+        MoveScaled(1,3,15,4)
+      }
+      { CheckBox3 CheckBox
+        MoveScaled(1,6,15,4)
+      }
+      { CheckBox4 CheckBox
+        MoveScaled(1,9,15,4)
+      }
+      { CheckBox6 CheckBox
+        MoveScaled(1,12,15,4)
+      }
+      { CheckBox5 CheckBox
+        MoveScaled(1,15,15,4)
+      }
+      { CheckBox7 CheckBox
+        MoveScaled(1,18,15,4)
+      }
+      { CheckBox8 CheckBox
+        MoveScaled(1,21,15,4)
+      }
+      { CheckBox9 CheckBox
+        MoveScaled(1,24,15,4)
+      }
+    }
+    { ButtonRedibujar Button
+      MoveScaled(24,68,13,5)
+      Text = ("Redibujar")
+      Picture = Picture["icon:/16/wizard"]
+    }
   }
   { DrawingArea1 DrawingArea
-    MoveScaled(47,2,62,54)
+    MoveScaled(72,5,62,54)
+    Expand = True
   }
 }

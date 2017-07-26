@@ -310,7 +310,7 @@ msgstr ""
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:140 FormEstadistica.form:24 FormLectura.form:113
+#: FormConfigurarTest.form:140 FormEstadistica.form:40 FormLectura.form:113
 #: FormResultados.form:49
 msgid "Salir"
 msgstr ""
@@ -331,20 +331,24 @@ msgstr ""
 msgid "Palabras leidas"
 msgstr ""
 
-#: FormEstadistica.form:30
+#: FormEstadistica.form:46
 msgid "Media de todas las marcas"
 msgstr ""
 
-#: FormEstadistica.form:36
+#: FormEstadistica.form:52
 msgid "Evolución Velocidad vs Tiempo"
 msgstr ""
 
-#: FormEstadistica.form:42
+#: FormEstadistica.form:58
 msgid "Ültima Marca"
 msgstr ""
 
-#: FormEstadistica.form:48
+#: FormEstadistica.form:64
 msgid "Mejor Marca"
+msgstr ""
+
+#: FormEstadistica.form:110
+msgid "Redibujar"
 msgstr ""
 
 #: FormLectura.form:34
@@ -403,19 +407,19 @@ msgstr ""
 msgid "Importar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.class:54
+#: FormPrincipal.class:55
 msgid "Puntuación"
 msgstr ""
 
-#: FormPrincipal.class:62
+#: FormPrincipal.class:63
 msgid "Acción"
 msgstr ""
 
-#: FormPrincipal.class:76
+#: FormPrincipal.class:77
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
-#: FormPrincipal.class:141
+#: FormPrincipal.class:143
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 

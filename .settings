@@ -1,15 +1,34 @@
 [Breakpoints]
 Breakpoint[1]="ExplainTextbox.55"
-Count=1
+Breakpoint[2]="PruebasDAO.357"
+Count=2
 
 [DebugWindow]
-Count=0
+Count=3
+DebugWindow[1]="Index"
+DebugWindow[2]="$aroSeries"
+DebugWindow[3]="$aroSeries[4]"
+
+[DebugWindow/$aroSeries]
+Geometry=[0,24,210,210]
+
+[DebugWindow/$aroSeries[4]]
+Geometry=[14,38,210,210]
+
+[DebugWindow/Index]
+Geometry=[0,24,210,210]
 
 [DebugWindow/ScrollBar]
 Geometry=[0,24,210,210]
 
 [DebugWindow/TextArea1]
 Geometry=[0,24,210,757]
+
+[DebugWindow/res]
+Geometry=[0,24,210,210]
+
+[DebugWindow/res.Fields]
+Geometry=[14,38,210,210]
 
 [OpenFile]
 File[1]="leones.png"
@@ -21,7 +40,7 @@ File[6]=".src/FormRegistro.class:122.48"
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-File[10]=".src/FormPrincipal.class:27.0"
+File[10]=".src/FormPrincipal.class:99.20"
 File[11]=".src/ModuleComun.module:8.36"
 File[12]=".src/FormConfigurarTest.form"
 File[13]=".src/FormConfigurarTest.class:20.2"
@@ -34,14 +53,16 @@ File[19]=".src/ClassDatosPruebas.class:7.0"
 File[20]="NivelesGrados.txt:8.13"
 File[21]="Clases.txt:6.1"
 File[22]=".src/modelo/modeloTabla/DAO/PersonaDAO.class:103.7"
-File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:101.16"
-File[24]=".src/modelo/conexion/Conexion.class:9.22"
+File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:357.7"
+File[24]=".src/modelo/conexion/Conexion.class:29.9"
 File[25]=".src/FormAutomaticoDinamico.form"
+Active=26
 File[26]=".src/FormEstadistica.form"
 File[27]=".src/FormEstadistica.class:8.2"
-Active=28
 File[28]=".connection/Connection1.connection"
-Count=28
+File[29]=".src/modelo/modeloTabla/VO/PersonaVO.class:31.19"
+File[30]=".src/chart/Chart.class:211.0"
+Count=30
 
 [Watches]
 Count=1

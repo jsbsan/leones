@@ -6,16 +6,22 @@ Private PersonaDAOtmp As New PersonaDAO
 
 Public Sub Form_Open()
   
-  Chart.CountDataSets = 2                                                         'How many data sets do you require = 2
+  Chart.CountDataSets = 1                                                         'How many data sets do you require = 2
   Chart.Headers.Values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 'Header values
-  Chart.Title.Text = "Percent"                                                    'Chart heading
-  Chart[0].Values = [20, 50, 10, 60, 30]                                          'Chart initial values
-  Chart[1].Values = [15, 85, 25, 35, 55]                                          'Chart initial values
-  'Chart.Legend.Visible = True                                                     'Makes the Legend visible
-  Chart.Legend.Title = "Days"                                                     'Title of chart
+  Chart.Title.Text = "Palabras Por Minuto"                                                    'Chart heading
+  
+  'consulta segun boton pulsado...
+  
+  Chart[0].Values = [20, 50, 10, 60, 30]  
+  Chart[0].Text = "Prueba 1"                                        'Chart initial values
+  ' Chart[1].Values = [15, 85, 25, 35, 55]                                          'Chart initial values
+  ' Chart[1].Text = "Prueba 2"
+  
+  Chart.Legend.Visible = True                                                     'Makes the Legend visible
+  Chart.Legend.Title = "Lecturas"                                                     'Title of chart
   Chart.Type = ChartType.Lines                                                    'Type of chart
-  Chart.BackGround = Color.Yellow                                                 'Sets the background colour
-  Chart.Border = False                                                            'Gets rid of the border
+  Chart.BackGround = Color.white                                              'Sets the background colour
+  Chart.Border = True                                                          'Gets rid of the border
   DrawingArea1.Refresh                                                            'Refresh the Drawing area
   
 End
@@ -24,10 +30,10 @@ Public Sub DrawingArea1_Draw()                                                  
   
   Dim siHeight, siWidth As Short                                                  'For Height and Width of the Chart
   
-  siHeight = DrawingArea1.Height - 10                                             'Set the value to 10 less than the DrawingArea Height
-  siWidth = DrawingArea1.Width - 10                                               'Set the value to 10 less than the DrawingArea Width
-  If siHeight < 10 Then siHeight = 10                                             'Make sure the value is not too small
-  If siWidth < 10 Then siWidth = 10                                               'Make sure the value is not too small
+  siHeight = DrawingArea1.Height - 5                                             'Set the value to 10 less than the DrawingArea Height
+  siWidth = DrawingArea1.Width - 5                                               'Set the value to 10 less than the DrawingArea Width
+  If siHeight < 5 Then siHeight = 5                                             'Make sure the value is not too small
+  If siWidth < 5 Then siWidth = 5                                               'Make sure the value is not too small
   
   Chart.Height = siHeight                                                         'Set the Chart Height
   Chart.Width = siWidth                                                           'Set the Chart Width
@@ -38,5 +44,107 @@ End
 Public Sub ButtonSalir_Click()
   
   Me.Close()
+  
+End
+
+Public Sub ButtonRedibujar_Click()
+  
+  Chart.CountDataSets = 1
+  
+  If CheckBox1.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(59, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 1º grado"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(35, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 1º grado"
+    
+  Endif
+  
+  If CheckBox2.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(60, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 2º grado"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(84, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 2º grado"
+    
+  Endif
+  
+  If CheckBox3.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(85, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 3º grado"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(99, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 3º grado"
+    
+  Endif
+  
+  If CheckBox4.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(100, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 4º grado"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(114, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 4º grado"
+    
+  Endif
+  
+  If CheckBox5.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(115, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 5º grado"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(124, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 5º grado"
+    
+  Endif
+  
+  If CheckBox6.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(125, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 6º grado"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(134, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 6º grado"
+    
+  Endif
+  
+  If CheckBox7.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(135, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 1º grado Secundaria"
+    Chart[Chart.CountDataSets - 1].values = repiteValores(144, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 1º grado Secundaria"
+    
+  Endif
+  
+  If CheckBox8.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(145, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 2º grado Secundaria" 
+    Chart[Chart.CountDataSets - 1].values = repiteValores(154, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 2º grado Secundaria"
+    
+  Endif
+  
+  If CheckBox8.value = True Then 
+    Chart.CountDataSets += 2    
+    Chart[Chart.CountDataSets - 2].values = repiteValores(155, Chart[0].count)
+    Chart[Chart.CountDataSets - 2].text = "max 3º grado Secundaria" 
+    Chart[Chart.CountDataSets - 1].values = repiteValores(160, Chart[0].count)
+    Chart[Chart.CountDataSets - 1].text = "min 3º grado Secundaria"
+    
+  Endif
+  
+  DrawingArea1.Refresh        
+  
+End
+
+Public Function repiteValores(v As Integer, veces As Integer) As Integer[]
+  
+  Dim lista As New Integer[]
+  Dim a As Integer
+  
+  For a = 0 To veces - 1
+    lista.Add(v)
+  Next
+  
+  Return lista
   
 End
