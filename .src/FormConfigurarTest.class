@@ -12,7 +12,7 @@ Public Sub Form_Open()
   ColorButtonColorTexto.Value = Settings["colorletra", Color.White]
   FontChooserTipoLetra.Value = Settings["TipoLetra", "Serif,+8"]  
   CheckBoxGrabarLocucion.Value = Settings["GrabarLocucion", False] 
-  
+  ValueBoxCuentaAtras.value = Settings["cuantaAtras", 5]
   'actualizo valores del textarea
   TextArea1.Background = ColorButtonColorFondo.Value
   TextArea1.Foreground = ColorButtonColorTexto.Value
@@ -67,9 +67,10 @@ Public Sub ButtonGuardarYSalir_Click()
   
   Settings["colorfondo"] = ColorButtonColorFondo.Value
   Settings["colorletra"] = ColorButtonColorTexto.Value
-  Settings["tiempo"] = ValueBoxTiempo
+  Settings["tiempo"] = ValueBoxTiempo.value 
   Settings["TipoLetra"] = FontChooserTipoLetra.Value
   Settings["GrabarLocucion"] = CheckBoxGrabarLocucion.Value
+  Settings["cuantaAtras"] = ValueBoxCuentaAtras.value 
   Me.Close()
   
 End

@@ -14,27 +14,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormLectura.form:34
+#: FormLectura.form:35
 msgid "10"
 msgstr ""
 
-#: FormLectura.form:58
+#: FormLectura.form:59
 msgid "Tiempo Restante...."
 msgstr ""
 
-#: FormLectura.form:75
+#: FormLectura.form:76
 msgid "Fin Prueba"
 msgstr ""
 
-#: FormLectura.form:86
+#: FormLectura.form:87
 msgid "Pulse la tecla Enter o Return para contar errores de lectura"
 msgstr ""
 
-#: FormLectura.form:106
+#: FormLectura.form:107
 msgid "Repetir"
 msgstr ""
 
-#: FormLectura.form:113
+#: FormLectura.form:114
 msgid "Salir"
 msgstr ""
 

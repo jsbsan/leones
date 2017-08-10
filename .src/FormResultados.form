@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,54,37)
+  Icon = Picture["evaluar.jpg"]
   { Label1 Label
     MoveScaled(11,1,19,7)
     Text = ("Tiempo de lectura:")

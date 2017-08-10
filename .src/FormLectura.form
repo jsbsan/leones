@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,105,92)
+  Icon = Picture["leones.png"]
   Arrangement = Arrange.Fill
   { Timer1 #Timer
     #MoveScaled(41,2)
@@ -30,10 +31,10 @@
       MoveScaled(0,64,89,18)
       Arrangement = Arrange.Horizontal
       { Frame1 Frame
-        MoveScaled(1,1,24,17)
+        MoveScaled(1,1,23,17)
         Text = ("Tiempo Restante....")
         { LabelTiempo Label
-          MoveScaled(1,2,19,14)
+          MoveScaled(2,2,19,14)
           Font = Font["+17"]
           Alignment = Align.Center
           Border = Border.Plain

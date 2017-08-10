@@ -33,7 +33,10 @@ Public Sub cargaficheros()
   Dim nombrefile As String
   Dim arraybto As New Variant[]
   
+  Application.busy = 1
   arfile = Dir(ruta_trabajo, "*", gb.file)  'extraemos los ficheros
+  
+  ScrollViewDatosFicheros.Children.Clear() 'borrado de todo los controles que hubiensen
   
   hboxtemp = New HBox(ScrollViewDatosFicheros) 
   hboxtemp.h = 25
@@ -117,7 +120,8 @@ Public Sub cargaficheros()
     hboton.tag = "accion en fichero|" & ruta_trabajo & "/" & nombrefile
     
   Next  
-  
+  Application.busy = 0 
+
 End
 
 Public Sub GrupoFicheros_DblClick()
@@ -144,6 +148,8 @@ Public Sub GrupoAccion_Click()
   Else
     FormLectura.PersonaVOtmp = persona
     FormLectura.showmodal()  
+    
+    cargaficheros() 'recarga informacion
   Endif
   
 End

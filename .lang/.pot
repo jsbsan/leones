@@ -18,40 +18,36 @@ msgstr ""
 msgid "Sistema de Control de lectura para alumnos"
 msgstr ""
 
-#: FMain.form:32 FMainInicial.form:34
+#: FMainInicial.form:34
 msgid "Leones"
 msgstr ""
 
-#: FMain.form:39 FMainInicial.form:41
+#: FMainInicial.form:41
 msgid "Label2"
 msgstr ""
 
-#: FMain.form:45 FMainInicial.form:47
+#: FMainInicial.form:47
 msgid "Sistema para el control de lectura de alumnos."
 msgstr ""
 
-#: FMain.form:51 FMainInicial.form:53
+#: FMainInicial.form:53
 msgid "Entrar"
 msgstr ""
 
-#: FMain.form:57 FMainInicial.form:59
+#: FMainInicial.form:59
 msgid "Control de Acceso"
 msgstr ""
 
-#: FMain.form:63 FMainInicial.form:65
+#: FMainInicial.form:65
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMain.form:68 FMainInicial.form:70
+#: FMainInicial.form:70
 msgid "Usuario:"
 msgstr ""
 
-#: FMain.form:74 FMainInicial.form:76 FormRegistro.form:31
+#: FMainInicial.form:76 FormRegistro.form:32
 msgid "Contraseña:"
-msgstr ""
-
-#: FMain.class:11 FMainInicial.class:11
-msgid "Version"
 msgstr ""
 
 #: FMainInicial.form:97
@@ -60,6 +56,10 @@ msgstr ""
 
 #: FMainInicial.form:102
 msgid "Ejemplo Contraseña:<br>testAlumno<br>testProfesor"
+msgstr ""
+
+#: FMainInicial.class:11
+msgid "Version"
 msgstr ""
 
 #: FMainInicial.class:37
@@ -218,11 +218,11 @@ msgstr ""
 msgid "Aceptar"
 msgstr ""
 
-#: FormAutomaticoDinamico.form:46 FormRegistro.form:75
+#: FormAutomaticoDinamico.form:46 FormRegistro.form:76
 msgid "Cancelar"
 msgstr ""
 
-#: FormConfigurarTest.form:41
+#: FormConfigurarTest.form:46
 msgid ""
 "Había en un pueblo un molinero que medía el trigo que compraba con una "
 "medida que cabía un celemín, pero que era un poco mayor de la medida justa, "
@@ -270,56 +270,68 @@ msgid ""
 "pequeño."
 msgstr ""
 
-#: FormConfigurarTest.form:57
+#: FormConfigurarTest.form:62
 msgid "Tiempo"
 msgstr ""
 
-#: FormConfigurarTest.form:61
+#: FormConfigurarTest.form:66
 msgid "Tiempo de Lectura:"
 msgstr ""
 
-#: FormConfigurarTest.form:71
+#: FormConfigurarTest.form:76
 msgid "segundos"
 msgstr ""
 
-#: FormConfigurarTest.form:77
+#: FormConfigurarTest.form:82
 msgid "Colores"
 msgstr ""
 
-#: FormConfigurarTest.form:90
+#: FormConfigurarTest.form:95
 msgid "Color Texto:"
 msgstr ""
 
-#: FormConfigurarTest.form:96
+#: FormConfigurarTest.form:101
 msgid "Color Fondo:"
 msgstr ""
 
-#: FormConfigurarTest.form:103
+#: FormConfigurarTest.form:108
 msgid "Grabar...."
 msgstr ""
 
-#: FormConfigurarTest.form:113
+#: FormConfigurarTest.form:118
 msgid "Grabar locución"
 msgstr ""
 
 #: FormConfigurarTest.form:124
+msgid "Cuenta Atras inicio prueba"
+msgstr ""
+
+#: FormConfigurarTest.form:128
+msgid "Duración cuenta atrás:"
+msgstr ""
+
+#: FormConfigurarTest.form:134
+msgid "ValueBox1"
+msgstr ""
+
+#: FormConfigurarTest.form:150
 msgid "Haga dobleclick en alguna palabra para contar"
 msgstr ""
 
-#: FormConfigurarTest.form:139
+#: FormConfigurarTest.form:165
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:140 FormEstadistica.form:40 FormLectura.form:113
-#: FormResultados.form:49
+#: FormConfigurarTest.form:166 FormEstadistica.form:40 FormLectura.form:114
+#: FormResultados.form:50
 msgid "Salir"
 msgstr ""
 
-#: FormConfigurarTest.form:152
+#: FormConfigurarTest.form:178
 msgid "Guardar configuración y salir"
 msgstr ""
 
-#: FormConfigurarTest.form:153
+#: FormConfigurarTest.form:179
 msgid "Guardar y Salir"
 msgstr ""
 
@@ -351,23 +363,23 @@ msgstr ""
 msgid "Redibujar"
 msgstr ""
 
-#: FormLectura.form:34
+#: FormLectura.form:35
 msgid "10"
 msgstr ""
 
-#: FormLectura.form:58
+#: FormLectura.form:59
 msgid "Tiempo Restante...."
 msgstr ""
 
-#: FormLectura.form:75
+#: FormLectura.form:76
 msgid "Fin Prueba"
 msgstr ""
 
-#: FormLectura.form:86
+#: FormLectura.form:87
 msgid "Pulse la tecla Enter o Return para contar errores de lectura"
 msgstr ""
 
-#: FormLectura.form:106
+#: FormLectura.form:107
 msgid "Repetir"
 msgstr ""
 
@@ -407,51 +419,51 @@ msgstr ""
 msgid "Importar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.class:55
+#: FormPrincipal.class:58
 msgid "Puntuación"
 msgstr ""
 
-#: FormPrincipal.class:63
+#: FormPrincipal.class:66
 msgid "Acción"
 msgstr ""
 
-#: FormPrincipal.class:77
+#: FormPrincipal.class:80
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
-#: FormPrincipal.class:143
+#: FormPrincipal.class:147
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 
-#: FormRegistro.form:25
+#: FormRegistro.form:26
 msgid "Nombre de usuario:"
 msgstr ""
 
-#: FormRegistro.form:37
+#: FormRegistro.form:38
 msgid "Repite Contraseña:"
 msgstr ""
 
-#: FormRegistro.form:58
+#: FormRegistro.form:59
 msgid "Alumno"
 msgstr ""
 
-#: FormRegistro.form:58
+#: FormRegistro.form:59
 msgid "Profesor"
 msgstr ""
 
-#: FormRegistro.form:63
+#: FormRegistro.form:64
 msgid "Crear"
 msgstr ""
 
-#: FormRegistro.form:69
+#: FormRegistro.form:70
 msgid "Tipo:"
 msgstr ""
 
-#: FormRegistro.form:81
+#: FormRegistro.form:82
 msgid "Nivel/Grado:"
 msgstr ""
 
-#: FormRegistro.form:92
+#: FormRegistro.form:93
 msgid "Clase:"
 msgstr ""
 
@@ -471,27 +483,27 @@ msgstr ""
 msgid "Error: las contraseñas no son iguales"
 msgstr ""
 
-#: FormResultados.form:24
+#: FormResultados.form:25
 msgid "Tiempo de lectura:"
 msgstr ""
 
-#: FormResultados.form:30
+#: FormResultados.form:31
 msgid "Palabras leidas:"
 msgstr ""
 
-#: FormResultados.form:36
+#: FormResultados.form:37
 msgid "Errores Cometidos:"
 msgstr ""
 
-#: FormResultados.form:43
+#: FormResultados.form:44
 msgid "Puntuación Obtenida:"
 msgstr ""
 
-#: FormResultados.form:56
+#: FormResultados.form:57
 msgid "TextLabel1"
 msgstr ""
 
-#: FormResultados.form:105
+#: FormResultados.form:106
 msgid "Guardar Datos y Salir"
 msgstr ""
 

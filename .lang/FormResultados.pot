@@ -14,31 +14,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormResultados.form:24
+#: FormResultados.form:25
 msgid "Tiempo de lectura:"
 msgstr ""
 
-#: FormResultados.form:30
+#: FormResultados.form:31
 msgid "Palabras leidas:"
 msgstr ""
 
-#: FormResultados.form:36
+#: FormResultados.form:37
 msgid "Errores Cometidos:"
 msgstr ""
 
-#: FormResultados.form:43
+#: FormResultados.form:44
 msgid "Puntuación Obtenida:"
 msgstr ""
 
-#: FormResultados.form:49
+#: FormResultados.form:50
 msgid "Salir"
 msgstr ""
 
-#: FormResultados.form:56
+#: FormResultados.form:57
 msgid "TextLabel1"
 msgstr ""
 
-#: FormResultados.form:105
+#: FormResultados.form:106
 msgid "Guardar Datos y Salir"
 msgstr ""
 

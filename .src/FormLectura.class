@@ -21,7 +21,7 @@ End
 Public Sub iniciaFormulario()
   
   PanelPrincipal.Visible = False
-  LabelCuentaAtras.text = 10
+  LabelCuentaAtras.text = Settings["cuantaAtras", 5]
   LabelCuentaAtras.Visible = True
   Me.Center()
   
@@ -75,7 +75,7 @@ End
 
 Public Sub iniciaCuentaAtras()
   
-  cuentaAtras = 10
+  cuentaAtras = Settings["cuantaAtras", 5]
   TimerCuentaAtrasInicial.Start()
   
 End
@@ -121,7 +121,14 @@ Public Sub TextArea1_DblClick()
     'mis Datos de la prueba
     misDatosPruebas.errores = SumandoErrores
     misDatosPruebas.palabrasleidas = numeropalabras
-    misDatosPruebas.tiempo = TiempoFinal
+    
+    If TiempoFinal <> 0 Then
+      'se trata de una prueba con tiempo limite no superado.
+      misDatosPruebas.tiempo = TiempoFinal
+    Else
+      'se trata de una preuba con tiempo limte agotado
+      misDatosPruebas.tiempo = tiempoPruebaInicial
+    Endif
     
     'mostrar informacion sobre el resultado....
     FormResultados.PersonaVOtmp = PersonaVOtmp
@@ -145,5 +152,9 @@ Public Sub ButtonReiniciarPrueba_Click()
   
   ''TODO: repetir la prueba....
   iniciaFormulario()
+  
+End
+
+Public Sub PanelPrincipal_MouseDown()
   
 End
