@@ -29,6 +29,7 @@ Geometry=[14,38,210,210]
 
 [OpenFile]
 File[1]="leones.png"
+Active=2
 File[2]=".src/FMainInicial.form"
 File[3]=".src/FMainInicial.class:11.28"
 File[4]=".src/ExplainTextbox.class:21.2"
@@ -37,7 +38,6 @@ File[6]=".src/FormRegistro.class:122.48"
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-Active=10
 File[10]=".src/FormPrincipal.class:122.23"
 File[11]=".src/ModuleComun.module:8.36"
 File[12]=".src/FormConfigurarTest.form"

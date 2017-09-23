@@ -10,7 +10,11 @@ Public Sub Form_Open()
   Me.Center
   Labelversion.Text = ("Version") & " " & Application.Version
   ComboBoxUsuario.SetFocus()
-
+  
+  ''TODO: Eliminar solo pruebas test
+  ComboBoxUsuario.text = "testAlumno"
+  TextBoxContrasena.text = "testAlumno"
+  
 End
 
 Public Sub ButtonNuevoUsuario_Click()

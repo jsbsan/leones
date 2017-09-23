@@ -20,55 +20,51 @@ Property Visible As Integer
 Property Read _Width As Integer
 Property Read _Height As Integer
 
-
 Public Sub _New(sidChart As String)
   
-  Me.Font.Size = 11
+  Me.Font.Size = 7 'cambio tamaño de letra
   $sidChart = sidChart
   
 End
 
 Public Sub _Free()
   
-  
-  
 End
 
-
 Private Function Title_Read() As String
-
+  
   Return $sTitle
-
+  
 End
 
 Private Sub Title_Write(Value As String)
-
+  
   $sTitle = Value
-
+  
 End
 
 Private Function Position_Read() As Integer
-
+  
   Return $iPosition
-
+  
 End
 
 Private Sub Position_Write(Value As Integer)
-
+  
   $iPosition = Value
-
+  
 End
 
 Private Function Visible_Read() As Integer
-
+  
   Return $bVisible
-
+  
 End
 
 Private Sub Visible_Write(Value As Integer)
-
+  
   $bVisible = Value
-
+  
 End
 
 Public Sub Draw(bSeries As Boolean)
@@ -82,6 +78,7 @@ Public Sub Draw(bSeries As Boolean)
   Dim iStaticSpace As Integer = 5 * Chart._$ColChart[$sidChart]._fProportionnal
   Dim arsInt As String[]
   Dim oSerie As _CSerie
+  
   $iWidth = 0
   $iHeight = 0
   'Créé un tableau interne contenant soit les série soit les entête
@@ -95,21 +92,20 @@ Public Sub Draw(bSeries As Boolean)
     arsInt = Chart._$ColChart[$sidChart].Headers.Values
   Endif 
   
-  
   If Not $bVisible Then Return 
   
   w = Chart._$ColChart[$sidChart].Width
   h = Chart._$ColChart[$sidChart].Height
   'draw.Font = Chart.Font
   'Get the max text length  
-
+  
   draw.Font = $oFont
   draw.Font.Size = $oFont.Size * Chart._$ColChart[$sidChart]._fProportionnal
   For Each s In arsInt
     i = draw.TextWidth(s)
     If i > cnt Then cnt = i
   Next
-    Print cnt
+  Print cnt
   SQUARESIZE = draw.TextHeight("T")
   
   Select Case $iPosition
@@ -140,7 +136,6 @@ Public Sub Draw(bSeries As Boolean)
         Draw.Text(arsInt[i], x + iStaticSpace + SQUARESIZE + iStaticSpace, Y + TitleH + iStaticSpace + cnt)
         cnt += Draw.Font.Height + iStaticSpace
       Next
-      
       
       $iWidth = w + iStaticSpace
       $iHeight = 0
@@ -178,29 +173,29 @@ Public Sub Draw(bSeries As Boolean)
       $iWidth = 0
       $iHeight = h + iStaticSpace
   End Select
+  
 End
 
-
 Private Function _Width_Read() As Integer
-
+  
   Return $iWidth
-
+  
 End
 
 Private Function _Height_Read() As Integer
-
+  
   Return $iHeight
-
+  
 End
 
 Private Function Font_Read() As Font
-
+  
   Return $oFont
-
+  
 End
 
 Private Sub Font_Write(Value As Font)
-
+  
   $oFont = Value
-
+  
 End

@@ -62,15 +62,15 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: FMainInicial.class:37
+#: FMainInicial.class:41
 msgid "No existe ese alumno/profesor"
 msgstr ""
 
-#: FMainInicial.class:43
+#: FMainInicial.class:47
 msgid "No existe ese alumno/profesor con ese nombre"
 msgstr ""
 
-#: FMainInicial.class:49
+#: FMainInicial.class:53
 msgid "Error: Contraseña inválida"
 msgstr ""
 
@@ -322,7 +322,7 @@ msgstr ""
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:166 FormEstadistica.form:40 FormLectura.form:114
+#: FormConfigurarTest.form:166 FormEstadistica.form:30 FormLectura.form:114
 #: FormResultados.form:50
 msgid "Salir"
 msgstr ""
@@ -343,24 +343,24 @@ msgstr ""
 msgid "Palabras leidas"
 msgstr ""
 
-#: FormEstadistica.form:46
-msgid "Media de todas las marcas"
-msgstr ""
-
-#: FormEstadistica.form:52
-msgid "Evolución Velocidad vs Tiempo"
-msgstr ""
-
-#: FormEstadistica.form:58
-msgid "Ültima Marca"
-msgstr ""
-
-#: FormEstadistica.form:64
-msgid "Mejor Marca"
-msgstr ""
-
-#: FormEstadistica.form:110
+#: FormEstadistica.form:37
 msgid "Redibujar"
+msgstr ""
+
+#: FormEstadistica.form:44
+msgid "Media Alumno"
+msgstr ""
+
+#: FormEstadistica.form:51
+msgid "Mostrar:"
+msgstr ""
+
+#: FormEstadistica.form:57
+msgid "Max y Min según Curso"
+msgstr ""
+
+#: FormEstadistica.class:103
+msgid "Palabras Por Minuto"
 msgstr ""
 
 #: FormLectura.form:35

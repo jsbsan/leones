@@ -3,8 +3,17 @@
 'Recibire los datos de la persona para sacar las gráficas....
 Public PersonaVOtmp As PersonaVO
 Private PersonaDAOtmp As New PersonaDAO
+Private PruebasDAOtmp As New PruebasDAO
+Private PruebasVotmp As PruebasVO
+Private PruebasVotmpLista As PruebasVO[] 'se guardan las pruebas.
 
 Public Sub Form_Open()
+  
+  graficaAlumno()
+  
+End
+
+Private Sub ComoDefinirGrafica()
   
   Chart.CountDataSets = 1                                                         'How many data sets do you require = 2
   Chart.Headers.Values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 'Header values
@@ -49,90 +58,7 @@ End
 
 Public Sub ButtonRedibujar_Click()
   
-  Chart.CountDataSets = 1
-  
-  If CheckBox1.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(59, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 1º grado"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(35, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 1º grado"
-    
-  Endif
-  
-  If CheckBox2.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(60, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 2º grado"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(84, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 2º grado"
-    
-  Endif
-  
-  If CheckBox3.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(85, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 3º grado"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(99, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 3º grado"
-    
-  Endif
-  
-  If CheckBox4.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(100, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 4º grado"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(114, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 4º grado"
-    
-  Endif
-  
-  If CheckBox5.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(115, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 5º grado"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(124, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 5º grado"
-    
-  Endif
-  
-  If CheckBox6.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(125, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 6º grado"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(134, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 6º grado"
-    
-  Endif
-  
-  If CheckBox7.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(135, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 1º grado Secundaria"
-    Chart[Chart.CountDataSets - 1].values = repiteValores(144, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 1º grado Secundaria"
-    
-  Endif
-  
-  If CheckBox8.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(145, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 2º grado Secundaria" 
-    Chart[Chart.CountDataSets - 1].values = repiteValores(154, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 2º grado Secundaria"
-    
-  Endif
-  
-  If CheckBox8.value = True Then 
-    Chart.CountDataSets += 2    
-    Chart[Chart.CountDataSets - 2].values = repiteValores(155, Chart[0].count)
-    Chart[Chart.CountDataSets - 2].text = "max 3º grado Secundaria" 
-    Chart[Chart.CountDataSets - 1].values = repiteValores(160, Chart[0].count)
-    Chart[Chart.CountDataSets - 1].text = "min 3º grado Secundaria"
-    
-  Endif
-  
-  DrawingArea1.Refresh        
+  graficaAlumno()
   
 End
 
@@ -146,5 +72,135 @@ Public Function repiteValores(v As Integer, veces As Integer) As Integer[]
   Next
   
   Return lista
+  
+End
+
+Public Sub graficaAlumno()
+  
+  Dim resultado As Result
+  Dim sqlString As String
+  Dim velocidad As Integer
+  Dim SumaVelocidad As Integer
+  Dim media As Integer
+  Dim i, minimo, maximo As Integer
+  
+  'filtro: Por persona
+  'PersonaVOtmp.idpersona
+  Print "El nivel es: "; PersonaVOtmp.nivel
+  
+  sqlString = "Select fecha,puntuacion from Pruebas where" 
+  sqlString &= " idpersona=" & PersonaVOtmp.idpersona & " " 'alumno que nos pasan de referencia
+  sqlString &= " Order by fecha" 'ordenado por fechas
+  resultado = PruebasDAOtmp.sql(sqlString)
+  'con esto consigo un listado fecha y puntuacion
+  
+  ' If CheckBoxMediaAlumno.Value = False And CheckBoxMaxMin.Value = False Then chart.CountDataSets = 1   'How many data sets do you require
+  '   If CheckBoxMediaAlumno.Value = True And CheckBoxMaxMin.Value = False Then chart.CountDataSets = 2
+  ' If CheckBoxMediaAlumno.Value = False And CheckBoxMaxMin.Value = True Then chart.CountDataSets = 2
+  
+  If CheckBoxMediaAlumno.Value = True And CheckBoxMaxMin.Value = True Then chart.CountDataSets = 4
+  
+  chart.Title.Text = ("Palabras Por Minuto") 'Chart heading
+  'reinicio la velocidad
+  SumaVelocidad = 0
+  
+  chart.Headers.Values.Clear()
+  chart[0].Values.Clear()
+  
+  While resultado.Available
+    chart.Headers.Values.Add(Format(resultado["fecha"], "dd/mm"))
+    velocidad = resultado["puntuacion"]
+    SumaVelocidad += velocidad
+    chart[0].Values.Add(velocidad)
+    resultado.MoveNext
+    Chart[0].Text = "Lecturas"
+  Wend
+  
+  media = SumaVelocidad / resultado.Max
+  
+  If CheckBoxMediaAlumno.Value Then 
+    chart[1].Values.Clear()
+    For i = 0 To resultado.Count
+      chart[1].Values.Add(media)
+    Next 
+    Chart[1].Text = "Media (" & PersonaVOtmp.nombre & ")"
+  Endif
+  
+  If CheckBoxMaxMin.Value Then 
+    chart[2].Values.Clear()
+    maximo = ValorMaximoCurso(PersonaVOtmp.nivel)
+    For i = 0 To resultado.Count
+      chart[2].Values.Add(maximo)
+    Next
+    Chart[2].Text = "Maximo " & PersonaVOtmp.nivel
+    
+    minimo = ValorMinimoCurso(PersonaVOtmp.nivel)    
+    chart[3].Values.Clear()
+    For i = 0 To resultado.Count
+      chart[3].Values.Add(minimo)
+    Next
+    Chart[3].Text = "Minimo " & PersonaVOtmp.nivel
+    
+  Endif
+  
+  chart.XAxe.Font = Font["5"]
+  chart.YAxe.FONT = Font["5"]
+  
+  Chart.Legend.Visible = True                                                     'Makes the Legend visible
+  Chart.Legend.Title = "Lecturas"                                                     'Title of chart
+  chart.Type = ChartType.Lines                                                    'Type of chart
+  chart.BackGround = Color.white                                              'Sets the background colour
+  chart.Border = True                                                          'Gets rid of the border
+  DrawingArea1.Refresh                                                            'Refresh the Drawing area
+  
+End
+
+Public Function ValorMaximoCurso(curso As String) As Integer
+  
+  Select Case Curso
+    Case "Primaria 1º"
+      Return 59
+    Case "Primaria 2º"
+      Return 84
+    Case "Primaria 3º"
+      Return 99
+    Case "Primaria 4º"
+      Return 114
+    Case "Primaria 5º"
+      Return 124
+    Case "Primaria 6º"
+      Return 134
+    Case "Secundaria 1º"
+      Return 144
+    Case "Secundaria 2º"
+      Return 154
+    Case "Secundaria 3º"
+      Return 160
+  End Select
+  
+End
+
+Public Function ValorMinimoCurso(curso As String) As Integer
+  
+  Select Case Curso
+    Case "Primaria 1º"
+      Return 35
+    Case "Primaria 2º"
+      Return 60
+    Case "Primaria 3º"
+      Return 85
+    Case "Primaria 4º"
+      Return 100
+    Case "Primaria 5º"
+      Return 115
+    Case "Primaria 6º"
+      Return 125
+    Case "Secundaria 1º"
+      Return 135
+    Case "Secundaria 2º"
+      Return 145
+    Case "Secundaria 3º"
+      Return 155
+  End Select
   
 End

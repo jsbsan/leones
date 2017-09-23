@@ -1,0 +1,12 @@
+ESTADISTICAS:
+Estadistica Nivel Alumno:
+-Nivel de alumno poder observar de un vistazo los resultados de sus lecturas, lo que viene a ser su evolución. 
+-También dibujar una línea roja que marque la media.
+-Añadir una línea superior e inferior que represente lo que se considera normal en el curso en el que se haya registrado el alumno.
+-Para de un vistazo saber qué cerca o lejos está de conseguir una buena velocidad para su edad.
+-Visible por alumno/profesor
+
+Estadistica Nivel Clase:
+-Recopilar todas las medias y hacer la media de las medias de todos los alumnos para sacar la media de la clase
+ y mostrar ese dato cuando se muestre la gráfica del alumno.
+-Un checkbox para mostrar u ocultar líneas (mínimo, máximo, media, media de la clase).

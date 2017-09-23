@@ -14,27 +14,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormEstadistica.form:40
+#: FormEstadistica.form:30
 msgid "Salir"
 msgstr ""
 
-#: FormEstadistica.form:46
-msgid "Media de todas las marcas"
-msgstr ""
-
-#: FormEstadistica.form:52
-msgid "Evolución Velocidad vs Tiempo"
-msgstr ""
-
-#: FormEstadistica.form:58
-msgid "Ültima Marca"
-msgstr ""
-
-#: FormEstadistica.form:64
-msgid "Mejor Marca"
-msgstr ""
-
-#: FormEstadistica.form:110
+#: FormEstadistica.form:37
 msgid "Redibujar"
+msgstr ""
+
+#: FormEstadistica.form:44
+msgid "Media Alumno"
+msgstr ""
+
+#: FormEstadistica.form:51
+msgid "Mostrar:"
+msgstr ""
+
+#: FormEstadistica.form:57
+msgid "Max y Min según Curso"
+msgstr ""
+
+#: FormEstadistica.class:103
+msgid "Palabras Por Minuto"
 msgstr ""
 
