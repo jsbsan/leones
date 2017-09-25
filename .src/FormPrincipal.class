@@ -16,6 +16,11 @@ Public Sub Form_Open()
   
   'carga ficheros 
   cargaficheros()
+  
+  'carga datos de todos los alumnos -> solo en el caso de que el profesor haya entrado
+  Debug "Es un tipo de persona:", persona.tipo
+  CargaAlumnos()
+  
   'datos
   Me.Title = "Leones: " & persona.nombre
   
@@ -121,7 +126,7 @@ Public Sub cargaficheros()
     
   Next  
   Application.busy = 0 
-
+  
 End
 
 Public Sub GrupoFicheros_DblClick()
@@ -164,5 +169,78 @@ Public Sub ButtonEstadisticas_Click()
   
   FormEstadistica.PersonaVOtmp = persona
   FormEstadistica.ShowModal()
+  
+End
+
+Public Sub CargaAlumnos()
+  
+  Dim resultado As Result
+  Dim PersonaDAOTmp As New PersonaDao
+  Dim nombre, nivel, clase As String
+  Dim hboxtemp As Hbox
+  Dim hlabel As Label
+  Dim hboton As Button
+  
+  resultado = PersonaDAOtmp.sql("Select idpersona,nombre,nivel,clase,tipo from Persona")
+  
+  While resultado.Available
+    
+    If resultado["tipo"] = "Alumno" Then 
+      hboxtemp = New Hbox(ScrollViewAlumnos)
+      hboxtemp.h = 25
+      hboxtemp.w = ScrollViewAlumnos.w - 10
+      
+      nombre = resultado["nombre"]
+      '[
+      hlabel = New Label(hboxtemp) As "GrupoAlumnos"
+      hlabel.h = 15
+      hlabel.expand = True
+      hlabel.text = nombre
+      hlabel.border = border.plain
+      ']
+      nivel = resultado["nivel"]
+      '[
+      hlabel = New Label(hboxtemp) As "GrupoAlumnos"
+      hlabel.h = 15
+      hlabel.expand = True
+      hlabel.text = nivel
+      hlabel.border = border.plain
+      ']
+      
+      clase = resultado["clase"]
+      '[
+      hlabel = New Label(hboxtemp) As "GrupoAlumnos"
+      hlabel.h = 15
+      hlabel.expand = True
+      hlabel.text = clase
+      hlabel.border = border.plain
+      ']
+      'boton exportar dato del alumno..-> convertir datos a json, que luego pueda ser leido por el programa en otra ubicacion.
+      '
+      hboton = New Button(hboxtemp) As "grupoAlumnosImportarDatos" ''TODO: Crear datos en formato json para importar
+      hboton.h = 15
+      hboton.w = 30
+      hboton.picture = Picture["icon:/16/copy"]
+      hboton.tag = resultado["idpersona"]
+      hboton.Tooltip = hboton.tag
+      
+      'boton para estadistica del alumno
+      hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno
+      hboton.h = 15
+      hboton.w = 30
+      hboton.picture = Picture["estadisticas16x16p.png"]
+      hboton.tag = resultado["idpersona"]
+      hboton.Tooltip = hboton.tag
+      
+      'boton para estadisticas del curso
+      hboton = New Button(hboxtemp) As "grupoAlumnosEstadisticaClase" ''TODO: Crear estadistica de clase con las medias de alumnos
+      hboton.h = 15
+      hboton.w = 30
+      hboton.picture = Picture["estadisticas16x16c.png"]
+      hboton.tag = nivel & "|" & clase
+      hboton.Tooltip = hboton.tag
+    Endif
+    resultado.movenext
+  Wend
   
 End

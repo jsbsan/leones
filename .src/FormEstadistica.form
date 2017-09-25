@@ -5,7 +5,7 @@
   Icon = Picture["tabla velocidades.png"]
   Arrangement = Arrange.Horizontal
   { Panel1 Panel
-    MoveScaled(5,1,19,59)
+    MoveScaled(0,1,16,59)
     { PictureBox1 PictureBox
       MoveScaled(1,14,40,38)
       Enabled = False
@@ -13,7 +13,7 @@
       Stretch = True
     }
     { ButtonSalir Button
-      MoveScaled(1,53,16,5)
+      MoveScaled(0,54,16,5)
       Text = ("Salir")
       Picture = Picture["icon:/22/quit"]
     }
@@ -43,7 +43,7 @@
     }
   }
   { DrawingArea1 DrawingArea
-    MoveScaled(56,6,51,53)
+    MoveScaled(19,3,79,53)
     Expand = True
   }
 }

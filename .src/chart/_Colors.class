@@ -5,7 +5,8 @@ Public Const Auto As Integer = 1
 
 Private $ariCustomColors As New Integer[]
 Private $ariColors As Integer[] = [Color.red, Color.blue, Color.cyan, Color.orange, Color.green]
-' &hff6f00,
+''FIXME: Redefino colores de las lineas de gráfico
+'' &hff6f00,
 '   &h800080, &h666666, &hfff0ff, &h6B4794, &h290099, &h7da647,
 '   &he6e64c, &hff9966, &h000080, &h00ffff, &h9999ff]
 Private $iMode As Integer = Auto

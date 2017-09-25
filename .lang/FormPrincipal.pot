@@ -14,55 +14,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormPrincipal.form:35
+#: FormPrincipal.form:36
 msgid "Configuración Test"
 msgstr ""
 
-#: FormPrincipal.form:41
+#: FormPrincipal.form:42
 msgid "Estadisticas e informes"
 msgstr ""
 
-#: FormPrincipal.form:47
+#: FormPrincipal.form:48
 msgid "Agregar Lectura"
 msgstr ""
 
-#: FormPrincipal.form:59
+#: FormPrincipal.form:60
 msgid "Lecturas"
 msgstr ""
 
-#: FormPrincipal.form:76
+#: FormPrincipal.form:77
 msgid "Lecturas Disponibles"
 msgstr ""
 
-#: FormPrincipal.form:96
+#: FormPrincipal.form:97
 msgid "Alumnos"
 msgstr ""
 
-#: FormPrincipal.form:112
+#: FormPrincipal.form:113
 msgid "Estadísticas"
 msgstr ""
 
-#: FormPrincipal.form:118
+#: FormPrincipal.form:119
 msgid "Exportar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.form:123
+#: FormPrincipal.form:124
 msgid "Importar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.class:58
+#: FormPrincipal.class:63
 msgid "Puntuación"
 msgstr ""
 
-#: FormPrincipal.class:66
+#: FormPrincipal.class:71
 msgid "Acción"
 msgstr ""
 
-#: FormPrincipal.class:80
+#: FormPrincipal.class:85
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
-#: FormPrincipal.class:147
+#: FormPrincipal.class:152
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 

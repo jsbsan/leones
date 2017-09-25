@@ -90,12 +90,17 @@
         }
       }
       { Panel3 Panel
-        MoveScaled(5,11,82,13)
+        MoveScaled(4,10,82,13)
         Expand = True
         Arrangement = Arrange.Fill
         { GridViewDatosAlumnos GridView
           MoveScaled(1,1,36,6)
           Expand = True
+        }
+        { ScrollViewAlumnos ScrollView
+          MoveScaled(40,1,36,9)
+          Background = &HFFFFFF&
+          Arrangement = Arrange.Vertical
         }
       }
     }
