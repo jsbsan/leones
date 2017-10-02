@@ -53,7 +53,7 @@ End
 
 Public Sub Timer1_Timer()
   'poner el foco en el TextArea
-
+  
   TextArea1.SetFocus()
   
   tiempoPrueba -= 1
@@ -71,7 +71,7 @@ End
 
 Public Sub TextArea1_KeyPress()
   
-  Form_KeyRelease()
+  '   Form_KeyRelease()
   
 End
 
@@ -81,6 +81,7 @@ Public Sub Form_KeyRelease()
     SumandoErrores += 1
     
     Print SumandoErrores
+    Stop Event
   Endif
   
 End
@@ -163,6 +164,7 @@ End
 Public Sub ButtonReiniciarPrueba_Click()
   
   ''TODO: repetir la prueba....
+  SumandoErrores = 0
   iniciaFormulario()
   
 End
