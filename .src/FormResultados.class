@@ -46,7 +46,8 @@ Public Sub ButtonGUARDARySalir_Click()
   '' pruebatmp.archivosonido = ficherosonido 'si es que lo hay
   
   If PruebastmpDAO.registrar(pruebatmp) Then 
-    Message.Info(("Datos de la prueba guardados correctamente"))
+    'todo correcto.
+    'Message.Info(("Datos de la prueba guardados correctamente"))
   Else
     Message.Error(("Se ha producido un error al guardar los datos"))
   Endif

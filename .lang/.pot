@@ -322,7 +322,7 @@ msgstr ""
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:166 FormEstadistica.form:30 FormLectura.form:114
+#: FormConfigurarTest.form:166 FormEstadistica.form:79 FormLectura.form:114
 #: FormResultados.form:50
 msgid "Salir"
 msgstr ""
@@ -343,20 +343,24 @@ msgstr ""
 msgid "Palabras leidas"
 msgstr ""
 
-#: FormEstadistica.form:37
+#: FormEstadistica.form:39
 msgid "Redibujar"
 msgstr ""
 
-#: FormEstadistica.form:44
+#: FormEstadistica.form:46
 msgid "Media Alumno"
 msgstr ""
 
-#: FormEstadistica.form:51
+#: FormEstadistica.form:53
 msgid "Mostrar:"
 msgstr ""
 
-#: FormEstadistica.form:57
+#: FormEstadistica.form:59
 msgid "Max y Min según Curso"
+msgstr ""
+
+#: FormEstadistica.form:72
+msgid "Informes"
 msgstr ""
 
 #: FormEstadistica.class:103
@@ -511,11 +515,7 @@ msgstr ""
 msgid "Datos de la prueba de lectura"
 msgstr ""
 
-#: FormResultados.class:49
-msgid "Datos de la prueba guardados correctamente"
-msgstr ""
-
-#: FormResultados.class:51
+#: FormResultados.class:52
 msgid "Se ha producido un error al guardar los datos"
 msgstr ""
 

@@ -3,19 +3,19 @@
 { Form Form
   MoveScaled(0,0,111,61)
   Icon = Picture["tabla velocidades.png"]
-  Arrangement = Arrange.Horizontal
+  Arrangement = Arrange.Vertical
+  { ADrawingArea1 DrawingArea
+    MoveScaled(19,3,79,53)
+    Expand = True
+  }
   { Panel1 Panel
-    MoveScaled(0,1,16,59)
+    MoveScaled(1,14,16,59)
+    Visible = False
     { PictureBox1 PictureBox
       MoveScaled(1,14,40,38)
       Enabled = False
       Picture = Picture["tabla velocidades.png"]
       Stretch = True
-    }
-    { ButtonSalir Button
-      MoveScaled(0,54,16,5)
-      Text = ("Salir")
-      Picture = Picture["icon:/22/quit"]
     }
     { ButtonRedibujar Button
       MoveScaled(2,46,13,5)
@@ -42,8 +42,20 @@
       Value = CheckBox.True
     }
   }
-  { DrawingArea1 DrawingArea
-    MoveScaled(19,3,79,53)
-    Expand = True
+  { HBox1 HBox
+    MoveScaled(24,52,35,6)
+    { ButtonInformes Button
+      MoveScaled(1,0,16,6)
+      Enabled = False
+      Expand = True
+      Text = ("Informes")
+      Picture = Picture["Informe Icono32x32.png"]
+    }
+    { ButtonSalir Button
+      MoveScaled(20,0,16,6)
+      Expand = True
+      Text = ("Salir")
+      Picture = Picture["icon:/22/quit"]
+    }
   }
 }

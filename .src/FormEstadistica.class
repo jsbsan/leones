@@ -31,16 +31,16 @@ Private Sub ComoDefinirGrafica()
   Chart.Type = ChartType.Lines                                                    'Type of chart
   Chart.BackGround = Color.white                                              'Sets the background colour
   Chart.Border = True                                                          'Gets rid of the border
-  DrawingArea1.Refresh                                                            'Refresh the Drawing area
+  ADrawingArea1.Refresh                                                            'Refresh the Drawing area
   
 End
 
-Public Sub DrawingArea1_Draw()                                                  'Required to draw the chart
+Public Sub ADrawingArea1_Draw()                                                  'Required to draw the chart
   
   Dim siHeight, siWidth As Short                                                  'For Height and Width of the Chart
   
-  siHeight = DrawingArea1.Height - 5                                             'Set the value to 10 less than the DrawingArea Height
-  siWidth = DrawingArea1.Width - 5                                               'Set the value to 10 less than the DrawingArea Width
+  siHeight = ADrawingArea1.Height - 5                                             'Set the value to 10 less than the DrawingArea Height
+  siWidth = ADrawingArea1.Width - 5                                               'Set the value to 10 less than the DrawingArea Width
   If siHeight < 5 Then siHeight = 5                                             'Make sure the value is not too small
   If siWidth < 5 Then siWidth = 5                                               'Make sure the value is not too small
   
@@ -151,7 +151,7 @@ Public Sub graficaAlumno()
   chart.Type = ChartType.Lines                                                    'Type of chart
   chart.BackGround = Color.white                                              'Sets the background colour
   chart.Border = True                                                          'Gets rid of the border
-  DrawingArea1.Refresh                                                            'Refresh the Drawing area
+  ADrawingArea1.Refresh                                                            'Refresh the Drawing area
   
 End
 

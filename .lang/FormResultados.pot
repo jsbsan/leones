@@ -46,11 +46,7 @@ msgstr ""
 msgid "Datos de la prueba de lectura"
 msgstr ""
 
-#: FormResultados.class:49
-msgid "Datos de la prueba guardados correctamente"
-msgstr ""
-
-#: FormResultados.class:51
+#: FormResultados.class:52
 msgid "Se ha producido un error al guardar los datos"
 msgstr ""
 

@@ -46,9 +46,15 @@ Public Sub iniciaFormulario()
   iniciaCuentaAtras()
   pruebafinalizada = False 'no se ha terminado la prueba
   
+  'poner el foco en el TextArea
+  TextArea1.SetFocus()
+  
 End
 
 Public Sub Timer1_Timer()
+  'poner el foco en el TextArea
+
+  TextArea1.SetFocus()
   
   tiempoPrueba -= 1
   
@@ -60,6 +66,12 @@ Public Sub Timer1_Timer()
     Message.Info("Seleccione palabra donde se quedo en la lectura")
     
   Endif
+  
+End
+
+Public Sub TextArea1_KeyPress()
+  
+  Form_KeyRelease()
   
 End
 
