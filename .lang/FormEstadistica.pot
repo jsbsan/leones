@@ -14,31 +14,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormEstadistica.form:39
+#: FormEstadistica.form:46
 msgid "Redibujar"
 msgstr ""
 
-#: FormEstadistica.form:46
+#: FormEstadistica.form:53
 msgid "Media Alumno"
 msgstr ""
 
-#: FormEstadistica.form:53
+#: FormEstadistica.form:60
 msgid "Mostrar:"
 msgstr ""
 
-#: FormEstadistica.form:59
+#: FormEstadistica.form:66
 msgid "Max y Min según Curso"
 msgstr ""
 
-#: FormEstadistica.form:72
+#: FormEstadistica.form:79
 msgid "Informes"
 msgstr ""
 
-#: FormEstadistica.form:79
+#: FormEstadistica.form:86
 msgid "Salir"
 msgstr ""
 
-#: FormEstadistica.class:103
+#: FormEstadistica.class:108
 msgid "Palabras Por Minuto"
 msgstr ""
 

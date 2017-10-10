@@ -4,9 +4,14 @@
   MoveScaled(0,0,111,61)
   Icon = Picture["tabla velocidades.png"]
   Arrangement = Arrange.Vertical
-  { ADrawingArea1 DrawingArea
-    MoveScaled(19,3,79,53)
+  { ScrollView1 ScrollView
+    MoveScaled(10,1,52,49)
     Expand = True
+    Arrangement = Arrange.Vertical
+    { ADrawingArea1 DrawingArea
+      MoveScaled(6,7,79,53)
+      Expand = True
+    }
   }
   { Panel1 Panel
     MoveScaled(1,14,16,59)

@@ -94,11 +94,16 @@ Public Sub graficaAlumno()
   resultado = PruebasDAOtmp.sql(sqlString)
   'con esto consigo un listado fecha y puntuacion
   
-  ' If CheckBoxMediaAlumno.Value = False And CheckBoxMaxMin.Value = False Then chart.CountDataSets = 1   'How many data sets do you require
-  '   If CheckBoxMediaAlumno.Value = True And CheckBoxMaxMin.Value = False Then chart.CountDataSets = 2
-  ' If CheckBoxMediaAlumno.Value = False And CheckBoxMaxMin.Value = True Then chart.CountDataSets = 2
-  
-  If CheckBoxMediaAlumno.Value = True And CheckBoxMaxMin.Value = True Then chart.CountDataSets = 4
+  Select Case PersonaVOtmp.tipo
+    Case "Alumno"
+      'si es una alumno solo mostrar 4 lineas de datos
+      chart.CountDataSets = 4 
+    Case "Profesor"
+      'si es un profesor mostrar tambien la linea de medias de medias: 5
+      ''TODO: Si es profesor mostrar tambien la linea de Medias de Medias
+      ''TODO: Si es un profesor el que entra nos tiene que dar tambien el alumno o la clase del que este interesado la nota y medias.
+      chart.CountDataSets = 5       
+  End Select
   
   chart.Title.Text = ("Palabras Por Minuto") 'Chart heading
   'reinicio la velocidad
@@ -118,28 +123,39 @@ Public Sub graficaAlumno()
   
   media = SumaVelocidad / resultado.Max
   
-  If CheckBoxMediaAlumno.Value Then 
-    chart[1].Values.Clear()
-    For i = 0 To resultado.Count
-      chart[1].Values.Add(media)
-    Next 
-    Chart[1].Text = "Media (" & PersonaVOtmp.nombre & ")"
-  Endif
+  'If CheckBoxMediaAlumno.Value Then 
+  chart[1].Values.Clear()
+  For i = 0 To resultado.Count
+    chart[1].Values.Add(media)
+  Next 
+  Chart[1].Text = "Media (" & PersonaVOtmp.nombre & ")"
+  ' Endif
   
-  If CheckBoxMaxMin.Value Then 
-    chart[2].Values.Clear()
-    maximo = ValorMaximoCurso(PersonaVOtmp.nivel)
-    For i = 0 To resultado.Count
-      chart[2].Values.Add(maximo)
-    Next
-    Chart[2].Text = "Maximo " & PersonaVOtmp.nivel
+  ' If CheckBoxMaxMin.Value Then 
+  chart[2].Values.Clear()
+  maximo = ValorMaximoCurso(PersonaVOtmp.nivel)
+  For i = 0 To resultado.Count
+    chart[2].Values.Add(maximo)
+  Next
+  Chart[2].Text = "Maximo " & PersonaVOtmp.nivel
+  
+  minimo = ValorMinimoCurso(PersonaVOtmp.nivel)    
+  chart[3].Values.Clear()
+  For i = 0 To resultado.Count
+    chart[3].Values.Add(minimo)
+  Next
+  Chart[3].Text = "Minimo " & PersonaVOtmp.nivel
+  
+  'Si es un Profesor....
+  If chart.CountDataSets = 5 Then 
+    'dibujar Medias de Medias
     
-    minimo = ValorMinimoCurso(PersonaVOtmp.nivel)    
-    chart[3].Values.Clear()
+    chart[4].Values.Clear()
     For i = 0 To resultado.Count
-      chart[3].Values.Add(minimo)
-    Next
-    Chart[3].Text = "Minimo " & PersonaVOtmp.nivel
+      chart[4].Values.Add(SerieMediadeMedia())
+    Next 
+    
+    Chart[4].Text = "Media de Clase " & PersonaVOtmp.nivel & " " & PersonaVOtmp.clase
     
   Endif
   
@@ -152,6 +168,68 @@ Public Sub graficaAlumno()
   chart.BackGround = Color.white                                              'Sets the background colour
   chart.Border = True                                                          'Gets rid of the border
   ADrawingArea1.Refresh                                                            'Refresh the Drawing area
+  
+End
+
+Public Sub SerieMediadeMedia() As Float
+  
+  Dim nivel, clase, sqlString As String
+  Dim resultado2, resultado As Result
+  Dim TotalMedia, sumamedia, SumaAlumno, SumaVelocidad, media As Integer
+  
+  '* definir MEDIA de MEDIA  de los alumnos de la misma clase. *'
+  'solo para profesor
+  'obtener el nivel/clase del alumno dado
+  nivel = PersonaVOtmp.nivel
+  clase = PersonaVOtmp.clase
+  
+  'obtener toda los id de cada alumo de ese nivelclase
+  sqlString = "Select idpersona from Persona where" 
+  sqlString &= " nivel=" & PersonaVOtmp.nivel & " " 
+  sqlString &= " and clase=" & PersonaVOtmp.clase  
+  resultado = PruebasDAOtmp.sql(sqlString)
+  
+  'por cada alumno sacar la media:
+  SumaMedia = 0
+  SumaAlumno = 0
+  
+  While resultado.Available 'lista de alumnos
+    'subconsulta: obtener media del alumno
+    
+    sqlString = "Select puntuacion from Pruebas where" 
+    sqlString &= " idpersona=" & resultado["idpersona"] 
+    resultado2 = PruebasDAOtmp.sql(sqlString)
+    SumaVelocidad = 0
+    media = 0
+    While resultado2.Available
+      '    obtener lecturas y puntuaciones
+      
+      SumaVelocidad += resultado2["puntuacion"]
+      resultado2.MoveNext
+    Wend
+    If resultado2.Max <> 0 Then 
+      'Formula Media: Sumatorio de puntuacion dividido entre numero de pruebas.
+      
+      media = SumaVelocidad / resultado2.Max
+    Else
+      media = 0
+    Endif
+    
+    If media = 0 Then 
+      'si la media es 0, es que no tienen pruebas hechas, y no se contabiliza 
+    Else
+      'La media se suma al se suma al total de media, y el numero de alumnosmedia se incrementa
+      
+      SumaMedia += media
+      SumaAlumno += 1
+    Endif
+    
+    resultado.MoveNext
+  Wend
+  'La media de las medias es el total de medias por el numero de alumnosmedia
+  TotalMedia = SumaMedia / SumaAlumno
+  
+  Return TotalMedia
   
 End
 
