@@ -15,7 +15,9 @@ msgid "leones"
 msgstr ""
 
 #: .project:2
-msgid "Sistema de Control de lectura para alumnos"
+msgid ""
+"Sistema de Control de lectura para alumnos.\n"
+"Cambio ruta de la base de datos a .config"
 msgstr ""
 
 #: FMainInicial.form:34

@@ -2,7 +2,7 @@
 
 ''NOTE: Realizado con MapBd-Vistas. version 0.2.99920  Fecha: 2017-05-07 20:00:36
 Public hconn As New Connection 
-Public NombreBaseDatos As String = user.home & "/" & "lecturas.sqlite" ''TODO: Cambiar ruta a .config
+Public NombreBaseDatos As String = user.home & "/.config" & "/lecturas.sqlite" ''TODO: Cambiar ruta a .config
 
 Public Function conexion()
   ' hace la conexion a la base de datos
@@ -17,14 +17,14 @@ Public Function conexion()
   'comprueba que exista fichero de bd
   If Not Exist(rutabd &/ file.name(NombreBaseDatos)) Then 
     application.busy = 1
-    Try Copy "lecturas.tar.gz" To rutabd &/ "lecturas.tar.gz"
-    Shell "cd " & rutabd & ";tar xzvf " & rutabd &/ "lecturas.tar.gz"
+    Try Copy "lecturas.sqlite" To NombreBaseDatos 'copio la base de datos interior del programa (inicial) a la ruta de trabajo
+    'Shell "cd " & rutabd & ";tar xzvf " & rutabd &/ "lecturas.tar.gz"
     Wait 2
-    Try Kill rutabd &/ "lecturas.tar.gz"
+    'Try Kill rutabd &/ "lecturas.tar.gz"
     application.busy = 0
   Endif
-  hconn.Name = user.home & "/lecturas.sqlite"
-  hconn.host = user.home & "/lecturas.sqlite"
+  hconn.Name = NombreBaseDatos '-> ruta home .config lecturas.sqlite
+  hconn.host = NombreBaseDatos '
   hconn.Type = "Sqlite3"
   hconn.open
   Return 
