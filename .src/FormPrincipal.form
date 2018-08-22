@@ -10,19 +10,24 @@
     Margin = True
     Padding = 3
     { ButtonConfigurar Button
-      MoveScaled(4,0,27,8)
+      MoveScaled(0,0,27,8)
       Text = ("Configuración Test")
       Picture = Picture["Folder-Settings-Tools-icon40x40.png"]
     }
     { ButtonEstadisticas Button
-      MoveScaled(33,0,33,8)
+      MoveScaled(28,0,33,8)
       Text = ("Estadisticas e informes")
       Picture = Picture["estadisticas40x40.png"]
     }
     { ButtonAgregar Button
-      MoveScaled(71,0,23,8)
+      MoveScaled(62,0,23,8)
       Text = ("Agregar Lectura")
       Picture = Picture["icon:/32/add"]
+    }
+    { ButtonCambiarAlumno Button
+      MoveScaled(86,0,21,8)
+      Text = ("Cambiar Alumno")
+      Picture = Picture["CambiarUsuario32.png"]
     }
   }
   { TabStripVarias TabStrip

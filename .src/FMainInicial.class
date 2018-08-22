@@ -28,6 +28,7 @@ Public Sub ButtonEntrar_Click()
   Dim manejador As New PersonaDAO
   Dim personatmp As New PersonaVO
   Dim personasTmp As PersonaVO[]
+  Dim Principal As New FormPrincipal
   'comprobar datos
   '
   'si ok, entonces mostrar siguiente formulario
@@ -54,8 +55,8 @@ Public Sub ButtonEntrar_Click()
       
     Else
       
-      FormPrincipal.persona = personasTmp[0]
-      FormPrincipal.ShowDialog()
+      Principal.persona = personasTmp[0]
+      Principal.ShowDialog()
       Me.Close()
     Endif
   Endif

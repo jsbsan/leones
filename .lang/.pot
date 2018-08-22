@@ -62,15 +62,15 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: FMainInicial.class:41
+#: FMainInicial.class:42
 msgid "No existe ese alumno/profesor"
 msgstr ""
 
-#: FMainInicial.class:47
+#: FMainInicial.class:48
 msgid "No existe ese alumno/profesor con ese nombre"
 msgstr ""
 
-#: FMainInicial.class:53
+#: FMainInicial.class:54
 msgid "Error: Contraseña inválida"
 msgstr ""
 
@@ -387,39 +387,43 @@ msgstr ""
 msgid "Repetir"
 msgstr ""
 
-#: FormPrincipal.form:36
+#: FormPrincipal.form:37
 msgid "Configuración Test"
 msgstr ""
 
-#: FormPrincipal.form:42
+#: FormPrincipal.form:43
 msgid "Estadisticas e informes"
 msgstr ""
 
-#: FormPrincipal.form:48
+#: FormPrincipal.form:49
 msgid "Agregar Lectura"
 msgstr ""
 
-#: FormPrincipal.form:60
+#: FormPrincipal.form:55
+msgid "Cambiar Alumno"
+msgstr ""
+
+#: FormPrincipal.form:67
 msgid "Lecturas"
 msgstr ""
 
-#: FormPrincipal.form:77
+#: FormPrincipal.form:84
 msgid "Lecturas Disponibles"
 msgstr ""
 
-#: FormPrincipal.form:97
+#: FormPrincipal.form:104
 msgid "Alumnos"
 msgstr ""
 
-#: FormPrincipal.form:113
+#: FormPrincipal.form:120
 msgid "Estadísticas"
 msgstr ""
 
-#: FormPrincipal.form:119
+#: FormPrincipal.form:126
 msgid "Exportar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.form:124
+#: FormPrincipal.form:131
 msgid "Importar datos de alumnos"
 msgstr ""
 

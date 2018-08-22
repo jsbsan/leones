@@ -244,3 +244,12 @@ Public Sub CargaAlumnos()
   Wend
   
 End
+
+Public Sub ButtonCambiarAlumno_Click()
+  
+  ''TODO: abrir un formulario para cambio de alumno...
+  '
+  '
+  '
+  
+End
