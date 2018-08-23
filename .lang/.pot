@@ -17,7 +17,9 @@ msgstr ""
 #: .project:2
 msgid ""
 "Sistema de Control de lectura para alumnos.\n"
-"Cambio ruta de la base de datos a .config"
+"Cambio ruta de la base de datos a .config\n"
+"Formulario de edicion de textos (solo para profesores)\n"
+"Cambio de alumno"
 msgstr ""
 
 #: FMainInicial.form:34
@@ -44,11 +46,11 @@ msgstr ""
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMainInicial.form:70
+#: FMainInicial.form:70 FormCambiarAlumno.form:26
 msgid "Usuario:"
 msgstr ""
 
-#: FMainInicial.form:76 FormRegistro.form:32
+#: FMainInicial.form:76 FormCambiarAlumno.form:20 FormRegistro.form:32
 msgid "Contraseña:"
 msgstr ""
 
@@ -64,15 +66,15 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: FMainInicial.class:42
+#: FMainInicial.class:42 FormCambiarAlumno.class:28
 msgid "No existe ese alumno/profesor"
 msgstr ""
 
-#: FMainInicial.class:48
+#: FMainInicial.class:48 FormCambiarAlumno.class:34
 msgid "No existe ese alumno/profesor con ese nombre"
 msgstr ""
 
-#: FMainInicial.class:54
+#: FMainInicial.class:54 FormCambiarAlumno.class:40
 msgid "Error: Contraseña inválida"
 msgstr ""
 
@@ -220,8 +222,25 @@ msgstr ""
 msgid "Aceptar"
 msgstr ""
 
-#: FormAutomaticoDinamico.form:46 FormRegistro.form:76
+#: FormAutomaticoDinamico.form:46 FormCambiarAlumno.form:57
+#: FormEditorLecturas.form:43 FormRegistro.form:76
 msgid "Cancelar"
+msgstr ""
+
+#: FormCambiarAlumno.form:15
+msgid "Cambio de alumno....."
+msgstr ""
+
+#: FormCambiarAlumno.form:41
+msgid "Ejemplo Contraseña:<br>testAlumno"
+msgstr ""
+
+#: FormCambiarAlumno.form:46
+msgid "Ejemplo Usuario:<br>testAlumno"
+msgstr ""
+
+#: FormCambiarAlumno.form:51
+msgid "Cambiar..."
 msgstr ""
 
 #: FormConfigurarTest.form:46
@@ -345,6 +364,14 @@ msgstr ""
 msgid "Palabras leidas"
 msgstr ""
 
+#: FormEditorLecturas.form:19
+msgid "TextArea1"
+msgstr ""
+
+#: FormEditorLecturas.form:32
+msgid "Guardar"
+msgstr ""
+
 #: FormEstadistica.form:46
 msgid "Redibujar"
 msgstr ""
@@ -429,19 +456,19 @@ msgstr ""
 msgid "Importar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.class:63
+#: FormPrincipal.class:74
 msgid "Puntuación"
 msgstr ""
 
-#: FormPrincipal.class:71
+#: FormPrincipal.class:82
 msgid "Acción"
 msgstr ""
 
-#: FormPrincipal.class:85
+#: FormPrincipal.class:96
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
-#: FormPrincipal.class:152
+#: FormPrincipal.class:185
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 

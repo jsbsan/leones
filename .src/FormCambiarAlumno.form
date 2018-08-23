@@ -1,0 +1,42 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,89,31)
+  Text = ("Cambio de alumno.....")
+  Icon = Picture["CambiarUsuario32.png"]
+  { Label4 Label
+    MoveScaled(7,12,14,5)
+    Text = ("Contraseña:")
+    Alignment = Align.Right
+  }
+  { Label3 Label
+    MoveScaled(4,4,14,5)
+    Text = ("Usuario:")
+    Alignment = Align.Right
+  }
+  { ComboBoxUsuario ComboBox
+    MoveScaled(23,4,38,5)
+  }
+  { TextBoxContrasena TextBox
+    MoveScaled(24,12,21,5)
+    Password = True
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(65,13,21,6)
+    Text = ("Ejemplo Contraseña:<br>testAlumno")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(66,2,21,11)
+    Text = ("Ejemplo Usuario:<br>testAlumno")
+  }
+  { ButtonCambiar Button
+    MoveScaled(28,22,19,7)
+    Text = ("Cambiar...")
+    Picture = Picture["CambiarUsuario32.png"]
+  }
+  { ButtonCancelar Button
+    MoveScaled(63,22,19,7)
+    Text = ("Cancelar")
+    Picture = Picture["icon:/32/cancel"]
+  }
+}

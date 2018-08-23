@@ -32,7 +32,7 @@
     Text = ("Entrar")
   }
   { Label2 Label
-    MoveScaled(27,30,24,4)
+    MoveScaled(27,29,24,4)
     Font = Font["+3"]
     Text = ("Control de Acceso")
     Alignment = Align.Center
@@ -42,21 +42,21 @@
     Text = ("¿nuevo usuario? Registrate")
   }
   { Label3 Label
-    MoveScaled(4,36,14,5)
+    MoveScaled(4,34,14,5)
     Text = ("Usuario:")
     Alignment = Align.Right
   }
   { Label4 Label
-    MoveScaled(4,43,14,5)
+    MoveScaled(5,44,14,5)
     Text = ("Contraseña:")
     Alignment = Align.Right
   }
   { TextBoxContrasena TextBox
-    MoveScaled(21,43,21,5)
+    MoveScaled(21,44,21,5)
     Password = True
   }
   { ComboBoxUsuario ComboBox
-    MoveScaled(21,36,38,5)
+    MoveScaled(20,34,38,5)
   }
   { PictureBox2 PictureBox
     MoveScaled(24,4,11,11)
@@ -64,11 +64,11 @@
     Stretch = True
   }
   { TextLabel2 TextLabel
-    MoveScaled(61,35,15,8)
+    MoveScaled(61,32,15,10)
     Text = ("Ejemplo Usuario:<br>testAlumno<br>testProfesor")
   }
   { TextLabel3 TextLabel
-    MoveScaled(43,43,21,6)
+    MoveScaled(43,43,21,7)
     Text = ("Ejemplo Contraseña:<br>testAlumno<br>testProfesor")
   }
 }

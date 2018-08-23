@@ -3,7 +3,7 @@
 Title=leones
 Startup=FMainInicial
 Icon=leones.png
-Version=0.0.2
+Version=0.0.3
 Component=gb.image
 Component=gb.qt4
 Component=gb.form
@@ -12,7 +12,7 @@ Component=gb.db.form
 Component=gb.db.sqlite3
 Component=gb.settings
 Component=gb.qt4.ext
-Description="Sistema de Control de lectura para alumnos.\nCambio ruta de la base de datos a .config"
+Description="Sistema de Control de lectura para alumnos.\nCambio ruta de la base de datos a .config\nFormulario de edicion de textos (solo para profesores)\nCambio de alumno"
 Authors="Julio Sanchez Berro (jsbsan)"
 TabSize=2
 Translate=1

@@ -5,7 +5,7 @@ Public ManejadorPersona As New PersonaDAO
 Private ManejadorPruebasTmpDato As New PruebasDAO 
 Private PruebasTmpDato As PruebasVO
 
-Private ruta_trabajo As String = User.Home & "/.leones"
+Private ruta_trabajo As String = User.Home & "/.leones" 'importante... ruta donde estan los ficheros de lectura...
 Private ultimoobjeto As Label
 
 Public Sub Form_Open()
@@ -13,14 +13,25 @@ Public Sub Form_Open()
   ModuleComun.copiarLecturas()
   
   Me.Center
+  CargaInicialDatos()
+  
+End
+
+Public Sub CargaInicialDatos()
   
   'carga ficheros 
   cargaficheros()
   
   'carga datos de todos los alumnos -> solo en el caso de que el profesor haya entrado
   Debug "Es un tipo de persona:", persona.tipo
-  CargaAlumnos()
-  
+  If persona.tipo = "Profesor" Then 
+    TabStripVarias[1].Enabled = True
+    TabStripVarias[1].Visible = True
+    CargaAlumnos()
+  Else
+    TabStripVarias[1].Enabled = False
+    TabStripVarias[1].Visible = False
+  Endif
   'datos
   Me.Title = "Leones: " & persona.nombre
   
@@ -124,8 +135,30 @@ Public Sub cargaficheros()
     
     hboton.tag = "accion en fichero|" & ruta_trabajo & "/" & nombrefile
     
+    'Si es profesor añadir un boton de editar lectura...
+    If persona.tipo = "Profesor" Then 
+      hboton.w = 75
+      
+      hboton = New Button(hboxtemp) As "GrupoAccionEditar"
+      hboton.h = 15
+      hboton.w = 75
+      hboton.text = "Editar"
+      hboton.tag = "editar en fichero|" & ruta_trabajo & "/" & nombrefile
+      
+    Endif
+    
   Next  
   Application.busy = 0 
+  
+End
+
+Public Sub GrupoAccionEditar_Click()
+  
+  'Message.Info("Editar fichero: " & Last.tag)
+  
+  FormEditorLecturas.Fichero_lectura = Last.tag
+  
+  FormEditorLecturas.ShowModal()
   
 End
 
@@ -180,6 +213,8 @@ Public Sub CargaAlumnos()
   Dim hboxtemp As Hbox
   Dim hlabel As Label
   Dim hboton As Button
+  
+  ScrollViewAlumnos.Children.Clear() 'borrado de todo los controles que hubiensen
   
   resultado = PersonaDAOtmp.sql("Select idpersona,nombre,nivel,clase,tipo from Persona")
   
@@ -247,9 +282,24 @@ End
 
 Public Sub ButtonCambiarAlumno_Click()
   
+  Dim idactual As Integer
   ''TODO: abrir un formulario para cambio de alumno...
-  '
-  '
-  '
+  idactual = persona.idpersona
+  FormCambiarAlumno.personaActual = persona
+  FormCambiarAlumno.Principal = Me
+  FormCambiarAlumno.ShowModal()
+  'cuando vuelve hay que actualizar datos...
+  '¿se ha cambiado el usuario? Si... entonces recargar la información del usuario....
+  
+  If persona.idpersona = -999 Or persona.idpersona = idactual Then
+    'se cancelo o cerro el formulario, restauro id y no hago nada mas
+    persona.idpersona = idactual
+    Return 
+    
+  Endif
+  
+  ''devuelta del formulario, si se ha recibido cambio de alumno, se actualizan los contenedores de datos del usuario actual
+  ''
+  CargaInicialDatos()
   
 End

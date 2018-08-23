@@ -1,0 +1,36 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,84,64)
+  Arrangement = Arrange.Vertical
+  { TextArea1 TextArea
+    MoveScaled(15,10,35,29)
+    Expand = True
+    Text = ("TextArea1")
+  }
+  { HBox1 HBox
+    MoveScaled(4,53,79,7)
+    { Panel2 Panel
+      MoveScaled(-5,3,16,4)
+      Expand = True
+    }
+    { ButtonGuardar Button
+      MoveScaled(12,0,15,7)
+      Text = ("Guardar")
+      Picture = Picture["icon:/32/save"]
+    }
+    { Panel1 Panel
+      MoveScaled(29,2,16,4)
+      Expand = True
+    }
+    { ButtonCancelar Button
+      MoveScaled(48,-1,14,7)
+      Text = ("Cancelar")
+      Picture = Picture["icon:/32/cancel"]
+    }
+    { Panel3 Panel
+      MoveScaled(61,2,16,4)
+      Expand = True
+    }
+  }
+}

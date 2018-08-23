@@ -22,7 +22,7 @@
     MoveScaled(3,3,92,85)
     Arrangement = Arrange.Vertical
     { TextArea1 TextArea
-      MoveScaled(-21,15,43,47)
+      MoveScaled(0,10,43,47)
       Expand = True
       ReadOnly = True
       Wrap = True

@@ -1,0 +1,62 @@
+' Gambas class file
+
+Public Principal As FormPrincipal 'formulario de donde vengo...
+Public personaActual As PersonaVO
+
+Public Sub Form_Open()
+  
+  Me.Center()
+  
+End
+
+Public Sub ButtonCambiar_Click()
+  
+  Dim manejador As New PersonaDAO
+  Dim personatmp As New PersonaVO
+  Dim personasTmp As PersonaVO[]
+  
+  'comprobar datos
+  '
+  'si ok, entonces mostrar siguiente formulario
+  
+  personatmp.nombre = Upper$(ComboBoxUsuario.text)
+  personatmp.password = Upper$(TextBoxContrasena.text)
+  
+  personasTmp = manejador.ConvertirResult(manejador.BuscarIgualNombre(personatmp.nombre))
+  
+  If personasTmp.count = 0 Then 
+    Message.error(("No existe ese alumno/profesor"))  
+    Return 
+    
+  Endif
+  
+  If String.Upper(personasTmp[0].nombre) <> personatmp.nombre Then
+    Message.Error(("No existe ese alumno/profesor con ese nombre"))
+    Return 
+    
+  Else
+    
+    If String.Upper(personasTmp[0].password) <> personatmp.password Then 
+      Message.Error(("Error: Contraseña inválida"))
+      
+    Else
+      
+      Principal.persona = personasTmp[0]
+      Principal.ShowDialog()
+      Me.Close()
+    Endif
+  Endif
+  
+End
+
+Public Sub ButtonCancelar_Click()
+  'cambio de persona cancelado....
+  
+  Me.personaActual.idpersona = -999
+  Me.Close()
+  
+End
+
+Public Sub Form_Close()
+  
+End

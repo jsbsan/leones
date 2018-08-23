@@ -1,0 +1,38 @@
+' Gambas class file
+
+Public Fichero_lectura As String
+Public nombrefichero As String
+
+Public Sub Form_Open()
+  
+  nombrefichero = Split(Fichero_lectura, "|")[1]
+  Me.Title = "Editando: " & File.Name(nombrefichero)
+  'cargar el fichero de lectura
+  'poner color y fondo como esta defindo en la configuracion
+  
+  TextArea1.text = File.Load(nombrefichero)
+  
+  'leo configuracion...
+  
+  TextArea1.Background = Settings["colorfondo", Color.Black] 
+  TextArea1.Foreground = Settings["colorletra", Color.White]
+  TextArea1.font = Font[Settings["TipoLetra", "Serif,+8"]]
+  
+  TextArea1.pos = 1 'me pongo al inicio del documento
+  
+End
+
+Public Sub ButtonCancelar_Click()
+  
+  Me.Close()
+  
+End
+
+Public Sub ButtonGuardar_Click()
+  
+  File.Save(nombrefichero, TextArea1.text)
+  
+  Message.Info("Modificación Guardada")
+  Me.Close()
+  
+End
