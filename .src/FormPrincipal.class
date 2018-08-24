@@ -303,3 +303,24 @@ Public Sub ButtonCambiarAlumno_Click()
   CargaInicialDatos()
   
 End
+
+Public Sub ButtonAgregar_Click()
+  
+  Dialog.Title = "Elege nueva lectura"
+  Dialog.Path = User.Home
+  
+  If Dialog.OpenFile() Then 
+    Return 'el usuario cancelo la eleccion de fichero
+  Endif
+  
+  'copiar el fichero al directorio de trabajo
+  'fichero elegido ->   Dialog.Path
+  'recargar las lecturas...
+  '
+  Copy Dialog.path To ruta_trabajo & "/" & File.Name(Dialog.path)
+  
+  Wait 0.5 'espera  para terminar de copiar...
+  
+  cargaficheros()
+  
+End

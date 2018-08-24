@@ -4,7 +4,8 @@ FormCambiarAlumno=[45]
 [Breakpoints]
 Breakpoint[1]="ExplainTextbox.55"
 Breakpoint[2]="PruebasDAO.357"
-Count=2
+Breakpoint[3]="FormPrincipal.319"
+Count=3
 
 [DebugWindow]
 Count=0
@@ -18,6 +19,9 @@ Geometry=[14,38,210,210]
 [DebugWindow/Cursor]
 Geometry=[0,24,210,210]
 
+[DebugWindow/Dialog]
+Geometry=[95,388,694,262]
+
 [DebugWindow/Index]
 Geometry=[0,24,210,210]
 
@@ -26,6 +30,9 @@ Geometry=[0,24,210,210]
 
 [DebugWindow/TextArea1]
 Geometry=[0,24,210,757]
+
+[DebugWindow/arfile]
+Geometry=[6,24,210,689]
 
 [DebugWindow/res]
 Geometry=[0,24,210,210]
@@ -43,7 +50,8 @@ File[6]=".src/FormRegistro.class:6.2"
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-File[10]=".src/FormPrincipal.class:157.0"
+Active=10
+File[10]=".src/FormPrincipal.class:52.8"
 File[11]=".src/ModuleComun.module:11.2"
 File[12]=".src/FormConfigurarTest.form"
 File[13]=".src/FormConfigurarTest.class:73.12"
@@ -72,7 +80,7 @@ File[35]=".src/chart/CPoint.class:0.19"
 File[36]=".src/chart/CRect.class:0.19"
 File[37]=".src/chart/FTest.form"
 File[38]=".src/chart/FTest2.form"
-File[39]=".src/chart/MTools.module:121.23"
+File[39]=".src/chart/MTools.module:117.6"
 File[40]=".src/chart/_CYAxe.class:0.19"
 File[41]=".src/chart/Styles/_CSerie.class:65.26"
 File[42]=".src/chart/Styles/_CStylePie.class:48.27"
@@ -83,8 +91,7 @@ File[46]=".src/FormCambiarAlumno.form"
 File[47]=".src/comun.module:0.20"
 File[48]=".src/FormCambiarAlumno.class:55.12"
 File[49]=".src/FormEditorLecturas.form"
-Active=50
-File[50]=".src/FormEditorLecturas.class:36.2"
+File[50]=".src/FormEditorLecturas.class:23.0"
 Count=50
 
 [Watches]

@@ -20,7 +20,7 @@
       Picture = Picture["estadisticas40x40.png"]
     }
     { ButtonAgregar Button
-      MoveScaled(62,0,23,8)
+      MoveScaled(63,0,23,8)
       Text = ("Agregar Lectura")
       Picture = Picture["icon:/32/add"]
     }
