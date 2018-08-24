@@ -3,9 +3,8 @@ FormCambiarAlumno=[45]
 
 [Breakpoints]
 Breakpoint[1]="ExplainTextbox.55"
-Breakpoint[2]="PruebasDAO.357"
-Breakpoint[3]="FormPrincipal.319"
-Count=3
+Breakpoint[2]="FormEstadistica.196"
+Count=2
 
 [DebugWindow]
 Count=0
@@ -43,15 +42,14 @@ Geometry=[14,38,210,210]
 [OpenFile]
 File[1]="leones.png"
 File[2]=".src/FMainInicial.form"
-File[3]=".src/FMainInicial.class:18.0"
+File[3]=".src/FMainInicial.class:61.7"
 File[4]=".src/ExplainTextbox.class:21.2"
 File[5]=".src/FormRegistro.form"
 File[6]=".src/FormRegistro.class:6.2"
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-Active=10
-File[10]=".src/FormPrincipal.class:52.8"
+File[10]=".src/FormPrincipal.class:203.2"
 File[11]=".src/ModuleComun.module:11.2"
 File[12]=".src/FormConfigurarTest.form"
 File[13]=".src/FormConfigurarTest.class:73.12"
@@ -64,13 +62,14 @@ File[19]=".src/ClassDatosPruebas.class:7.0"
 File[20]="NivelesGrados.txt:0.0"
 File[21]="Clases.txt:6.1"
 File[22]=".src/modelo/modeloTabla/DAO/PersonaDAO.class:163.7"
-File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:871.0"
-File[24]=".src/modelo/conexion/Conexion.class:11.9"
+File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:364.12"
+File[24]=".src/modelo/conexion/Conexion.class:29.9"
 File[25]=".src/FormAutomaticoDinamico.form"
 File[26]=".src/FormEstadistica.form"
-File[27]=".src/FormEstadistica.class:104.36"
-File[28]=".src/modelo/modeloTabla/VO/PersonaVO.class:39.5"
-File[29]=".src/chart/Chart.class:208.48"
+Active=27
+File[27]=".src/FormEstadistica.class:195.49"
+File[28]=".src/modelo/modeloTabla/VO/PersonaVO.class:91.5"
+File[29]=".src/chart/Chart.class:211.3"
 File[30]="TODO.TXT:11.86"
 File[31]=".src/chart/_CXAxe.class:0.19"
 File[32]=".src/chart/_CAxes.class:15.27"
@@ -80,19 +79,21 @@ File[35]=".src/chart/CPoint.class:0.19"
 File[36]=".src/chart/CRect.class:0.19"
 File[37]=".src/chart/FTest.form"
 File[38]=".src/chart/FTest2.form"
-File[39]=".src/chart/MTools.module:117.6"
+File[39]=".src/chart/MTools.module:117.3"
 File[40]=".src/chart/_CYAxe.class:0.19"
-File[41]=".src/chart/Styles/_CSerie.class:65.26"
-File[42]=".src/chart/Styles/_CStylePie.class:48.27"
+File[41]=".src/chart/Styles/_CSerie.class:29.0"
+File[42]=".src/chart/Styles/_CStylePie.class:48.3"
 File[43]=".src/chart/Styles/_CStyleLine.class:0.19"
-File[44]=".src/chart/_CLegend.class:24.42"
+File[44]=".src/chart/_CLegend.class:27.3"
 File[45]=".src/chart/_Colors.class:8.12"
 File[46]=".src/FormCambiarAlumno.form"
 File[47]=".src/comun.module:0.20"
 File[48]=".src/FormCambiarAlumno.class:55.12"
 File[49]=".src/FormEditorLecturas.form"
 File[50]=".src/FormEditorLecturas.class:23.0"
-Count=50
+File[51]=".src/chart/_CTitle.class:16.0"
+File[52]=".src/chart/_CHeaders.class:12.0"
+Count=52
 
 [Watches]
 Count=1

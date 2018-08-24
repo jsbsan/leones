@@ -309,6 +309,8 @@ Public Sub ButtonAgregar_Click()
   Dialog.Title = "Elege nueva lectura"
   Dialog.Path = User.Home
   
+  Dialog.Filter = ["*.palabras", "palabras", "*.sintagmas", "sintagmas", "*.frases", "frases", "*.evaluaciones", "evaluaciones", "*.evaluaciones externas", "evaluaciones externas", "*.txt", "archivos de texto", "*", "todos los archivos"]
+  
   If Dialog.OpenFile() Then 
     Return 'el usuario cancelo la eleccion de fichero
   Endif

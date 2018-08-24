@@ -392,7 +392,7 @@ msgstr ""
 msgid "Informes"
 msgstr ""
 
-#: FormEstadistica.class:108
+#: FormEstadistica.class:115
 msgid "Palabras Por Minuto"
 msgstr ""
 

@@ -7,7 +7,9 @@ Private PruebasDAOtmp As New PruebasDAO
 Private PruebasVotmp As PruebasVO
 Private PruebasVotmpLista As PruebasVO[] 'se guardan las pruebas.
 
-Public Sub Form_Open()
+Private SinDatos As Boolean = True
+
+Public Sub Form_show()
   
   graficaAlumno()
   
@@ -38,6 +40,11 @@ End
 Public Sub ADrawingArea1_Draw()                                                  'Required to draw the chart
   
   Dim siHeight, siWidth As Short                                                  'For Height and Width of the Chart
+  
+  If SinDatos = False Then
+    Me.Close()
+    Return
+  Endif
   
   siHeight = ADrawingArea1.Height - 5                                             'Set the value to 10 less than the DrawingArea Height
   siWidth = ADrawingArea1.Width - 5                                               'Set the value to 10 less than the DrawingArea Width
@@ -280,5 +287,9 @@ Public Function ValorMinimoCurso(curso As String) As Integer
     Case "Secundaria 3º"
       Return 155
   End Select
+  
+End
+
+Public Sub Form_Open()
   
 End
