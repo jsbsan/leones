@@ -42,7 +42,7 @@
     Text = ("¿nuevo usuario? Registrate")
   }
   { Label3 Label
-    MoveScaled(4,34,14,5)
+    MoveScaled(5,34,14,5)
     Text = ("Usuario:")
     Alignment = Align.Right
   }
@@ -52,7 +52,7 @@
     Alignment = Align.Right
   }
   { TextBoxContrasena TextBox
-    MoveScaled(21,44,21,5)
+    MoveScaled(20,44,22,5)
     Password = True
   }
   { ComboBoxUsuario ComboBox

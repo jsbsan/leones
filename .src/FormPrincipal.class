@@ -257,7 +257,7 @@ Public Sub CargaAlumnos()
       hboton.w = 30
       hboton.picture = Picture["icon:/16/copy"]
       hboton.tag = resultado["idpersona"]
-      hboton.Tooltip = hboton.tag
+      hboton.Tooltip = ("Crear datos en formato json para importar")
       
       'boton para estadistica del alumno
       hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno
@@ -265,7 +265,7 @@ Public Sub CargaAlumnos()
       hboton.w = 30
       hboton.picture = Picture["estadisticas16x16p.png"]
       hboton.tag = resultado["idpersona"]
-      hboton.Tooltip = hboton.tag
+      hboton.Tooltip = ("Estadistica del Alumno")
       
       'boton para estadisticas del curso
       hboton = New Button(hboxtemp) As "grupoAlumnosEstadisticaClase" ''TODO: Crear estadistica de clase con las medias de alumnos
@@ -273,7 +273,7 @@ Public Sub CargaAlumnos()
       hboton.w = 30
       hboton.picture = Picture["estadisticas16x16c.png"]
       hboton.tag = nivel & "|" & clase
-      hboton.Tooltip = hboton.tag
+      hboton.Tooltip = ("Crear estadistica de clase con las medias de alumnos")
     Endif
     resultado.movenext
   Wend

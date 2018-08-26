@@ -3,8 +3,7 @@ FormCambiarAlumno=[45]
 
 [Breakpoints]
 Breakpoint[1]="ExplainTextbox.55"
-Breakpoint[2]="FormEstadistica.196"
-Count=2
+Count=1
 
 [DebugWindow]
 Count=0
@@ -49,10 +48,10 @@ File[6]=".src/FormRegistro.class:6.2"
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-File[10]=".src/FormPrincipal.class:203.2"
+File[10]=".src/FormPrincipal.class:276.9"
 File[11]=".src/ModuleComun.module:11.2"
 File[12]=".src/FormConfigurarTest.form"
-File[13]=".src/FormConfigurarTest.class:73.12"
+File[13]=".src/FormConfigurarTest.class:78.0"
 File[14]=".src/FormLectura.form"
 File[15]="Stop.png"
 File[16]=".src/FormLectura.class:38.2"
@@ -66,8 +65,7 @@ File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:364.12"
 File[24]=".src/modelo/conexion/Conexion.class:29.9"
 File[25]=".src/FormAutomaticoDinamico.form"
 File[26]=".src/FormEstadistica.form"
-Active=27
-File[27]=".src/FormEstadistica.class:195.49"
+File[27]=".src/FormEstadistica.class:196.10"
 File[28]=".src/modelo/modeloTabla/VO/PersonaVO.class:91.5"
 File[29]=".src/chart/Chart.class:211.3"
 File[30]="TODO.TXT:11.86"
@@ -93,7 +91,9 @@ File[49]=".src/FormEditorLecturas.form"
 File[50]=".src/FormEditorLecturas.class:23.0"
 File[51]=".src/chart/_CTitle.class:16.0"
 File[52]=".src/chart/_CHeaders.class:12.0"
-Count=52
+Active=53
+File[53]="Tareas Pendientes.txt:9.17"
+Count=53
 
 [Watches]
 Count=1

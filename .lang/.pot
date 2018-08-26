@@ -319,40 +319,40 @@ msgstr ""
 msgid "Grabar...."
 msgstr ""
 
-#: FormConfigurarTest.form:118
+#: FormConfigurarTest.form:120
 msgid "Grabar locución"
 msgstr ""
 
-#: FormConfigurarTest.form:124
+#: FormConfigurarTest.form:126
 msgid "Cuenta Atras inicio prueba"
 msgstr ""
 
-#: FormConfigurarTest.form:128
+#: FormConfigurarTest.form:130
 msgid "Duración cuenta atrás:"
 msgstr ""
 
-#: FormConfigurarTest.form:134
+#: FormConfigurarTest.form:136
 msgid "ValueBox1"
 msgstr ""
 
-#: FormConfigurarTest.form:150
+#: FormConfigurarTest.form:152
 msgid "Haga dobleclick en alguna palabra para contar"
 msgstr ""
 
-#: FormConfigurarTest.form:165
+#: FormConfigurarTest.form:167
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:166 FormEstadistica.form:86 FormLectura.form:114
+#: FormConfigurarTest.form:168 FormEstadistica.form:86 FormLectura.form:114
 #: FormResultados.form:50
 msgid "Salir"
 msgstr ""
 
-#: FormConfigurarTest.form:178
+#: FormConfigurarTest.form:180
 msgid "Guardar configuración y salir"
 msgstr ""
 
-#: FormConfigurarTest.form:179
+#: FormConfigurarTest.form:181
 msgid "Guardar y Salir"
 msgstr ""
 

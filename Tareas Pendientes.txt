@@ -1,0 +1,21 @@
+LEONES:
+
+-> Terminar de programar:
+Combo para elegir usuarios (pantalla inicial y de cambio de alumno/profesor)
+
+-> Sin terminar:
+Grabar Locucion [en configuración]
+
+En graficar:
+Realizar Informes
+
+Pestaña de Alumnos cuando el usuario es profesor:
+-Graficar 
+-Importar datos de alumnos
+-Exportar datos de alumnos
+-Estadisticas
+
+
+Errores:
+Si no hay datos que graficar, indicarlo.
+

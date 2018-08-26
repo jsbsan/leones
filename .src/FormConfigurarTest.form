@@ -65,11 +65,13 @@
       Text = ("Grabar....")
       { PictureBox1 PictureBox
         MoveScaled(3,2,7,7)
+        Enabled = False
         Picture = Picture["microfono.png"]
         Stretch = True
       }
       { CheckBoxGrabarLocucion CheckBox
         MoveScaled(12,3,22,6)
+        Enabled = False
         Text = ("Grabar locución")
       }
     }
