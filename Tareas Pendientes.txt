@@ -1,4 +1,4 @@
-LEONES:
+LEONES 0.0.3:
 
 -> Terminar de programar:
 Combo para elegir usuarios (pantalla inicial y de cambio de alumno/profesor)
@@ -17,5 +17,5 @@ Pestaña de Alumnos cuando el usuario es profesor:
 
 
 Errores:
-Si no hay datos que graficar, indicarlo.
+Si no hay datos que graficar, indicarlo.  -> ok, 29/08/2018
 

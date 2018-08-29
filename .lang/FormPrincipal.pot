@@ -70,3 +70,15 @@ msgstr ""
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 
+#: FormPrincipal.class:285
+msgid "Crear datos en formato json para importar"
+msgstr ""
+
+#: FormPrincipal.class:293
+msgid "Estadistica del Alumno"
+msgstr ""
+
+#: FormPrincipal.class:301
+msgid "Crear estadistica de clase con las medias de alumnos"
+msgstr ""
+

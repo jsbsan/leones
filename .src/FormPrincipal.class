@@ -200,8 +200,33 @@ End
 
 Public Sub ButtonEstadisticas_Click()
   
-  FormEstadistica.PersonaVOtmp = persona
-  FormEstadistica.ShowModal()
+  Dim resultado As Result
+  Dim sqlString As String
+  Dim PruebasDAOtmp As New PersonaDAO
+  
+  Select Case Persona.tipo
+    Case "Alumno"
+      
+      sqlString = "Select fecha,puntuacion from Pruebas where" 
+      sqlString &= " idpersona=" & persona.idpersona & " " 'alumno que nos pasan de referencia
+      sqlString &= " Order by fecha" 'ordenado por fechas
+      resultado = PruebasDAOtmp.sql(sqlString)
+      
+      'Comprobacion si el Alumno no tiene datos de lecturas....
+      If resultado.Count = 0 Then 
+        Message.Info("No hay datos para mostrar graficas")
+      Else
+        FormEstadistica.PersonaVOtmp = persona
+        FormEstadistica.ShowModal()
+      Endif
+      
+    Case "Profesor"
+      'si es un profesor mostrar tambien la linea de medias de medias: 5
+      ''TODO: Si es profesor mostrar tambien la linea de Medias de Medias
+      ''TODO: Si es un profesor el que entra nos tiene que dar tambien el alumno o la clase del que este interesado la nota y medias.
+      FormEstadistica.PersonaVOtmp = persona '-> es el profesor...
+      FormEstadistica.ShowModal()
+  End Select
   
 End
 
