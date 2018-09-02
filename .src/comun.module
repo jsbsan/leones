@@ -69,7 +69,7 @@ Public Sub rellenalista(ListBoxPersonas As ListBox)
   
   ListBoxPersonas.Clear()
   
-  resultado = PersonaDAOtmp.sql("Select idpersona,nombre,nivel,clase,tipo from Persona Order By clase,nivel,nombre")
+  resultado = PersonaDAOtmp.sql("Select idpersona,nombre,nivel,clase,tipo from Persona Order By UPPER(clase),UPPER(nivel),UPPER(nombre)")
   
   While resultado.Available
     texto = "Clase: " & resultado["clase"] & " | " & resultado["nivel"] & " | " & resultado["nombre"]

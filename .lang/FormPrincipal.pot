@@ -14,43 +14,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormPrincipal.form:37
+#: FormPrincipal.form:38
 msgid "Configuración Test"
 msgstr ""
 
-#: FormPrincipal.form:43
+#: FormPrincipal.form:44
 msgid "Estadisticas e informes"
 msgstr ""
 
-#: FormPrincipal.form:49
+#: FormPrincipal.form:50
 msgid "Agregar Lectura"
 msgstr ""
 
-#: FormPrincipal.form:55
+#: FormPrincipal.form:56
+msgid "Acceder al directorio de archivos de lecturas"
+msgstr ""
+
+#: FormPrincipal.form:57
+msgid "Directorio"
+msgstr ""
+
+#: FormPrincipal.form:63
+msgid "acceder a directorio de ficheros de lecturas"
+msgstr ""
+
+#: FormPrincipal.form:64
 msgid "Cambiar Alumno"
 msgstr ""
 
-#: FormPrincipal.form:67
+#: FormPrincipal.form:76
 msgid "Lecturas"
 msgstr ""
 
-#: FormPrincipal.form:84
+#: FormPrincipal.form:93
 msgid "Lecturas Disponibles"
 msgstr ""
 
-#: FormPrincipal.form:104
+#: FormPrincipal.form:113
 msgid "Alumnos"
 msgstr ""
 
-#: FormPrincipal.form:120
+#: FormPrincipal.form:129
 msgid "Estadísticas"
 msgstr ""
 
-#: FormPrincipal.form:126
+#: FormPrincipal.form:135
 msgid "Exportar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.form:131
+#: FormPrincipal.form:140
 msgid "Importar datos de alumnos"
 msgstr ""
 

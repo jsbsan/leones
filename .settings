@@ -29,6 +29,9 @@ Geometry=[6,24,210,210]
 [DebugWindow/ScrollBar]
 Geometry=[0,24,210,210]
 
+[DebugWindow/Split(ListBoxPersonas.Text, " | ")]
+Geometry=[6,24,210,210]
+
 [DebugWindow/TextArea1]
 Geometry=[0,24,210,757]
 
@@ -44,14 +47,15 @@ Geometry=[14,38,210,210]
 [OpenFile]
 File[1]="leones.png"
 File[2]=".src/FMainInicial.form"
-File[3]=".src/FMainInicial.class:61.7"
+File[3]=".src/FMainInicial.class:100.66"
 File[4]=".src/ExplainTextbox.class:21.2"
 File[5]=".src/FormRegistro.form"
 File[6]=".src/FormRegistro.class:6.2"
+Active=7
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-File[10]=".src/FormPrincipal.class:206.26"
+File[10]=".src/FormPrincipal.class:360.42"
 File[11]=".src/ModuleComun.module:11.2"
 File[12]=".src/FormConfigurarTest.form"
 File[13]=".src/FormConfigurarTest.class:78.0"
@@ -88,14 +92,13 @@ File[43]=".src/chart/Styles/_CStyleLine.class:0.19"
 File[44]=".src/chart/_CLegend.class:27.3"
 File[45]=".src/chart/_Colors.class:8.12"
 File[46]=".src/FormCambiarAlumno.form"
-File[47]=".src/comun.module:0.20"
+File[47]=".src/comun.module:71.137"
 File[48]=".src/FormCambiarAlumno.class:55.12"
 File[49]=".src/FormEditorLecturas.form"
 File[50]=".src/FormEditorLecturas.class:23.0"
 File[51]=".src/chart/_CTitle.class:40.0"
 File[52]=".src/chart/_CHeaders.class:85.0"
-Active=53
-File[53]="Tareas Pendientes.txt:19.59"
+File[53]="Tareas Pendientes.txt:18.8"
 File[54]="tareas pendientes_OLD.txt:0.0"
 Count=54
 

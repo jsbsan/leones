@@ -355,3 +355,9 @@ End
 Public Sub TabStripVarias_Click()
   
 End
+
+Public Sub ButtonDirectorio_Click()
+  
+  Exec ["pcmanfm", User.Home & "/.leones"]
+  
+End

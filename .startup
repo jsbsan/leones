@@ -10,6 +10,7 @@ gb.form
 gb.db
 gb.db.form
 gb.db.sqlite3
+gb.desktop
 gb.settings
 gb.qt4.ext
 
