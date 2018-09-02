@@ -55,20 +55,28 @@
     MoveScaled(20,44,22,5)
     Password = True
   }
-  { ComboBoxUsuario ComboBox
-    MoveScaled(20,34,38,5)
-  }
   { PictureBox2 PictureBox
     MoveScaled(24,4,11,11)
     Picture = Picture["LectorIcono.png"]
     Stretch = True
   }
   { TextLabel2 TextLabel
-    MoveScaled(61,32,15,10)
+    MoveScaled(63,32,15,10)
     Text = ("Ejemplo Usuario:<br>testAlumno<br>testProfesor")
   }
   { TextLabel3 TextLabel
     MoveScaled(43,43,21,7)
     Text = ("Ejemplo Contraseña:<br>testAlumno<br>testProfesor")
+  }
+  { ButtonPersonas Button
+    MoveScaled(58,34,5,6)
+    Picture = Picture["icon:/32/people"]
+  }
+  { ListBoxPersonas ListBox
+    MoveScaled(1,8,57,26)
+    Visible = False
+  }
+  { ComboBoxUsuario TextBox
+    MoveScaled(20,34,38,5)
   }
 }

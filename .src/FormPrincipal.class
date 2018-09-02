@@ -351,3 +351,7 @@ Public Sub ButtonAgregar_Click()
   cargaficheros()
   
 End
+
+Public Sub TabStripVarias_Click()
+  
+End

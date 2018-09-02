@@ -78,3 +78,27 @@ Public Sub ComboBoxUsuario_KeyPress()
   Endif
   
 End
+
+Public Sub ButtonPersonas_Click()
+  'hay que cargar la lista de las personas disponibles...
+  
+  If ListBoxPersonas.Visible = True Then 
+    ListBoxPersonas.Visible = False
+  Else
+    
+    ListBoxPersonas.Clear()
+    
+    comun.rellenalista(ListBoxPersonas)
+    
+    ListBoxPersonas.Visible = True    
+    
+  Endif
+  
+End
+
+Public Sub ListBoxPersonas_DblClick()
+  
+  ComboBoxUsuario.text = Trim(Split(ListBoxPersonas.Text, "|")[2])
+  ListBoxPersonas.Visible = False
+  
+End

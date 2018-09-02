@@ -14,43 +14,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FMainInicial.form:34
+#: FMainInicial.form:36
 msgid "Leones"
 msgstr ""
 
-#: FMainInicial.form:41
+#: FMainInicial.form:43
 msgid "Label2"
 msgstr ""
 
-#: FMainInicial.form:47
+#: FMainInicial.form:49
 msgid "Sistema para el control de lectura de alumnos."
 msgstr ""
 
-#: FMainInicial.form:53
+#: FMainInicial.form:55
 msgid "Entrar"
 msgstr ""
 
-#: FMainInicial.form:59
+#: FMainInicial.form:61
 msgid "Control de Acceso"
 msgstr ""
 
-#: FMainInicial.form:65
+#: FMainInicial.form:67
 msgid "¿nuevo usuario? Registrate"
 msgstr ""
 
-#: FMainInicial.form:70
+#: FMainInicial.form:72
 msgid "Usuario:"
 msgstr ""
 
-#: FMainInicial.form:76
+#: FMainInicial.form:78
 msgid "Contraseña:"
 msgstr ""
 
-#: FMainInicial.form:97
+#: FMainInicial.form:95
 msgid "Ejemplo Usuario:<br>testAlumno<br>testProfesor"
 msgstr ""
 
-#: FMainInicial.form:102
+#: FMainInicial.form:100
 msgid "Ejemplo Contraseña:<br>testAlumno<br>testProfesor"
 msgstr ""
 
