@@ -14,43 +14,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormCambiarAlumno.form:15
+#: FormCambiarAlumno.form:17
 msgid "Cambio de alumno....."
 msgstr ""
 
-#: FormCambiarAlumno.form:20
+#: FormCambiarAlumno.form:22
 msgid "Contraseña:"
 msgstr ""
 
-#: FormCambiarAlumno.form:26
+#: FormCambiarAlumno.form:28
 msgid "Usuario:"
 msgstr ""
 
-#: FormCambiarAlumno.form:41
+#: FormCambiarAlumno.form:39
 msgid "Ejemplo Contraseña:<br>testAlumno"
 msgstr ""
 
-#: FormCambiarAlumno.form:46
+#: FormCambiarAlumno.form:44
 msgid "Ejemplo Usuario:<br>testAlumno"
 msgstr ""
 
-#: FormCambiarAlumno.form:51
+#: FormCambiarAlumno.form:49
 msgid "Cambiar..."
 msgstr ""
 
-#: FormCambiarAlumno.form:57
+#: FormCambiarAlumno.form:55
 msgid "Cancelar"
 msgstr ""
 
-#: FormCambiarAlumno.class:28
+#: FormCambiarAlumno.class:30
 msgid "No existe ese alumno/profesor"
 msgstr ""
 
-#: FormCambiarAlumno.class:34
+#: FormCambiarAlumno.class:36
 msgid "No existe ese alumno/profesor con ese nombre"
 msgstr ""
 
-#: FormCambiarAlumno.class:40
+#: FormCambiarAlumno.class:42
 msgid "Error: Contraseña inválida"
 msgstr ""
 

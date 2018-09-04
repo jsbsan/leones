@@ -27,8 +27,11 @@ Public Sub CargaInicialDatos()
   If persona.tipo = "Profesor" Then 
     TabStripVarias[1].Enabled = True
     TabStripVarias[1].Visible = True
+    ButtonEstadisticas.visible = False
     CargaAlumnos()
   Else
+    'si es un alumno
+    ButtonEstadisticas.visible = True
     TabStripVarias[1].Enabled = False
     TabStripVarias[1].Visible = False
   Endif
@@ -285,23 +288,55 @@ Public Sub CargaAlumnos()
       hboton.Tooltip = ("Crear datos en formato json para importar")
       
       'boton para estadistica del alumno
-      hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno
+      hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno -> ya incluyen la media de clases y alumnos
       hboton.h = 15
       hboton.w = 30
       hboton.picture = Picture["estadisticas16x16p.png"]
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Estadistica del Alumno")
       
-      'boton para estadisticas del curso
-      hboton = New Button(hboxtemp) As "grupoAlumnosEstadisticaClase" ''TODO: Crear estadistica de clase con las medias de alumnos
-      hboton.h = 15
-      hboton.w = 30
-      hboton.picture = Picture["estadisticas16x16c.png"]
-      hboton.tag = nivel & "|" & clase
-      hboton.Tooltip = ("Crear estadistica de clase con las medias de alumnos")
+      ' 'boton para estadisticas del curso
+      ' hboton = New Button(hboxtemp) As "grupoAlumnosEstadisticaClase" ''TODO: Crear estadistica de clase con las medias de alumnos
+      ' hboton.h = 15
+      ' hboton.w = 30
+      ' hboton.picture = Picture["estadisticas16x16c.png"]
+      ' hboton.tag = nivel & "|" & clase
+      ' hboton.Tooltip = ("Crear estadistica de clase con las medias de alumnos")
     Endif
     resultado.movenext
   Wend
+  
+End
+
+Public Sub grupoAlumnosEstadistica_Click()
+  
+  Dim resultado As Result
+  Dim sqlString As String
+  Dim PruebasDAOtmp As New PersonaDAO
+  Dim id As Integer
+  Dim personatmp As PersonaVO
+  Dim personaManejadorDato As New PersonaDAO
+  
+  'mostrar grafica del alumno (id del ultimo boton accionado)
+  
+  id = Last.tag
+  
+  '  Message.Info("Alumno " & id)
+  
+  personatmp = personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(id))[0]
+  
+  sqlString = "Select fecha,puntuacion from Pruebas where" 
+  sqlString &= " idpersona=" & id & " " 'alumno que nos pasan de referencia
+  sqlString &= " Order by fecha" 'ordenado por fechas
+  resultado = PruebasDAOtmp.sql(sqlString)
+  
+  'Comprobacion si el Alumno no tiene datos de lecturas....
+  If resultado.Count = 0 Then 
+    Message.Info("No hay datos para mostrar graficas")
+  Else
+    FormEstadistica.PersonaVOtmp = personatmp
+    FormEstadistica.ShowModal()
+  Endif
   
 End
 

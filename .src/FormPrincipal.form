@@ -89,6 +89,7 @@
         Border = Border.Plain
         { Button1 Button
           MoveScaled(75,1,26,6)
+          Visible = False
           Text = ("Estadísticas")
           Picture = Picture["estadisticas40x40.png"]
         }
