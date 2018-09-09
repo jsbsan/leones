@@ -1,4 +1,4 @@
-LEONES 0.0.3:
+LEONES 0.0.4:
 
 -> Terminar de programar:
 Combo para elegir usuarios (pantalla inicial y de cambio de alumno/profesor)  -> ok 04/09/2018
@@ -18,4 +18,7 @@ Pestaña de Alumnos cuando el usuario es profesor:
 
 Errores - BUG:
 Si no hay datos que graficar, indicarlo.  -> ok, 29/08/2018
+
+9/9/2018
+Añado tipo de letra M&M desarrollada por Antonio Sanchez para facilitar lectura
 

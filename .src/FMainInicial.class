@@ -14,6 +14,14 @@ Public Sub Form_Open()
   ''TODO: Eliminar solo pruebas test
   ComboBoxUsuario.text = "testAlumno"
   TextBoxContrasena.text = "testAlumno"
+  '' Copiar tipo de letra especial para lectura
+  If Not Exist(User.Home & "/.fonts") Then 
+    Mkdir User.home & "/.fonts"
+  Endif
+  
+  If Not Exist(User.Home & "/.fonts/M&M.ttf") Then 
+    Copy "tipoletra/M&M.ttf" To User.Home & "/.fonts/M&M.ttf"
+  Endif
   
 End
 
@@ -101,5 +109,5 @@ Public Sub ListBoxPersonas_DblClick()
   ComboBoxUsuario.text = Trim(Split(ListBoxPersonas.Text, "|")[2])
   ListBoxPersonas.Visible = False
   TextBoxContrasena.SetFocus()
-
+  
 End

@@ -58,15 +58,15 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: FMainInicial.class:42
+#: FMainInicial.class:50
 msgid "No existe ese alumno/profesor"
 msgstr ""
 
-#: FMainInicial.class:48
+#: FMainInicial.class:56
 msgid "No existe ese alumno/profesor con ese nombre"
 msgstr ""
 
-#: FMainInicial.class:54
+#: FMainInicial.class:62
 msgid "Error: Contraseña inválida"
 msgstr ""
 

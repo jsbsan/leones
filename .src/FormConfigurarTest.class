@@ -7,20 +7,7 @@ Public Sub Form_Open()
   ' TextArea1.ToColumn(1)
   ' TextArea1.ToLine(1)
   
-  'leo configuracion...
-  ColorButtonColorFondo.Value = Settings["colorfondo", Color.Black] 
-  ColorButtonColorTexto.Value = Settings["colorletra", Color.White]
-  FontChooserTipoLetra.Value = Settings["TipoLetra", "Serif,+8"]  
-  CheckBoxGrabarLocucion.Value = Settings["GrabarLocucion", False] 
-  ValueBoxCuentaAtras.value = Settings["cuantaAtras", 5]
-  'actualizo valores del textarea
-  TextArea1.Background = ColorButtonColorFondo.Value
-  TextArea1.Foreground = ColorButtonColorTexto.Value
-  TextArea1.font = Font[FontChooserTipoLetra.Value]
-  
-  ValueBoxTiempo.value = Settings["tiempo", 90]
-  
-  TextArea1.Pos = 1
+  actualizaControles()
   
 End
 
@@ -69,12 +56,47 @@ Public Sub ButtonGuardarYSalir_Click()
   Settings["colorletra"] = ColorButtonColorTexto.Value
   Settings["tiempo"] = ValueBoxTiempo.value 
   Settings["TipoLetra"] = FontChooserTipoLetra.Value
-  Settings["GrabarLocucion"] = CheckBoxGrabarLocucion.Value
+  Settings["GrabarLocucion"] = CheckBoxGrabarLocucion.value
   Settings["cuantaAtras"] = ValueBoxCuentaAtras.value 
   Me.Close()
   
 End
 
 Public Sub CheckBoxGrabarLocucion_Click()
+  ''TODO: Pendiente de activar o no la grabacion de la lectura
+  ''
+  
+End
+
+Public Sub ButtonValoresPorDefecto_Click()
+  
+  Settings["colorfondo"] = Color.RGB(245, 245, 200) 'color calido
+  Settings["colorletra"] = Color.Black 'color negro para la letra
+  Settings["tiempo"] = 90
+  
+  Settings["TipoLetra"] = "M&M,+8"
+  Settings["GrabarLocucion"] = False
+  Settings["cuantaAtras"] = 5
+  
+  actualizaControles()
+  
+End
+
+Public Sub actualizaControles()
+  'leo configuracion...
+  
+  ColorButtonColorFondo.Value = Settings["colorfondo", Color.RGB(245, 245, 200)] 
+  ColorButtonColorTexto.Value = Settings["colorletra", Color.Black]
+  FontChooserTipoLetra.Value = Settings["TipoLetra", "M&M,+8"]  
+  CheckBoxGrabarLocucion.Value = Settings["GrabarLocucion", False] 
+  ValueBoxCuentaAtras.value = Settings["cuantaAtras", 5]
+  ValueBoxTiempo.value = Settings["tiempo", 90]
+  
+  'actualizo valores del textarea
+  TextArea1.Background = ColorButtonColorFondo.Value
+  TextArea1.Foreground = ColorButtonColorTexto.Value
+  TextArea1.font = Font[FontChooserTipoLetra.Value]
+  
+  TextArea1.Pos = 1
   
 End

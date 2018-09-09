@@ -23,8 +23,13 @@
     MoveScaled(53,0,45,84)
     Expand = True
     Arrangement = Arrange.Vertical
+    { ButtonValoresPorDefecto Button
+      MoveScaled(1,0,40,5)
+      Text = ("Restablecer Valores Por Defecto")
+      Picture = Picture["icon:/16/attach"]
+    }
     { FrameTiempo Frame
-      MoveScaled(1,0,43,9)
+      MoveScaled(0,2,43,7)
       Text = ("Tiempo")
       { Label1 Label
         MoveScaled(1,3,20,4)
@@ -40,7 +45,7 @@
       }
     }
     { FrameColores Frame
-      MoveScaled(1,9,43,14)
+      MoveScaled(1,11,43,14)
       Text = ("Colores")
       { ColorButtonColorFondo ColorButton
         MoveScaled(18,2,11,5)
@@ -59,12 +64,17 @@
         Text = ("Color Fondo:")
         Alignment = Align.Right
       }
+      { ButtonFondoCalido Button
+        MoveScaled(30,3,11,4)
+        Background = &HF5F5C8&
+        Text = ("Calido")
+      }
     }
     { Frame1 Frame
-      MoveScaled(1,23,43,10)
+      MoveScaled(1,24,43,8)
       Text = ("Grabar....")
       { PictureBox1 PictureBox
-        MoveScaled(3,2,7,7)
+        MoveScaled(4,3,6,5)
         Enabled = False
         Picture = Picture["microfono.png"]
         Stretch = True
@@ -76,7 +86,7 @@
       }
     }
     { Cuan Frame
-      MoveScaled(1,35,43,10)
+      MoveScaled(1,33,43,7)
       Text = ("Cuenta Atras inicio prueba")
       { Label5 Label
         MoveScaled(1,3,23,4)
@@ -93,13 +103,13 @@
       }
     }
     { FontChooserTipoLetra FontChooser
-      MoveScaled(2,47,42,25)
+      MoveScaled(1,42,42,28)
     }
     { LabelPalabrasLeidas Label
-      MoveScaled(1,69,42,4)
+      MoveScaled(2,69,42,5)
       Font = Font["-1"]
       ToolTip = ("Haga dobleclick en alguna palabra para contar")
-      Text = ("Haga dobleclick en alguna palabra para contar")
+      Text = ("Nota: Haga dobleclick en alguna\npalabra para contar")
       Alignment = Align.Center
     }
     { Panel2 Panel
@@ -120,7 +130,7 @@
         AutoResize = True
       }
       { ButtonGuardarYSalir Button
-        MoveScaled(23,-1,20,6)
+        MoveScaled(23,0,22,6)
         ToolTip = ("Guardar configuración y salir")
         Text = ("Guardar y Salir")
         Picture = Picture["icon:/22/save"]

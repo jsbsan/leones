@@ -19,7 +19,7 @@ msgid ""
 "Sistema de Control de lectura para alumnos.\n"
 "Cambio ruta de la base de datos a .config\n"
 "Formulario de edicion de textos (solo para profesores)\n"
-"Cambio de alumno"
+"Cambio de alumno. Nuevo tipo de letra y color de fondo por defecto calido"
 msgstr ""
 
 #: FMainInicial.form:36
@@ -66,15 +66,15 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: FMainInicial.class:42 FormCambiarAlumno.class:30
+#: FMainInicial.class:50 FormCambiarAlumno.class:30
 msgid "No existe ese alumno/profesor"
 msgstr ""
 
-#: FMainInicial.class:48 FormCambiarAlumno.class:36
+#: FMainInicial.class:56 FormCambiarAlumno.class:36
 msgid "No existe ese alumno/profesor con ese nombre"
 msgstr ""
 
-#: FMainInicial.class:54 FormCambiarAlumno.class:42
+#: FMainInicial.class:62 FormCambiarAlumno.class:42
 msgid "Error: Contraseña inválida"
 msgstr ""
 
@@ -243,7 +243,7 @@ msgstr ""
 msgid "Cambiar..."
 msgstr ""
 
-#: FormConfigurarTest.form:46
+#: FormConfigurarTest.form:48
 msgid ""
 "Había en un pueblo un molinero que medía el trigo que compraba con una "
 "medida que cabía un celemín, pero que era un poco mayor de la medida justa, "
@@ -291,68 +291,82 @@ msgid ""
 "pequeño."
 msgstr ""
 
-#: FormConfigurarTest.form:62
+#: FormConfigurarTest.form:64
+msgid "Restablecer Valores Por Defecto"
+msgstr ""
+
+#: FormConfigurarTest.form:70
 msgid "Tiempo"
 msgstr ""
 
-#: FormConfigurarTest.form:66
+#: FormConfigurarTest.form:74
 msgid "Tiempo de Lectura:"
 msgstr ""
 
-#: FormConfigurarTest.form:76
+#: FormConfigurarTest.form:84
 msgid "segundos"
 msgstr ""
 
-#: FormConfigurarTest.form:82
+#: FormConfigurarTest.form:90
 msgid "Colores"
 msgstr ""
 
-#: FormConfigurarTest.form:95
+#: FormConfigurarTest.form:103
 msgid "Color Texto:"
 msgstr ""
 
-#: FormConfigurarTest.form:101
+#: FormConfigurarTest.form:109
 msgid "Color Fondo:"
 msgstr ""
 
-#: FormConfigurarTest.form:108
+#: FormConfigurarTest.form:116
+msgid "Calido"
+msgstr ""
+
+#: FormConfigurarTest.form:122
 msgid "Grabar...."
 msgstr ""
 
-#: FormConfigurarTest.form:120
+#: FormConfigurarTest.form:134
 msgid "Grabar locución"
 msgstr ""
 
-#: FormConfigurarTest.form:126
+#: FormConfigurarTest.form:140
 msgid "Cuenta Atras inicio prueba"
 msgstr ""
 
-#: FormConfigurarTest.form:130
+#: FormConfigurarTest.form:144
 msgid "Duración cuenta atrás:"
 msgstr ""
 
-#: FormConfigurarTest.form:136
+#: FormConfigurarTest.form:150
 msgid "ValueBox1"
 msgstr ""
 
-#: FormConfigurarTest.form:152
+#: FormConfigurarTest.form:166
 msgid "Haga dobleclick en alguna palabra para contar"
 msgstr ""
 
 #: FormConfigurarTest.form:167
+msgid ""
+"Nota: Haga dobleclick en alguna\n"
+"palabra para contar"
+msgstr ""
+
+#: FormConfigurarTest.form:181
 msgid "Salir sin guardar cambios"
 msgstr ""
 
-#: FormConfigurarTest.form:168 FormEstadistica.form:86 FormLectura.form:114
+#: FormConfigurarTest.form:182 FormEstadistica.form:86 FormLectura.form:114
 #: FormResultados.form:50
 msgid "Salir"
 msgstr ""
 
-#: FormConfigurarTest.form:180
+#: FormConfigurarTest.form:194
 msgid "Guardar configuración y salir"
 msgstr ""
 
-#: FormConfigurarTest.form:181
+#: FormConfigurarTest.form:195
 msgid "Guardar y Salir"
 msgstr ""
 
@@ -360,7 +374,7 @@ msgstr ""
 msgid "Configuración"
 msgstr ""
 
-#: FormConfigurarTest.class:61
+#: FormConfigurarTest.class:48
 msgid "Palabras leidas"
 msgstr ""
 
