@@ -243,6 +243,10 @@ msgstr ""
 msgid "Cambiar..."
 msgstr ""
 
+#: FormCambiarAlumno.form:71
+msgid "Seleccione haciendo doble click"
+msgstr ""
+
 #: FormConfigurarTest.form:48
 msgid ""
 "Había en un pueblo un molinero que medía el trigo que compraba con una "
@@ -506,6 +510,10 @@ msgstr ""
 msgid "Estadistica del Alumno"
 msgstr ""
 
+#: FormPrincipal.class:304
+msgid "Crear Informe del alumno"
+msgstr ""
+
 #: FormRegistro.form:26
 msgid "Nombre de usuario:"
 msgstr ""
@@ -652,4 +660,16 @@ msgstr ""
 
 #: comun.module:60
 msgid "Trazada:"
+msgstr ""
+
+#: comun.module:133
+msgid "Lectura"
+msgstr ""
+
+#: comun.module:134
+msgid "Palabras por Minuto"
+msgstr ""
+
+#: comun.module:135
+msgid "Fecha"
 msgstr ""

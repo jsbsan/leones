@@ -42,6 +42,10 @@ msgstr ""
 msgid "Cancelar"
 msgstr ""
 
+#: FormCambiarAlumno.form:71
+msgid "Seleccione haciendo doble click"
+msgstr ""
+
 #: FormCambiarAlumno.class:30
 msgid "No existe ese alumno/profesor"
 msgstr ""

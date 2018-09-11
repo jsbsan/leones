@@ -295,16 +295,26 @@ Public Sub CargaAlumnos()
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Estadistica del Alumno")
       
-      ' 'boton para estadisticas del curso
-      ' hboton = New Button(hboxtemp) As "grupoAlumnosEstadisticaClase" ''TODO: Crear estadistica de clase con las medias de alumnos
-      ' hboton.h = 15
-      ' hboton.w = 30
-      ' hboton.picture = Picture["estadisticas16x16c.png"]
-      ' hboton.tag = nivel & "|" & clase
-      ' hboton.Tooltip = ("Crear estadistica de clase con las medias de alumnos")
+      'boton para informe 
+      hboton = New Button(hboxtemp) As "grupoAlumnosInforme" ''TODO: Crear informe
+      hboton.h = 15
+      hboton.w = 30
+      hboton.picture = Picture["Informe16x16.png"]
+      hboton.tag = resultado["idpersona"]
+      hboton.Tooltip = ("Crear Informe del alumno")
     Endif
     resultado.movenext
   Wend
+  
+End
+
+Public Sub grupoAlumnosInforme_Click()
+  
+  Dim personaManejadorDato As New PersonaDAO
+  ''creo el informe, pasando el tag del ultimo control pulsado.
+  ''Este Tag esta definico como resultado["idpersona"]
+  
+  comun.InformeAlumno(personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(Last.tag))[0])
   
 End
 
@@ -372,7 +382,7 @@ Public Sub ButtonAgregar_Click()
   Dialog.Filter = ["*.palabras", "palabras", "*.sintagmas", "sintagmas", "*.frases", "frases", "*.evaluaciones", "evaluaciones", "*.evaluaciones externas", "evaluaciones externas", "*.txt", "archivos de texto", "*", "todos los archivos"]
   
   If Dialog.OpenFile() Then 
-    Return 'el usuario cancelo la eleccion de fichero
+    Return 'el usuario cancelo la eleccion de fichero  
   Endif
   
   'copiar el fichero al directorio de trabajo

@@ -90,3 +90,7 @@ msgstr ""
 msgid "Estadistica del Alumno"
 msgstr ""
 
+#: FormPrincipal.class:304
+msgid "Crear Informe del alumno"
+msgstr ""
+

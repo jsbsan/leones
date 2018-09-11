@@ -140,13 +140,13 @@ Public Sub graficaAlumno()
   
   ' If CheckBoxMaxMin.Value Then 
   chart[2].Values.Clear()
-  maximo = ValorMaximoCurso(PersonaVOtmp.nivel)
+  maximo = comun.ValorMaximoCurso(PersonaVOtmp.nivel)
   For i = 0 To resultado.Count
     chart[2].Values.Add(maximo)
   Next
   Chart[2].Text = "Maximo " & PersonaVOtmp.nivel
   
-  minimo = ValorMinimoCurso(PersonaVOtmp.nivel)    
+  minimo = comun.ValorMinimoCurso(PersonaVOtmp.nivel)    
   chart[3].Values.Clear()
   For i = 0 To resultado.Count
     chart[3].Values.Add(minimo)
@@ -240,56 +240,62 @@ Public Sub SerieMediadeMedia() As Float
   
 End
 
-Public Function ValorMaximoCurso(curso As String) As Integer
-  
-  Select Case Curso
-    Case "Primaria 1º"
-      Return 59
-    Case "Primaria 2º"
-      Return 84
-    Case "Primaria 3º"
-      Return 99
-    Case "Primaria 4º"
-      Return 114
-    Case "Primaria 5º"
-      Return 124
-    Case "Primaria 6º"
-      Return 134
-    Case "Secundaria 1º"
-      Return 144
-    Case "Secundaria 2º"
-      Return 154
-    Case "Secundaria 3º"
-      Return 160
-  End Select
-  
-End
-
-Public Function ValorMinimoCurso(curso As String) As Integer
-  
-  Select Case Curso
-    Case "Primaria 1º"
-      Return 35
-    Case "Primaria 2º"
-      Return 60
-    Case "Primaria 3º"
-      Return 85
-    Case "Primaria 4º"
-      Return 100
-    Case "Primaria 5º"
-      Return 115
-    Case "Primaria 6º"
-      Return 125
-    Case "Secundaria 1º"
-      Return 135
-    Case "Secundaria 2º"
-      Return 145
-    Case "Secundaria 3º"
-      Return 155
-  End Select
-  
-End
+' Public Function ValorMaximoCurso(curso As String) As Integer
+'   
+'   Select Case Curso
+'     Case "Primaria 1º"
+'       Return 59
+'     Case "Primaria 2º"
+'       Return 84
+'     Case "Primaria 3º"
+'       Return 99
+'     Case "Primaria 4º"
+'       Return 114
+'     Case "Primaria 5º"
+'       Return 124
+'     Case "Primaria 6º"
+'       Return 134
+'     Case "Secundaria 1º"
+'       Return 144
+'     Case "Secundaria 2º"
+'       Return 154
+'     Case "Secundaria 3º"
+'       Return 160
+'   End Select
+'   
+' End
+' 
+' Public Function ValorMinimoCurso(curso As String) As Integer
+'   
+'   Select Case Curso
+'     Case "Primaria 1º"
+'       Return 35
+'     Case "Primaria 2º"
+'       Return 60
+'     Case "Primaria 3º"
+'       Return 85
+'     Case "Primaria 4º"
+'       Return 100
+'     Case "Primaria 5º"
+'       Return 115
+'     Case "Primaria 6º"
+'       Return 125
+'     Case "Secundaria 1º"
+'       Return 135
+'     Case "Secundaria 2º"
+'       Return 145
+'     Case "Secundaria 3º"
+'       Return 155
+'   End Select
+'   
+' End
 
 Public Sub Form_Open()
+  
+End
+
+Public Sub ButtonInformes_Click()
+  
+  comun.InformeAlumno(PersonaVOtmp)
   
 End
