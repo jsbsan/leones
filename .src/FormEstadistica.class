@@ -15,27 +15,27 @@ Public Sub Form_show()
   
 End
 
-Private Sub ComoDefinirGrafica()
-  
-  Chart.CountDataSets = 1                                                         'How many data sets do you require = 2
-  Chart.Headers.Values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 'Header values
-  Chart.Title.Text = "Palabras Por Minuto"                                                    'Chart heading
-  
-  'consulta segun boton pulsado...
-  
-  Chart[0].Values = [20, 50, 10, 60, 30]  
-  Chart[0].Text = "Prueba 1"                                        'Chart initial values
-  ' Chart[1].Values = [15, 85, 25, 35, 55]                                          'Chart initial values
-  ' Chart[1].Text = "Prueba 2"
-  
-  Chart.Legend.Visible = True                                                     'Makes the Legend visible
-  Chart.Legend.Title = "Lecturas"                                                     'Title of chart
-  Chart.Type = ChartType.Lines                                                    'Type of chart
-  Chart.BackGround = Color.white                                              'Sets the background colour
-  Chart.Border = True                                                          'Gets rid of the border
-  ADrawingArea1.Refresh                                                            'Refresh the Drawing area
-  
-End
+' Private Sub ComoDefinirGrafica()
+'   
+'   Chart.CountDataSets = 1                                                         'How many data sets do you require = 2
+'   Chart.Headers.Values = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 'Header values
+'   Chart.Title.Text = "Palabras Por Minuto"                                                    'Chart heading
+'   
+'   'consulta segun boton pulsado...
+'   
+'   Chart[0].Values = [20, 50, 10, 60, 30]  
+'   Chart[0].Text = "Prueba 1"                                        'Chart initial values
+'   ' Chart[1].Values = [15, 85, 25, 35, 55]                                          'Chart initial values
+'   ' Chart[1].Text = "Prueba 2"
+'   
+'   Chart.Legend.Visible = True                                                     'Makes the Legend visible
+'   Chart.Legend.Title = "Lecturas"                                                     'Title of chart
+'   Chart.Type = ChartType.Lines                                                    'Type of chart
+'   Chart.BackGround = Color.white                                              'Sets the background colour
+'   Chart.Border = True                                                          'Gets rid of the border
+'   ADrawingArea1.Refresh                                                            'Refresh the Drawing area
+'   
+' End
 
 Public Sub ADrawingArea1_Draw()                                                  'Required to draw the chart
   
@@ -85,6 +85,7 @@ End
 Public Sub graficaAlumno()
   
   Dim resultado As Result
+  
   Dim sqlString As String
   Dim velocidad As Integer
   Dim SumaVelocidad As Integer
@@ -295,7 +296,11 @@ Public Sub Form_Open()
 End
 
 Public Sub ButtonInformes_Click()
+
+  Dim pc As Picture
+  pc = Desktop.Screenshot(ADrawingArea1.ScreenX, ADrawingArea1.ScreenY, ADrawingArea1.Width, ADrawingArea1.height)
+  pc.Save("/tmp/imagen.png", 100)
   
-  comun.InformeAlumno(PersonaVOtmp)
+  comun.InformeAlumno(PersonaVOtmp, "/tmp/imagen.png")
   
 End

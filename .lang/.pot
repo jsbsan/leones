@@ -410,7 +410,7 @@ msgstr ""
 msgid "Informes"
 msgstr ""
 
-#: FormEstadistica.class:115
+#: FormEstadistica.class:116
 msgid "Palabras Por Minuto"
 msgstr ""
 
@@ -662,14 +662,14 @@ msgstr ""
 msgid "Trazada:"
 msgstr ""
 
-#: comun.module:133
+#: comun.module:143
 msgid "Lectura"
 msgstr ""
 
-#: comun.module:134
+#: comun.module:144
 msgid "Palabras por Minuto"
 msgstr ""
 
-#: comun.module:135
+#: comun.module:145
 msgid "Fecha"
 msgstr ""

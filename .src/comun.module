@@ -80,7 +80,7 @@ Public Sub rellenalista(ListBoxPersonas As ListBox)
 End
 
 ''informe
-Public Sub InformeAlumno(PersonaVOtmp As PersonaVO)
+Public Sub InformeAlumno(PersonaVOtmp As PersonaVO, Optional ruta As String)
   
   Dim informe As String
   Dim sqlString As String
@@ -127,6 +127,16 @@ Public Sub InformeAlumno(PersonaVOtmp As PersonaVO)
   informe = Replace$(informe, "##MINIMO##", Str$(ValorMinimoCurso(PersonaVOtmp.nivel)))
   
   informe = Replace$(informe, "##MAXIMO##", Str$(ValorMaximoCurso(PersonaVOtmp.nivel)))
+  
+  If ruta <> "" Then 
+    'insertar imagen
+    informe = Replace$(informe, "##IMAGEN##", "<img src=\"" & ruta & "\"><br>")
+  Else
+    'borro imagen
+    '
+    informe = Replace$(informe, "##IMAGEN##", "")
+    
+  Endif
   
   ''TABLA DE RESULTADOS
   TABLA = "<TABLE><tr>"

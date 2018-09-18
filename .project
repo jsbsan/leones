@@ -12,6 +12,7 @@ Component=gb.db.form
 Component=gb.db.sqlite3
 Component=gb.desktop
 Component=gb.settings
+Component=gb.pdf
 Component=gb.qt4.ext
 Description="Sistema de Control de lectura para alumnos.\nCambio ruta de la base de datos a .config\nFormulario de edicion de textos (solo para profesores)\nCambio de alumno. Nuevo tipo de letra y color de fondo por defecto calido"
 Authors="Julio Sanchez Berro (jsbsan) & Antonio Sanchez (Guadafan)"

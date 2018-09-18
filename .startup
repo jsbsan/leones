@@ -12,5 +12,6 @@ gb.db.form
 gb.db.sqlite3
 gb.desktop
 gb.settings
+gb.pdf
 gb.qt4.ext
 

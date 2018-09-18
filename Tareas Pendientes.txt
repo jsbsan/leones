@@ -7,18 +7,18 @@ Combo para elegir usuarios (pantalla inicial y de cambio de alumno/profesor)  ->
 Grabar Locucion [en configuración]
 
 En graficar:
- Realizar Informes
+ Realizar Informes -> ok 15/9/2018 [pendiente guardar gráficos¿?]
 
 Pestaña de Alumnos cuando el usuario es profesor:
 -Graficar -> muestra el gráfico de la estadistica del alumno elegido (ok 04/09/2018)
 -Importar datos de alumnos
 -Exportar datos de alumnos
--Estadisticas [Informe PDF]
+-Estadisticas [Informe PDF] -> ok 15/9/2018 [pendiente guardar gráficos¿?]
 
 
 Errores - BUG:
 Si no hay datos que graficar, indicarlo.  -> ok, 29/08/2018
 
-9/9/2018
-Añado tipo de letra M&M desarrollada por Antonio Sanchez para facilitar lectura
+Tipo de letra
+Añado tipo de letra M&M desarrollada por Antonio Sanchez para facilitar lectura ->ok 9/9/2018
 
