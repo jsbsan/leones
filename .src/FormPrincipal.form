@@ -90,16 +90,22 @@
         { Button1 Button
           MoveScaled(75,1,26,6)
           Visible = False
+          Font = Font["-2"]
           Text = ("Estadísticas")
           Picture = Picture["estadisticas40x40.png"]
         }
-        { ButtonImportar2 Button
+        { ButtonExportar Button
           MoveScaled(38,1,36,6)
+          Visible = False
+          Font = Font["-2"]
           Text = ("Exportar datos de alumnos")
+          Picture = Picture["exportar3232.png"]
         }
         { ButtonImportar Button
           MoveScaled(1,1,36,6)
+          Font = Font["-2"]
           Text = ("Importar datos de alumnos")
+          Picture = Picture["importar3232.png"]
         }
       }
       { Panel3 Panel

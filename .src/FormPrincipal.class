@@ -280,12 +280,12 @@ Public Sub CargaAlumnos()
       ']
       'boton exportar dato del alumno..-> convertir datos a json, que luego pueda ser leido por el programa en otra ubicacion.
       '
-      hboton = New Button(hboxtemp) As "grupoAlumnosImportarDatos" ''TODO: Crear datos en formato json para importar
+      hboton = New Button(hboxtemp) As "grupoAlumnosExportarDatos" ''TODO: Crear datos en formato json para importar
       hboton.h = 15
       hboton.w = 30
-      hboton.picture = Picture["icon:/16/copy"]
+      hboton.picture = Picture["exportar1616.png"]
       hboton.tag = resultado["idpersona"]
-      hboton.Tooltip = ("Crear datos en formato json para importar")
+      hboton.Tooltip = ("Crear fichero con la información del alumno para exportarlo y usarlo en otro lugar")
       
       'boton para estadistica del alumno
       hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno -> ya incluyen la media de clases y alumnos
@@ -404,5 +404,16 @@ End
 Public Sub ButtonDirectorio_Click()
   
   Exec ["pcmanfm", User.Home & "/.leones"]
+  
+End
+
+Public Sub grupoAlumnosExportarDatos_Click()
+  
+  'se exportan los datos del alumno elegido..->boton de exportar del alumno en concreto tengo su  ID
+  
+  'la informacion que me continen el ultimo objeto (boton, last) es el ID del alumno
+  If comunExportar.ExportarDatos(Last.tag) Then 
+    Message.Info(("Exportados datos correctamente"))
+  Endif
   
 End

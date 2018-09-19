@@ -85,5 +85,13 @@ Public Sub ListBoxPersonas_DblClick()
   ComboBoxUsuario.text = Trim(Split(ListBoxPersonas.Text, "|")[2])
   ListBoxPersonas.Visible = False
   TextBoxContrasena.SetFocus()
+  
+End
 
+Public Sub TextBoxContrasena_KeyPress()
+  
+  If Key.Code = Key.enter Or Key.code = Key.return Then 
+    ButtonCambiar_Click()
+  Endif
+  
 End

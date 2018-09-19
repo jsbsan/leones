@@ -54,15 +54,15 @@ msgstr ""
 msgid "Alumnos"
 msgstr ""
 
-#: FormPrincipal.form:130
+#: FormPrincipal.form:131
 msgid "Estadísticas"
 msgstr ""
 
-#: FormPrincipal.form:136
+#: FormPrincipal.form:138
 msgid "Exportar datos de alumnos"
 msgstr ""
 
-#: FormPrincipal.form:141
+#: FormPrincipal.form:145
 msgid "Importar datos de alumnos"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgid "Se ha producido un error al intentar leer el fichero de lectura"
 msgstr ""
 
 #: FormPrincipal.class:288
-msgid "Crear datos en formato json para importar"
+msgid "Crear fichero con la información del alumno para exportarlo y usarlo en otro lugar"
 msgstr ""
 
 #: FormPrincipal.class:296
@@ -92,5 +92,9 @@ msgstr ""
 
 #: FormPrincipal.class:304
 msgid "Crear Informe del alumno"
+msgstr ""
+
+#: FormPrincipal.class:416
+msgid "Exportados datos correctamente"
 msgstr ""
 

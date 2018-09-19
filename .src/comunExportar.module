@@ -1,0 +1,60 @@
+' Gambas module file
+
+Private personaVOTMP As PersonaVO
+Private PruebasDAOtmp As New PruebasDAO
+Private personaManejadorDato As New PersonaDAO
+'me pasan el id del alumno
+'
+'
+
+Public Function ExportarDatos(id As Integer) As Boolean
+  
+  Dim sqlString As String
+  Dim resultado As Result
+  Dim informe As String
+  Dim personatmp As PersonaVO
+  '0º version del informe:
+  informe = "version0.0.1.19.09.2018" & gb.Cr
+  
+  '1º obtengo datos del alumno
+  
+  personatmp = personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(id))[0]
+  
+  informe &= personaTMP.nombre & "\n"
+  informe &= personaTMP.nivel & "\n"
+  informe &= personaTMP.clase & "\n"
+  
+  '2º obtengo datos de las lecturas del alumno
+  
+  sqlString = "Select fecha,puntuacion,textolectura,archivosonido from Pruebas where" 
+  sqlString &= " idpersona=" & id & " " 'alumno que nos pasan de referencia
+  sqlString &= " Order by fecha" 'ordenado por fechas
+  resultado = PruebasDAOtmp.sql(sqlString)
+  
+  informe &= Str$(resultado.Count) & "\n" 'numero de lecturas que hay
+  '3º lo guardo todo en un fichero [si no incluye los fichero .mp3, es sencillo....
+  While resultado.Available
+    informe &= resultado["textolectura"] & "\n"
+    informe &= resultado["puntuacion"] & "\n"
+    informe &= resultado["fecha"] & "\n"
+    informe &= resultado["archivosonido"] & "\n"
+    resultado.MoveNext
+  Wend
+  '4º Si todo va bien, devuelvo TRUE y si ha fallado algo devuelvo FAlSE
+  '
+  'pedir nombre de fichero para guardarlo
+  '
+  Print informe
+  
+  'guardar en fichero----
+  Dialog.Path = User.home & "/" & personaTMP.nombre & ".datos"
+  If Dialog.SaveFile() Then
+    Message.Info("Operación Cancelada")
+    Return False
+  Endif
+  
+  File.Save(Dialog.Path, informe)
+  
+  Return True 'todo correcto
+  
+End
