@@ -20,10 +20,11 @@ Public Function ExportarDatos(id As Integer) As Boolean
   
   personatmp = personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(id))[0]
   
-  informe &= personaTMP.nombre & "\n"
-  informe &= personaTMP.nivel & "\n"
-  informe &= personaTMP.clase & "\n"
-  
+  informe &= personaTMP.nombre & "\r"
+  informe &= personaTMP.nivel & "\r"
+  informe &= personaTMP.clase & "\r"
+  informe &= personaTMP.password & "\r"
+  informe &= personaTMP.tipo & "\r"
   '2º obtengo datos de las lecturas del alumno
   
   sqlString = "Select fecha,puntuacion,textolectura,archivosonido from Pruebas where" 
@@ -31,13 +32,13 @@ Public Function ExportarDatos(id As Integer) As Boolean
   sqlString &= " Order by fecha" 'ordenado por fechas
   resultado = PruebasDAOtmp.sql(sqlString)
   
-  informe &= Str$(resultado.Count) & "\n" 'numero de lecturas que hay
+  informe &= Str$(resultado.Count) & "\r" 'numero de lecturas que hay
   '3º lo guardo todo en un fichero [si no incluye los fichero .mp3, es sencillo....
   While resultado.Available
-    informe &= resultado["textolectura"] & "\n"
-    informe &= resultado["puntuacion"] & "\n"
-    informe &= resultado["fecha"] & "\n"
-    informe &= resultado["archivosonido"] & "\n"
+    informe &= resultado["textolectura"] & "\r"
+    informe &= resultado["puntuacion"] & "\r"
+    informe &= resultado["fecha"] & "\r"
+    informe &= resultado["archivosonido"] & "\r"
     resultado.MoveNext
   Wend
   '4º Si todo va bien, devuelvo TRUE y si ha fallado algo devuelvo FAlSE
@@ -56,5 +57,94 @@ Public Function ExportarDatos(id As Integer) As Boolean
   File.Save(Dialog.Path, informe)
   
   Return True 'todo correcto
+  
+End
+
+'importar datos.... desde un fichero elegido
+'
+Public Function ImportarDatos() As Boolean
+  
+  Dim ficheroContenido As String
+  
+  Dim contenido As String[]
+  
+  Dialog.Filter = ["*.datos", "*.datos"]
+  
+  If Dialog.OpenFile() Then 
+    Message.Info(("Operacion cancelada"))
+    Return False
+  Endif
+  
+  ficheroContenido = File.load(Dialog.Path)
+  contenido = Split(ficheroContenido, "\r")
+  
+  'procesando contenido...
+  '
+  'la primera linea contiene la version
+  If contenido[0] = "version0.0.1.19.09.2018" Then 
+    'se trata de la version inicial de pruebas
+    If lecturaVersionPruebas(contenido) Then
+      Return True
+    Else 
+      
+      Return False
+      
+    Endif
+  Endif
+  
+  'si llego hasta este punto, es porque algo ha fallado...
+  Return False
+  
+End
+
+Private Function lecturaVersionPruebas(lineas As String[]) As Boolean
+  
+  Dim PruebasVotmp As PruebasVO 'para guardar pruebas...
+  Dim contador As Integer 'para el numero de lecturas
+  Dim NumeroPruebas As Integer
+  Dim cuentalineas As Integer
+  '1º leo los dataos del alumnos
+  
+  personaVOTMP = New PersonaVO
+  
+  personaVOTMP.nombre = lineas[1]
+  personaVOTMP.nivel = lineas[2]
+  personaVOTMP.clase = lineas[3]
+  personaVOTMP.password = lineas[4]
+  personaVOTMP.tipo = lineas[5]
+  'guardo el alumno
+  
+  personaManejadorDato.registrar(personaVOTMP)
+  
+  'obtengo completamente los datos de la ultima persona introducida, [me interesa el ID]
+  personaVOTMP = personaManejadorDato.UltimoIntroducido()
+  
+  'empiezo a leer las pruebas del alumno
+  NumeroPruebas = lineas[6]
+  cuentalineas = 6
+  
+  contador = 1
+  
+  While contador < (NumeroPruebas + 1)
+    PruebasVotmp = New PruebasVO
+    PruebasVotmp.idpersona = personaVOTMP.idpersona
+    cuentalineas += 1
+    PruebasVotmp.textolectura = lineas[cuentalineas]
+    
+    cuentalineas += 1
+    PruebasVotmp.puntuacion = lineas[cuentalineas]
+    
+    cuentalineas += 1
+    PruebasVotmp.fecha = lineas[cuentalineas]
+    
+    cuentalineas += 1
+    PruebasVotmp.archivosonido = lineas[cuentalineas]
+    
+    PruebasDAOtmp.registrar(PruebasVotmp)
+    
+    contador += 1
+  Wend
+  
+  Return True
   
 End

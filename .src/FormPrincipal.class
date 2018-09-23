@@ -242,7 +242,7 @@ Public Sub CargaAlumnos()
   Dim hlabel As Label
   Dim hboton As Button
   
-  ScrollViewAlumnos.Children.Clear() 'borrado de todo los controles que hubiensen
+  ScrollViewAlumnos.Children.Clear() 'borrado de todo los controles que hubiesen
   
   resultado = PersonaDAOtmp.sql("Select idpersona,nombre,nivel,clase,tipo from Persona")
   
@@ -278,6 +278,21 @@ Public Sub CargaAlumnos()
       hlabel.text = clase
       hlabel.border = border.plain
       ']
+      '
+      'boton de borrado de alumnos...
+      hboton = New Button(hboxtemp) As "grupoAlumnosBorrarDatos" ''TODO: Crear datos en formato json para importar
+      hboton.h = 15
+      hboton.w = 30
+      hboton.picture = Picture["icon:/16/delete"]
+      hboton.tag = resultado["idpersona"]
+      hboton.Tooltip = ("Borrado de datos del alumno y lecturas realizadas")
+      hboton = New Button(hboxtemp) ''es un boton para espaciar
+      hboton.h = 15
+      hboton.w = 30
+      '
+      '
+      '
+      '
       'boton exportar dato del alumno..-> convertir datos a json, que luego pueda ser leido por el programa en otra ubicacion.
       '
       hboton = New Button(hboxtemp) As "grupoAlumnosExportarDatos" ''TODO: Crear datos en formato json para importar
@@ -414,6 +429,48 @@ Public Sub grupoAlumnosExportarDatos_Click()
   'la informacion que me continen el ultimo objeto (boton, last) es el ID del alumno
   If comunExportar.ExportarDatos(Last.tag) Then 
     Message.Info(("Exportados datos correctamente"))
+  Endif
+  
+End
+
+Public Sub ButtonExportar_Click()
+  
+  'exportar datos de lun alumno
+  
+End
+
+Public Sub ButtonImportar_Click()
+  
+  If comunExportar.ImportarDatos() = True Then
+    'se debe actualizar los datos del grid...
+    CargaAlumnos()
+    Message.Info(("Importacion de datos correctamente ejecutada"))
+    
+  Endif
+  
+End
+
+Public Sub grupoAlumnosBorrarDatos_Click()
+  
+  Dim resultado As Result
+  Dim msg As Integer
+  Dim idpruebaBorrar As Integer
+  'borrado de datos del alumno
+  
+  msg = Message.Question("¿Esta seguro de borrar los datos del alumno y sus lecturas?", "Si, borralo", "No, cancelar")
+  
+  If msg = 1 Then
+    'si seguro que quiero borrar
+    ManejadorPersona.BorrarIdpersona(Last.tag)
+    resultado = ManejadorPruebasTmpDato.BuscarIgualIdpersona(Last.tag)
+    While resultado.Available
+      idpruebaBorrar = resultado["idprueba"]
+      ManejadorPruebasTmpDato.BorrarIdprueba(idpruebaBorrar)
+      resultado.MoveNext
+    Wend
+    
+    'actualizo datos de la regilla
+    CargaAlumnos()
   Endif
   
 End
