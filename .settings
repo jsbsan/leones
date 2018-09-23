@@ -39,11 +39,23 @@ Geometry=[0,24,210,757]
 [DebugWindow/arfile]
 Geometry=[6,24,210,689]
 
+[DebugWindow/contenido]
+Geometry=[69,257,280,472]
+
+[DebugWindow/personaVOTMP]
+Geometry=[0,24,210,551]
+
+[DebugWindow/personaVOTMP.campo]
+Geometry=[14,38,210,551]
+
 [DebugWindow/res]
 Geometry=[0,24,210,210]
 
 [DebugWindow/res.Fields]
 Geometry=[14,38,210,210]
+
+[DebugWindow/resultado]
+Geometry=[0,24,210,210]
 
 [OpenFile]
 File[1]="leones.png"
@@ -52,11 +64,10 @@ File[3]=".src/FMainInicial.class:75.2"
 File[4]=".src/ExplainTextbox.class:21.2"
 File[5]=".src/FormRegistro.form"
 File[6]=".src/FormRegistro.class:6.2"
-Active=7
 File[7]=".src/FormPrincipal.form"
 File[8]="Lectura_icnoco.jpg"
 File[9]="LectorIcono.png"
-File[10]=".src/FormPrincipal.class:413.51"
+File[10]=".src/FormPrincipal.class:468.24"
 File[11]=".src/ModuleComun.module:11.2"
 File[12]=".src/FormConfigurarTest.form"
 File[13]=".src/FormConfigurarTest.class:9.22"
@@ -68,9 +79,9 @@ File[18]=".src/FormResultados.form"
 File[19]=".src/ClassDatosPruebas.class:7.0"
 File[20]="NivelesGrados.txt:0.0"
 File[21]="Clases.txt:6.1"
-File[22]=".src/modelo/modeloTabla/DAO/PersonaDAO.class:163.7"
-File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:364.12"
-File[24]=".src/modelo/conexion/Conexion.class:4.78"
+File[22]=".src/modelo/modeloTabla/DAO/PersonaDAO.class:999.0"
+File[23]=".src/modelo/modeloTabla/DAO/PruebasDAO.class:71.14"
+File[24]=".src/modelo/conexion/Conexion.class:37.3"
 File[25]=".src/FormAutomaticoDinamico.form"
 File[26]=".src/FormEstadistica.form"
 File[27]=".src/FormEstadistica.class:304.2"
@@ -99,7 +110,8 @@ File[49]=".src/FormEditorLecturas.form"
 File[50]=".src/FormEditorLecturas.class:23.0"
 File[51]=".src/chart/_CTitle.class:40.0"
 File[52]=".src/chart/_CHeaders.class:85.0"
-File[53]="Tareas Pendientes.txt:15.45"
+Active=53
+File[53]="Tareas Pendientes.txt:0.13"
 File[54]="tareas pendientes_OLD.txt:0.0"
 File[55]="html/plantilla01.html:15.4"
 File[56]="estadisticas.png"
@@ -109,8 +121,9 @@ File[59]="exportar1616.png"
 File[60]="exportar3232.png"
 File[61]="importar3232.png"
 File[62]="importar1616.png"
-File[63]=".src/comunExportar.module:50.27"
-Count=63
+File[63]=".src/comunExportar.module:77.38"
+File[64]=".src/modelo/modeloTabla/VO/PruebasVO.class:91.5"
+Count=64
 
 [Watches]
 Count=1
