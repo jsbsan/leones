@@ -1,0 +1,69 @@
+' Gambas class file
+
+Public PersonaVOtmp As PersonaVO
+Public PersonaDAOtmp As New PersonaDAO 'para manejar datos de las personas
+Public Cambios As String[]
+
+Public Sub Form_Open()
+  
+  Me.Center
+  
+  'cargar Niveles y Grado
+  ComboBoxNivelGrado.list = ModuleComun.NivelesGrado()
+  'la clase se debe de cargar
+  ComboBoxClase.list = ModuleComun.Clases()
+  
+  TextBoxAlumno.text = PersonaVOtmp.nombre
+  ComboBoxClase.Text = PersonaVOtmp.clase
+  ComboBoxNivelGrado.text = PersonaVOtmp.nivel
+  
+End
+
+Public Sub ButtonCancelar_Click()
+  'no guardo los cambios
+  '
+  'tengo que pasar un valor para indicar que no ha habido cambios
+  
+  Me.Close()
+  
+End
+
+Public Sub ButtonGuardar_Click()
+  
+  'ha habido cambios
+  Cambios[0] = "Ha habido cambios"
+  
+  'cambios los datos que se han editado
+  PersonaVOtmp.nombre = TextBoxAlumno.text 
+  PersonaVOtmp.clase = ComboBoxClase.Text 
+  PersonaVOtmp.nivel = ComboBoxNivelGrado.text 
+  
+  'guardar datos de la persona...
+  PersonaDAOtmp.ModificarIdpersona(PersonaVOtmp.idpersona, PersonaVOtmp)
+  
+  Me.Close
+  
+End
+
+Public Sub ButtonBorraLecturas_Click()
+  
+  Dim msg As Integer
+  Dim ManejadorPruebasTmpDato As New PruebasDAO
+  Dim resultado As Result
+  Dim idpruebaBorrar As Integer
+  
+  msg = Message.Question(("¿realmente desea borrar todos los datos de lectura del alumno?"), ("Si, borralo"), ("No, cancela"))
+  
+  If msg = 1 Then
+    'borra todas las lecturas del alumno...
+    
+    resultado = ManejadorPruebasTmpDato.BuscarIgualIdpersona(PersonaVOtmp.idpersona)
+    While resultado.Available
+      idpruebaBorrar = resultado["idprueba"]
+      ManejadorPruebasTmpDato.BorrarIdprueba(idpruebaBorrar)
+      resultado.MoveNext
+    Wend
+    Message.Info(("Datos de las lecturas borrados"))
+  Endif
+  
+End

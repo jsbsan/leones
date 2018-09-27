@@ -79,6 +79,31 @@ Public Sub rellenalista(ListBoxPersonas As ListBox)
   
 End
 
+''editar los datos de un alumno
+Public Function EditarAlumno(PersonaVOtmp As PersonaVO, Optional ruta As String) As Boolean
+  
+  'me pasan los datos del alumno 
+  'creo un formulario de edici´on y le paso el alumno
+  'abro el formulario
+  'el formulario devuelve los datos
+  'debo de recargar los datos en grid 
+  Dim cambios As New String[]
+  
+  cambios.Add("Sin Cambios")
+  
+  FormEditarAlumno.PersonaVOtmp = PersonaVOtmp
+  FormEditarAlumno.Cambios = cambios
+  
+  FormEditarAlumno.ShowModal()
+  
+  If cambios[0] = "Sin Cambios" Then 
+    Return False 'no ha habido cambios
+  Else
+    Return True
+  Endif
+  
+End
+
 ''informe
 Public Sub InformeAlumno(PersonaVOtmp As PersonaVO, Optional ruta As String)
   

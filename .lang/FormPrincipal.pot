@@ -66,6 +66,10 @@ msgstr ""
 msgid "Importar datos de alumnos"
 msgstr ""
 
+#: FormPrincipal.class:39
+msgid "Leones"
+msgstr ""
+
 #: FormPrincipal.class:77
 msgid "Puntuación"
 msgstr ""
@@ -78,31 +82,63 @@ msgstr ""
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
+#: FormPrincipal.class:134
+msgid "Leer"
+msgstr ""
+
+#: FormPrincipal.class:136
+msgid "Repetir"
+msgstr ""
+
+#: FormPrincipal.class:148
+msgid "Editar"
+msgstr ""
+
 #: FormPrincipal.class:188
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
+msgstr ""
+
+#: FormPrincipal.class:220
+msgid "No hay datos para mostrar graficas"
 msgstr ""
 
 #: FormPrincipal.class:288
 msgid "Borrado de datos del alumno y lecturas realizadas"
 msgstr ""
 
-#: FormPrincipal.class:303
+#: FormPrincipal.class:299
+msgid "Editar datos del alumno y lecturas realizadas"
+msgstr ""
+
+#: FormPrincipal.class:314
 msgid "Crear fichero con la información del alumno para exportarlo y usarlo en otro lugar"
 msgstr ""
 
-#: FormPrincipal.class:311
+#: FormPrincipal.class:326
 msgid "Estadistica del Alumno"
 msgstr ""
 
-#: FormPrincipal.class:319
-msgid "Crear Informe del alumno"
+#: FormPrincipal.class:425
+msgid "Elege nueva lectura"
 msgstr ""
 
-#: FormPrincipal.class:431
+#: FormPrincipal.class:462
 msgid "Exportados datos correctamente"
 msgstr ""
 
-#: FormPrincipal.class:447
+#: FormPrincipal.class:478
 msgid "Importacion de datos correctamente ejecutada"
+msgstr ""
+
+#: FormPrincipal.class:491
+msgid "¿Esta seguro de borrar los datos del alumno y sus lecturas?"
+msgstr ""
+
+#: FormPrincipal.class:491
+msgid "Si, borralo"
+msgstr ""
+
+#: FormPrincipal.class:491
+msgid "No, cancelar"
 msgstr ""
 

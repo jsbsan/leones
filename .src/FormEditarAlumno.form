@@ -1,0 +1,52 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,89,50)
+  { ButtonGuardar Button
+    MoveScaled(13,43,29,5)
+    Text = ("Guardar Cambios")
+    Picture = Picture["icon:/16/ok"]
+  }
+  { ButtonCancelar Button
+    MoveScaled(59,43,19,5)
+    Text = ("Cancelar")
+    Picture = Picture["icon:/16/cancel"]
+  }
+  { Label1 Label
+    MoveScaled(5,3,21,5)
+    Text = ("Nombre de Alumno:")
+    Alignment = Align.Right
+  }
+  { Label3 Label
+    MoveScaled(5,9,21,5)
+    Text = ("Nivel/Grado:")
+    Alignment = Align.Right
+  }
+  { Label2 Label
+    MoveScaled(4,16,21,5)
+    Text = ("Clase:")
+    Alignment = Align.Right
+  }
+  { TextBoxAlumno TextBox
+    MoveScaled(29,3,47,4)
+    Text = ("TextBox1")
+  }
+  { ComboBoxNivelGrado ComboBox
+    MoveScaled(29,9,27,5)
+    Text = ("ComboBox1")
+  }
+  { ComboBoxClase ComboBox
+    MoveScaled(29,16,25,5)
+    Text = ("ComboBox1")
+  }
+  { Frame1 Frame
+    MoveScaled(7,25,71,14)
+    Background = &HDF9953&
+    Text = ("  Lecturas....")
+    { ButtonBorraLecturas Button
+      MoveScaled(13,4,42,6)
+      Text = ("Borrar todos los datos de lecturas")
+      Picture = Picture["icon:/16/delete"]
+    }
+  }
+}

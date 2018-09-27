@@ -54,6 +54,10 @@ msgstr ""
 msgid "Clase:"
 msgstr ""
 
+#: FormRegistro.class:46
+msgid "Contraseña Maestra"
+msgstr ""
+
 #: FormRegistro.class:49
 msgid "Error: no se ha introducido bien la contraseña maestra"
 msgstr ""

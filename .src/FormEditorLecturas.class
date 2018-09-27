@@ -6,7 +6,7 @@ Public nombrefichero As String
 Public Sub Form_Open()
   
   nombrefichero = Split(Fichero_lectura, "|")[1]
-  Me.Title = "Editando: " & File.Name(nombrefichero)
+  Me.Title = ("Editando") & ": " & File.Name(nombrefichero)
   'cargar el fichero de lectura
   'poner color y fondo como esta defindo en la configuracion
   
@@ -32,7 +32,7 @@ Public Sub ButtonGuardar_Click()
   
   File.Save(nombrefichero, TextArea1.text)
   
-  Message.Info("Modificación Guardada")
+  Message.Info(("Modificación Guardada"))
   Me.Close()
   
 End

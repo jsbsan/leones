@@ -43,7 +43,7 @@ Public Sub TextArea1_DblClick()
   Dim textoAcontar As String
   
   numeropalabras = ModuleComun.contarPalabras(textArea1.text, TextArea1.pos)
-  Print "Numero de palabras: ", numeropalabras
+  ' Print "Numero de palabras: ", numeropalabras
   
   LabelPalabrasLeidas.text = ("Palabras leidas") & ":" & numeropalabras
   

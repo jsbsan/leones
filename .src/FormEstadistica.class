@@ -163,7 +163,7 @@ Public Sub graficaAlumno()
       chart[4].Values.Add(SerieMediadeMedia())
     Next 
     
-    Chart[4].Text = "Media de Clase " & PersonaVOtmp.nivel & " " & PersonaVOtmp.clase
+    Chart[4].Text = ("Media de Clase") & " " & PersonaVOtmp.nivel & " " & PersonaVOtmp.clase
     
   Endif
   
@@ -171,7 +171,7 @@ Public Sub graficaAlumno()
   chart.YAxe.FONT = Font["5"]
   
   Chart.Legend.Visible = True                                                     'Makes the Legend visible
-  Chart.Legend.Title = "Lecturas"                                                     'Title of chart
+  Chart.Legend.Title = ("Lecturas")                                                     'Title of chart
   chart.Type = ChartType.Lines                                                    'Type of chart
   chart.BackGround = Color.white                                              'Sets the background colour
   chart.Border = True                                                          'Gets rid of the border
@@ -296,8 +296,9 @@ Public Sub Form_Open()
 End
 
 Public Sub ButtonInformes_Click()
-
+  
   Dim pc As Picture
+  
   pc = Desktop.Screenshot(ADrawingArea1.ScreenX, ADrawingArea1.ScreenY, ADrawingArea1.Width, ADrawingArea1.height)
   pc.Save("/tmp/imagen.png", 100)
   

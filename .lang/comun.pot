@@ -18,15 +18,15 @@ msgstr ""
 msgid "Trazada:"
 msgstr ""
 
-#: comun.module:143
+#: comun.module:168
 msgid "Lectura"
 msgstr ""
 
-#: comun.module:144
+#: comun.module:169
 msgid "Palabras por Minuto"
 msgstr ""
 
-#: comun.module:145
+#: comun.module:170
 msgid "Fecha"
 msgstr ""
 

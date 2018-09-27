@@ -22,7 +22,7 @@ msgid ""
 "Cambio de alumno. Nuevo tipo de letra y color de fondo por defecto calido"
 msgstr ""
 
-#: FMainInicial.form:36
+#: FMainInicial.form:36 FormPrincipal.class:39
 msgid "Leones"
 msgstr ""
 
@@ -150,7 +150,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: FTest.form:207
+#: FTest.form:207 FormEditarAlumno.form:50
 msgid "TextBox1"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgid "Aceptar"
 msgstr ""
 
 #: FormAutomaticoDinamico.form:46 FormCambiarAlumno.form:55
-#: FormEditorLecturas.form:43 FormRegistro.form:76
+#: FormEditarAlumno.form:26 FormEditorLecturas.form:43 FormRegistro.form:76
 msgid "Cancelar"
 msgstr ""
 
@@ -382,12 +382,64 @@ msgstr ""
 msgid "Palabras leidas"
 msgstr ""
 
+#: FormEditarAlumno.form:20
+msgid "Guardar Cambios"
+msgstr ""
+
+#: FormEditarAlumno.form:32
+msgid "Nombre de Alumno:"
+msgstr ""
+
+#: FormEditarAlumno.form:38 FormRegistro.form:82
+msgid "Nivel/Grado:"
+msgstr ""
+
+#: FormEditarAlumno.form:44 FormRegistro.form:93
+msgid "Clase:"
+msgstr ""
+
+#: FormEditarAlumno.form:55
+msgid "ComboBox1"
+msgstr ""
+
+#: FormEditarAlumno.form:66
+msgid "  Lecturas...."
+msgstr ""
+
+#: FormEditarAlumno.form:70
+msgid "Borrar todos los datos de lecturas"
+msgstr ""
+
+#: FormEditarAlumno.class:55
+msgid "¿realmente desea borrar todos los datos de lectura del alumno?"
+msgstr ""
+
+#: FormEditarAlumno.class:55 FormPrincipal.class:491
+msgid "Si, borralo"
+msgstr ""
+
+#: FormEditarAlumno.class:55
+msgid "No, cancela"
+msgstr ""
+
+#: FormEditarAlumno.class:66
+msgid "Datos de las lecturas borrados"
+msgstr ""
+
 #: FormEditorLecturas.form:19
 msgid "TextArea1"
 msgstr ""
 
 #: FormEditorLecturas.form:32
 msgid "Guardar"
+msgstr ""
+
+#: FormEditorLecturas.class:9
+msgid "Editando"
+msgstr ""
+
+#: FormEditorLecturas.class:35
+msgid "Modificación Guardada"
 msgstr ""
 
 #: FormEstadistica.form:46
@@ -414,6 +466,14 @@ msgstr ""
 msgid "Palabras Por Minuto"
 msgstr ""
 
+#: FormEstadistica.class:166
+msgid "Media de Clase"
+msgstr ""
+
+#: FormEstadistica.class:174 FormPrincipal.form:76
+msgid "Lecturas"
+msgstr ""
+
 #: FormLectura.form:35
 msgid "10"
 msgstr ""
@@ -430,8 +490,12 @@ msgstr ""
 msgid "Pulse la tecla Enter o Return para contar errores de lectura"
 msgstr ""
 
-#: FormLectura.form:107
+#: FormLectura.form:107 FormPrincipal.class:136
 msgid "Repetir"
+msgstr ""
+
+#: FormLectura.class:113
+msgid "Seleccione palabra donde se quedo en la lectura"
 msgstr ""
 
 #: FormPrincipal.form:38
@@ -460,10 +524,6 @@ msgstr ""
 
 #: FormPrincipal.form:64
 msgid "Cambiar Alumno"
-msgstr ""
-
-#: FormPrincipal.form:76
-msgid "Lecturas"
 msgstr ""
 
 #: FormPrincipal.form:93
@@ -498,34 +558,58 @@ msgstr ""
 msgid "haga doble click para seleccionar lectura"
 msgstr ""
 
+#: FormPrincipal.class:134
+msgid "Leer"
+msgstr ""
+
+#: FormPrincipal.class:148
+msgid "Editar"
+msgstr ""
+
 #: FormPrincipal.class:188
 msgid "Se ha producido un error al intentar leer el fichero de lectura"
+msgstr ""
+
+#: FormPrincipal.class:220
+msgid "No hay datos para mostrar graficas"
 msgstr ""
 
 #: FormPrincipal.class:288
 msgid "Borrado de datos del alumno y lecturas realizadas"
 msgstr ""
 
-#: FormPrincipal.class:303
+#: FormPrincipal.class:299
+msgid "Editar datos del alumno y lecturas realizadas"
+msgstr ""
+
+#: FormPrincipal.class:314
 msgid ""
 "Crear fichero con la información del alumno para exportarlo y usarlo en otro "
 "lugar"
 msgstr ""
 
-#: FormPrincipal.class:311
+#: FormPrincipal.class:326
 msgid "Estadistica del Alumno"
 msgstr ""
 
-#: FormPrincipal.class:319
-msgid "Crear Informe del alumno"
+#: FormPrincipal.class:425
+msgid "Elege nueva lectura"
 msgstr ""
 
-#: FormPrincipal.class:431
+#: FormPrincipal.class:462
 msgid "Exportados datos correctamente"
 msgstr ""
 
-#: FormPrincipal.class:447
+#: FormPrincipal.class:478
 msgid "Importacion de datos correctamente ejecutada"
+msgstr ""
+
+#: FormPrincipal.class:491
+msgid "¿Esta seguro de borrar los datos del alumno y sus lecturas?"
+msgstr ""
+
+#: FormPrincipal.class:491
+msgid "No, cancelar"
 msgstr ""
 
 #: FormRegistro.form:26
@@ -552,12 +636,8 @@ msgstr ""
 msgid "Tipo:"
 msgstr ""
 
-#: FormRegistro.form:82
-msgid "Nivel/Grado:"
-msgstr ""
-
-#: FormRegistro.form:93
-msgid "Clase:"
+#: FormRegistro.class:46
+msgid "Contraseña Maestra"
 msgstr ""
 
 #: FormRegistro.class:49
@@ -676,15 +756,15 @@ msgstr ""
 msgid "Trazada:"
 msgstr ""
 
-#: comun.module:143
+#: comun.module:168
 msgid "Lectura"
 msgstr ""
 
-#: comun.module:144
+#: comun.module:169
 msgid "Palabras por Minuto"
 msgstr ""
 
-#: comun.module:145
+#: comun.module:170
 msgid "Fecha"
 msgstr ""
 

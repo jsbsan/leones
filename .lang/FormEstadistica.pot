@@ -42,3 +42,11 @@ msgstr ""
 msgid "Palabras Por Minuto"
 msgstr ""
 
+#: FormEstadistica.class:166
+msgid "Media de Clase"
+msgstr ""
+
+#: FormEstadistica.class:174
+msgid "Lecturas"
+msgstr ""
+

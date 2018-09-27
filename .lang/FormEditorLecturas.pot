@@ -26,3 +26,11 @@ msgstr ""
 msgid "Cancelar"
 msgstr ""
 
+#: FormEditorLecturas.class:9
+msgid "Editando"
+msgstr ""
+
+#: FormEditorLecturas.class:35
+msgid "Modificación Guardada"
+msgstr ""
+

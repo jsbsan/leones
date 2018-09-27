@@ -34,7 +34,7 @@
         MoveScaled(1,1,23,17)
         Text = ("Tiempo Restante....")
         { LabelTiempo Label
-          MoveScaled(2,2,19,14)
+          MoveScaled(2,3,19,14)
           Font = Font["+17"]
           Alignment = Align.Center
           Border = Border.Plain

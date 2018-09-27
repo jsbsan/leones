@@ -38,3 +38,7 @@ msgstr ""
 msgid "Salir"
 msgstr ""
 
+#: FormLectura.class:113
+msgid "Seleccione palabra donde se quedo en la lectura"
+msgstr ""
+

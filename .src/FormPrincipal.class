@@ -23,7 +23,7 @@ Public Sub CargaInicialDatos()
   cargaficheros()
   
   'carga datos de todos los alumnos -> solo en el caso de que el profesor haya entrado
-  Debug "Es un tipo de persona:", persona.tipo
+  '  Debug "Es un tipo de persona:", persona.tipo
   If persona.tipo = "Profesor" Then 
     TabStripVarias[1].Enabled = True
     TabStripVarias[1].Visible = True
@@ -36,7 +36,7 @@ Public Sub CargaInicialDatos()
     TabStripVarias[1].Visible = False
   Endif
   'datos
-  Me.Title = "Leones: " & persona.nombre
+  Me.Title = ("Leones") & ": " & persona.nombre
   
 End
 
@@ -131,9 +131,9 @@ Public Sub cargaficheros()
     hboton.w = 150
     
     If VELOCIDAD = "0 p/m" Then 
-      hboton.text = "Leer" 'si esta hecho seria, "Repetir"
+      hboton.text = ("Leer") 'si esta hecho seria, "Repetir"
     Else
-      hboton.text = "Repetir" 'si esta hecho seria, "Repetir"
+      hboton.text = ("Repetir") 'si esta hecho seria, "Repetir"
     Endif
     
     hboton.tag = "accion en fichero|" & ruta_trabajo & "/" & nombrefile
@@ -145,7 +145,7 @@ Public Sub cargaficheros()
       hboton = New Button(hboxtemp) As "GrupoAccionEditar"
       hboton.h = 15
       hboton.w = 75
-      hboton.text = "Editar"
+      hboton.text = ("Editar")
       hboton.tag = "editar en fichero|" & ruta_trabajo & "/" & nombrefile
       
     Endif
@@ -217,7 +217,7 @@ Public Sub ButtonEstadisticas_Click()
       
       'Comprobacion si el Alumno no tiene datos de lecturas....
       If resultado.Count = 0 Then 
-        Message.Info("No hay datos para mostrar graficas")
+        Message.Info(("No hay datos para mostrar graficas"))
       Else
         FormEstadistica.PersonaVOtmp = persona
         FormEstadistica.ShowModal()
@@ -280,29 +280,44 @@ Public Sub CargaAlumnos()
       ']
       '
       'boton de borrado de alumnos...
-      hboton = New Button(hboxtemp) As "grupoAlumnosBorrarDatos" ''TODO: Crear datos en formato json para importar
+      hboton = New Button(hboxtemp) As "grupoAlumnosBorrarDatos" 
       hboton.h = 15
       hboton.w = 30
       hboton.picture = Picture["icon:/16/delete"]
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Borrado de datos del alumno y lecturas realizadas")
+      '
       hboton = New Button(hboxtemp) ''es un boton para espaciar
       hboton.h = 15
       hboton.w = 30
       '
+      hboton = New Button(hboxtemp) As "grupoAlumnosEditarDatos" 
+      hboton.h = 15
+      hboton.w = 30
+      hboton.picture = Picture["icon:/16/edit"]
+      hboton.tag = resultado["idpersona"]
+      hboton.Tooltip = ("Editar datos del alumno y lecturas realizadas")
       '
+      hboton = New Button(hboxtemp) ''es un boton para espaciar
+      hboton.h = 15
+      hboton.w = 30
       '
+      
       '
       'boton exportar dato del alumno..-> convertir datos a json, que luego pueda ser leido por el programa en otra ubicacion.
       '
-      hboton = New Button(hboxtemp) As "grupoAlumnosExportarDatos" ''TODO: Crear datos en formato json para importar
+      hboton = New Button(hboxtemp) As "grupoAlumnosExportarDatos" 'exportar datos
       hboton.h = 15
       hboton.w = 30
       hboton.picture = Picture["exportar1616.png"]
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Crear fichero con la información del alumno para exportarlo y usarlo en otro lugar")
+      '
+      hboton = New Button(hboxtemp) ''es un boton para espaciar
+      hboton.h = 15
+      hboton.w = 30
       
-      'boton para estadistica del alumno
+      'boton para estadistica del alumno -> tambien es informe
       hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno -> ya incluyen la media de clases y alumnos
       hboton.h = 15
       hboton.w = 30
@@ -310,28 +325,44 @@ Public Sub CargaAlumnos()
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Estadistica del Alumno")
       
-      'boton para informe 
-      hboton = New Button(hboxtemp) As "grupoAlumnosInforme" ''TODO: Crear informe
-      hboton.h = 15
-      hboton.w = 30
-      hboton.picture = Picture["Informe16x16.png"]
-      hboton.tag = resultado["idpersona"]
-      hboton.Tooltip = ("Crear Informe del alumno")
+      ' 'boton para informe 
+      ' hboton = New Button(hboxtemp) As "grupoAlumnosInforme" ''TODO: Crear informe
+      ' hboton.h = 15
+      ' hboton.w = 30
+      ' hboton.picture = Picture["Informe16x16.png"]
+      ' hboton.tag = resultado["idpersona"]
+      ' hboton.Tooltip = ("Crear Informe del alumno")
     Endif
     resultado.movenext
   Wend
   
 End
 
-Public Sub grupoAlumnosInforme_Click()
+Public Sub grupoAlumnosEditarDatos_Click()
   
+  'editar datos de un alumno...
   Dim personaManejadorDato As New PersonaDAO
-  ''creo el informe, pasando el tag del ultimo control pulsado.
-  ''Este Tag esta definico como resultado["idpersona"]
   
-  comun.InformeAlumno(personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(Last.tag))[0])
+  '   ''Este Tag esta definico como resultado["idpersona"]
+  '   
+  If comun.EditarAlumno(personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(Last.tag))[0]) Then 
+    ''devuelta del formulario, si se ha recibido cambio de alumno, se actualizan los contenedores de datos del usuario actual
+    
+    CargaInicialDatos()
+    
+  Endif
   
 End
+
+' Public Sub grupoAlumnosInforme_Click()
+'   
+'   Dim personaManejadorDato As New PersonaDAO
+'   ''creo el informe, pasando el tag del ultimo control pulsado.
+'   ''Este Tag esta definico como resultado["idpersona"]
+'   
+'   comun.InformeAlumno(personaManejadorDato.ConvertirResult(personaManejadorDato.BuscarIgualIdpersona(Last.tag))[0])
+'   
+' End
 
 Public Sub grupoAlumnosEstadistica_Click()
   
@@ -357,7 +388,7 @@ Public Sub grupoAlumnosEstadistica_Click()
   
   'Comprobacion si el Alumno no tiene datos de lecturas....
   If resultado.Count = 0 Then 
-    Message.Info("No hay datos para mostrar graficas")
+    Message.Info(("No hay datos para mostrar graficas"))
   Else
     FormEstadistica.PersonaVOtmp = personatmp
     FormEstadistica.ShowModal()
@@ -391,7 +422,7 @@ End
 
 Public Sub ButtonAgregar_Click()
   
-  Dialog.Title = "Elege nueva lectura"
+  Dialog.Title = ("Elege nueva lectura")
   Dialog.Path = User.Home
   
   Dialog.Filter = ["*.palabras", "palabras", "*.sintagmas", "sintagmas", "*.frases", "frases", "*.evaluaciones", "evaluaciones", "*.evaluaciones externas", "evaluaciones externas", "*.txt", "archivos de texto", "*", "todos los archivos"]
@@ -457,7 +488,7 @@ Public Sub grupoAlumnosBorrarDatos_Click()
   Dim idpruebaBorrar As Integer
   'borrado de datos del alumno
   
-  msg = Message.Question("¿Esta seguro de borrar los datos del alumno y sus lecturas?", "Si, borralo", "No, cancelar")
+  msg = Message.Question(("¿Esta seguro de borrar los datos del alumno y sus lecturas?"), ("Si, borralo"), ("No, cancelar"))
   
   If msg = 1 Then
     'si seguro que quiero borrar

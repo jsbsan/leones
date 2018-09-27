@@ -43,7 +43,7 @@ Public Sub ButtonCrear_Click()
       
     Else
       
-      passwordProfesor = InputBox(("Contraseña:"), "Contraseña Maestra")
+      passwordProfesor = InputBox(("Contraseña:"), ("Contraseña Maestra"))
       
       If passwordProfesor <> Settings["ContraseñaMaestra", "MININO"] Then 
         Message.Error(("Error: no se ha introducido bien la contraseña maestra"))
