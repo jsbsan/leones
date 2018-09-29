@@ -129,9 +129,13 @@ Public Sub cargaficheros()
     hboton = New Button(hboxtemp) As "GrupoAccion"
     hboton.h = 15
     hboton.w = 150
+    hboton.Font = font[",,8"]
+    
+    hboton.Picture = Picture["icon:/16/book"]
     
     If VELOCIDAD = "0 p/m" Then 
       hboton.text = ("Leer") 'si esta hecho seria, "Repetir"
+      
     Else
       hboton.text = ("Repetir") 'si esta hecho seria, "Repetir"
     Endif
@@ -146,6 +150,8 @@ Public Sub cargaficheros()
       hboton.h = 15
       hboton.w = 75
       hboton.text = ("Editar")
+      hboton.Font = font[",,8"]
+      hboton.Picture = Picture["icon:/16/edit"]
       hboton.tag = "editar en fichero|" & ruta_trabajo & "/" & nombrefile
       
     Endif
@@ -260,47 +266,59 @@ Public Sub CargaAlumnos()
       hlabel.expand = True
       hlabel.text = nombre
       hlabel.border = border.plain
+      hlabel.Font = font[",,8"]
       ']
+      
       nivel = resultado["nivel"]
       '[
       hlabel = New Label(hboxtemp) As "GrupoAlumnos"
       hlabel.h = 15
       hlabel.expand = True
       hlabel.text = nivel
+      hlabel.Alignment = Align.Center
       hlabel.border = border.plain
+      hlabel.Font = font[",,8"]
       ']
       
       clase = resultado["clase"]
       '[
       hlabel = New Label(hboxtemp) As "GrupoAlumnos"
       hlabel.h = 15
-      hlabel.expand = True
+      hlabel.w = 20
+      hlabel.expand = False
+      hlabel.Alignment = Align.Center
       hlabel.text = clase
       hlabel.border = border.plain
+      hlabel.Font = font[",,8"]
+      
       ']
       '
       'boton de borrado de alumnos...
       hboton = New Button(hboxtemp) As "grupoAlumnosBorrarDatos" 
       hboton.h = 15
-      hboton.w = 30
+      hboton.w = 100
       hboton.picture = Picture["icon:/16/delete"]
+      hboton.Font = font[",,8"]
+      hboton.text = ("Borrar")
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Borrado de datos del alumno y lecturas realizadas")
       '
-      hboton = New Button(hboxtemp) ''es un boton para espaciar
-      hboton.h = 15
-      hboton.w = 30
+      ' hboton = New Button(hboxtemp) ''es un boton para espaciar
+      ' hboton.h = 15
+      ' hboton.w = 30
       '
       hboton = New Button(hboxtemp) As "grupoAlumnosEditarDatos" 
       hboton.h = 15
-      hboton.w = 30
+      hboton.w = 100
       hboton.picture = Picture["icon:/16/edit"]
+      hboton.Font = font[",,8"]
+      hboton.text = ("Editar")
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Editar datos del alumno y lecturas realizadas")
       '
-      hboton = New Button(hboxtemp) ''es un boton para espaciar
-      hboton.h = 15
-      hboton.w = 30
+      ' hboton = New Button(hboxtemp) ''es un boton para espaciar
+      ' hboton.h = 15
+      ' hboton.w = 30
       '
       
       '
@@ -308,23 +326,26 @@ Public Sub CargaAlumnos()
       '
       hboton = New Button(hboxtemp) As "grupoAlumnosExportarDatos" 'exportar datos
       hboton.h = 15
-      hboton.w = 30
+      hboton.w = 100
       hboton.picture = Picture["exportar1616.png"]
+      hboton.Font = font[",,8"]
+      hboton.text = ("Exportar")
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Crear fichero con la información del alumno para exportarlo y usarlo en otro lugar")
       '
-      hboton = New Button(hboxtemp) ''es un boton para espaciar
-      hboton.h = 15
-      hboton.w = 30
-      
+      ' hboton = New Button(hboxtemp) ''es un boton para espaciar
+      ' hboton.h = 15
+      ' hboton.w = 30
+      ' 
       'boton para estadistica del alumno -> tambien es informe
       hboton = New Button(hboxtemp) As "grupoAlumnosEstadistica" ''TODO: Estadistica del Alumno -> ya incluyen la media de clases y alumnos
       hboton.h = 15
-      hboton.w = 30
+      hboton.w = 150
       hboton.picture = Picture["estadisticas16x16p.png"]
       hboton.tag = resultado["idpersona"]
       hboton.Tooltip = ("Estadistica del Alumno")
-      
+      hboton.Font = font[",,8"]
+      hboton.text = ("Gráfica e Informes")
       ' 'boton para informe 
       ' hboton = New Button(hboxtemp) As "grupoAlumnosInforme" ''TODO: Crear informe
       ' hboton.h = 15

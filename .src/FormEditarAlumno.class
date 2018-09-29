@@ -17,6 +17,9 @@ Public Sub Form_Open()
   ComboBoxClase.Text = PersonaVOtmp.clase
   ComboBoxNivelGrado.text = PersonaVOtmp.nivel
   
+  'rellenar datos de lecturas...
+  rellenarDatosLecturas()
+  
 End
 
 Public Sub ButtonCancelar_Click()
@@ -64,6 +67,129 @@ Public Sub ButtonBorraLecturas_Click()
       resultado.MoveNext
     Wend
     Message.Info(("Datos de las lecturas borrados"))
+  Endif
+  
+End
+
+'Rellenar datos de lecturas
+'configuracion inicial
+Public Sub rellenarDatosLecturas()
+  
+  Dim hboxtemp As HBox
+  Dim hlabel As Label
+  Dim resultado As Result
+  Dim hbotton As Button
+  Dim ManejadorPruebasTmpDato As New PruebasDAO
+  
+  ScrollViewDatosLecturas.Arrangement = Arrange.Vertical
+  
+  ScrollViewDatosLecturas.Children.Clear() 'borrado de todo los controles que hubiensen
+  
+  hboxtemp = New HBox(ScrollViewDatosLecturas) 
+  hboxtemp.h = 25
+  hboxtemp.w = ScrollViewDatosLecturas.w - 10
+  
+  'cabecera'
+  '  
+  hlabel = New Label(hboxtemp) 
+  hlabel.h = 15
+  hlabel.expand = True
+  hlabel.text = ("Lectura")
+  hlabel.Border = Border.Plain
+  hlabel.Alignment = Align.Center
+  hlabel.Border = Border.Plain
+  hlabel.Background = Color.Gray
+  
+  hlabel = New Label(hboxtemp) 
+  hlabel.h = 15
+  hlabel.w = 50
+  hlabel.expand = True
+  hlabel.text = ("Puntuación")
+  hlabel.Border = Border.Plain
+  hlabel.Alignment = Align.Center
+  hlabel.Border = Border.Plain
+  hlabel.Background = Color.Gray
+  
+  hlabel = New Label(hboxtemp) 
+  hlabel.h = 15
+  hlabel.expand = True
+  hlabel.text = ("Fecha")
+  hlabel.Border = Border.Plain
+  hlabel.Alignment = Align.Center
+  hlabel.Border = Border.Plain
+  hlabel.Background = Color.Gray
+  
+  hbotton = New Button(hboxtemp)  'espacio del boton
+  hbotton.h = 15
+  hbotton.w = 30
+  'hlabel = New Label(hboxtemp) 
+  'hlabel.h = 15
+  'hlabel.expand = True
+  'hlabel.text = "Archivo Sonido"
+  'hlabel.Border = Border.Plain
+  ' hlabel.Alignment = Align.Center
+  ' hlabel.Border = Border.Plain
+  ' hlabel.Background = Color.Gray
+  ' 
+  'Mostrar datos de lecturas....
+  '
+  resultado = ManejadorPruebasTmpDato.BuscarIgualIdpersona(PersonaVOtmp.idpersona)
+  While resultado.Available
+    'nueva linea
+    ' 
+    hboxtemp = New HBox(ScrollViewDatosLecturas) 
+    hboxtemp.h = 25
+    hboxtemp.w = ScrollViewDatosLecturas.w - 10
+    
+    'datos y botones de la linea agregada
+    hlabel = New Label(hboxtemp) 
+    hlabel.h = 15
+    hlabel.expand = True
+    hlabel.text = resultado["textolectura"]
+    hlabel.Border = Border.Plain
+    hlabel.Alignment = Align.Center
+    hlabel.Border = Border.Plain
+    
+    hlabel = New Label(hboxtemp) 
+    hlabel.h = 15
+    hlabel.w = 50
+    hlabel.expand = True
+    hlabel.text = resultado["puntuacion"]
+    hlabel.Border = Border.Plain
+    hlabel.Alignment = Align.Center
+    hlabel.Border = Border.Plain
+    
+    hlabel = New Label(hboxtemp) 
+    hlabel.h = 15
+    hlabel.expand = True
+    hlabel.text = resultado["fecha"]
+    hlabel.Border = Border.Plain
+    hlabel.Alignment = Align.Center
+    hlabel.Border = Border.Plain
+    
+    hbotton = New Button(hboxtemp) As "GrupoBorrarLectura"
+    hbotton.h = 15
+    hbotton.w = 30
+    hbotton.Picture = Picture["icon:/16/delete"]
+    hbotton.tag = resultado["idprueba"] 'guardo el id de la prueba para borrala si le hago click
+    hbotton.Tooltip = ("Borrar Prueba de Lectura")
+    resultado.MoveNext
+  Wend
+  
+End
+
+Public Sub grupoborrarlectura_Click()
+  
+  Dim res As Integer
+  Dim ManejadorPruebasTmpDato As New PruebasDAO
+  
+  res = Message.Question(("¿seguro que quieres borrarla?"), ("Si,borrala"), ("No,cancelar"))
+  
+  If res = 1 Then 
+    'proceso a borrar la lectura 
+    ManejadorPruebasTmpDato.BorrarIdprueba(Last.tag)
+    'y recarga la regilla de datos...
+    rellenarDatosLecturas()
   Endif
   
 End

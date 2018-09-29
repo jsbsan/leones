@@ -1,52 +1,83 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,89,50)
-  { ButtonGuardar Button
-    MoveScaled(13,43,29,5)
-    Text = ("Guardar Cambios")
-    Picture = Picture["icon:/16/ok"]
-  }
+  MoveScaled(0,0,75,50)
   { ButtonCancelar Button
-    MoveScaled(59,43,19,5)
-    Text = ("Cancelar")
-    Picture = Picture["icon:/16/cancel"]
+    MoveScaled(55,44,19,5)
+    Text = ("Salir")
+    Picture = Picture["icon:/16/quit"]
   }
-  { Label1 Label
-    MoveScaled(5,3,21,5)
-    Text = ("Nombre de Alumno:")
-    Alignment = Align.Right
-  }
-  { Label3 Label
-    MoveScaled(5,9,21,5)
-    Text = ("Nivel/Grado:")
-    Alignment = Align.Right
-  }
-  { Label2 Label
-    MoveScaled(4,16,21,5)
-    Text = ("Clase:")
-    Alignment = Align.Right
-  }
-  { TextBoxAlumno TextBox
-    MoveScaled(29,3,47,4)
-    Text = ("TextBox1")
-  }
-  { ComboBoxNivelGrado ComboBox
-    MoveScaled(29,9,27,5)
-    Text = ("ComboBox1")
-  }
-  { ComboBoxClase ComboBox
-    MoveScaled(29,16,25,5)
-    Text = ("ComboBox1")
-  }
-  { Frame1 Frame
-    MoveScaled(7,25,71,14)
-    Background = &HDF9953&
-    Text = ("  Lecturas....")
-    { ButtonBorraLecturas Button
-      MoveScaled(13,4,42,6)
-      Text = ("Borrar todos los datos de lecturas")
-      Picture = Picture["icon:/16/delete"]
+  { TabStrip1 TabStrip
+    MoveScaled(1,0,73,43)
+    Arrangement = Arrange.Vertical
+    Count = 2
+    Index = 0
+    Text = ("Datos Personales Alumno")
+    Picture = Picture["icon:/16/people"]
+    { Panel1 Panel
+      MoveScaled(1,1,70,35)
+      { ComboBoxClase ComboBox
+        MoveScaled(22.4286,21,25,4)
+        Text = ("ComboBox1")
+      }
+      { Label2 Label
+        MoveScaled(0,20,21,5)
+        Text = ("Clase:")
+        Alignment = Align.Right
+      }
+      { Label3 Label
+        MoveScaled(0,13,21,5)
+        Text = ("Nivel/Grado:")
+        Alignment = Align.Right
+      }
+      { ComboBoxNivelGrado ComboBox
+        MoveScaled(22.4286,14,27,4)
+        Text = ("ComboBox1")
+      }
+      { TextBoxAlumno TextBox
+        MoveScaled(22.4286,7,47,4)
+        Text = ("TextBox1")
+      }
+      { Label1 Label
+        MoveScaled(0,7,21,5)
+        Text = ("Nombre de Alumno:")
+        Alignment = Align.Right
+      }
+      { PictureBox1 PictureBox
+        MoveScaled(3.4286,0,8,7)
+        Picture = Picture["icon:/64/people"]
+        Stretch = True
+      }
+      { ButtonGuardar Button
+        MoveScaled(19,29,29,5)
+        Text = ("Guardar Cambios")
+        Picture = Picture["icon:/16/ok"]
+      }
     }
+    Index = 1
+    Text = ("Lecturas")
+    Picture = Picture["LectorIcono.png"]
+    { Frame1 Frame
+      MoveScaled(1,1,67,9)
+      Background = &HFF1F1F&
+      Text = ("  Lecturas....")
+      { ButtonBorraLecturas Button
+        MoveScaled(22,2,42,6)
+        Text = ("Borrar todos los datos de lecturas")
+        Picture = Picture["icon:/16/delete"]
+      }
+      { PictureBox2 PictureBox
+        MoveScaled(13,1,7,7)
+        Picture = Picture["peligro64x64.png"]
+        Stretch = True
+      }
+    }
+    { ScrollViewDatosLecturas ScrollView
+      MoveScaled(3,13,58,21)
+      Background = &HFFFFFF&
+      Expand = True
+      Arrangement = Arrange.Vertical
+    }
+    Index = 0
   }
 }

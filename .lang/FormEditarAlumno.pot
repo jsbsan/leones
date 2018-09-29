@@ -14,55 +14,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FormEditarAlumno.form:20
-msgid "Guardar Cambios"
+#: FormEditarAlumno.form:25
+msgid "Salir"
 msgstr ""
 
-#: FormEditarAlumno.form:26
-msgid "Cancelar"
+#: FormEditarAlumno.form:34
+msgid "Datos Personales Alumno"
 msgstr ""
 
-#: FormEditarAlumno.form:32
-msgid "Nombre de Alumno:"
-msgstr ""
-
-#: FormEditarAlumno.form:38
-msgid "Nivel/Grado:"
-msgstr ""
-
-#: FormEditarAlumno.form:44
-msgid "Clase:"
-msgstr ""
-
-#: FormEditarAlumno.form:50
-msgid "TextBox1"
-msgstr ""
-
-#: FormEditarAlumno.form:55
+#: FormEditarAlumno.form:42
 msgid "ComboBox1"
 msgstr ""
 
-#: FormEditarAlumno.form:66
+#: FormEditarAlumno.form:47
+msgid "Clase:"
+msgstr ""
+
+#: FormEditarAlumno.form:53
+msgid "Nivel/Grado:"
+msgstr ""
+
+#: FormEditarAlumno.form:64
+msgid "TextBox1"
+msgstr ""
+
+#: FormEditarAlumno.form:69
+msgid "Nombre de Alumno:"
+msgstr ""
+
+#: FormEditarAlumno.form:81
+msgid "Guardar Cambios"
+msgstr ""
+
+#: FormEditarAlumno.form:86
+msgid "Lecturas"
+msgstr ""
+
+#: FormEditarAlumno.form:92
 msgid "  Lecturas...."
 msgstr ""
 
-#: FormEditarAlumno.form:70
+#: FormEditarAlumno.form:96
 msgid "Borrar todos los datos de lecturas"
 msgstr ""
 
-#: FormEditarAlumno.class:55
+#: FormEditarAlumno.class:58
 msgid "¿realmente desea borrar todos los datos de lectura del alumno?"
 msgstr ""
 
-#: FormEditarAlumno.class:55
+#: FormEditarAlumno.class:58
 msgid "Si, borralo"
 msgstr ""
 
-#: FormEditarAlumno.class:55
+#: FormEditarAlumno.class:58
 msgid "No, cancela"
 msgstr ""
 
-#: FormEditarAlumno.class:66
+#: FormEditarAlumno.class:69
 msgid "Datos de las lecturas borrados"
+msgstr ""
+
+#: FormEditarAlumno.class:97
+msgid "Lectura"
+msgstr ""
+
+#: FormEditarAlumno.class:107
+msgid "Puntuación"
+msgstr ""
+
+#: FormEditarAlumno.class:116
+msgid "Fecha"
+msgstr ""
+
+#: FormEditarAlumno.class:175
+msgid "Borrar Prueba de Lectura"
+msgstr ""
+
+#: FormEditarAlumno.class:186
+msgid "¿seguro que quieres borrarla?"
+msgstr ""
+
+#: FormEditarAlumno.class:186
+msgid "Si,borrala"
+msgstr ""
+
+#: FormEditarAlumno.class:186
+msgid "No,cancelar"
 msgstr ""
 
